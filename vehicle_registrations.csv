@@ -1,0 +1,1674 @@
+date,geography,variable,estimate,geography_type,share,metric,grouping
+2022-04-01,King,BEV (Battery Electric Vehicle),1247,County,0.1093859649122807,New Vehicle Registrations,All
+2022-04-01,King,HEV (Hybrid Electric Vehicle),1229,County,0.10780701754385964,New Vehicle Registrations,All
+2022-04-01,King,ICE (Internal Combustion Engine),8741,County,0.7667543859649123,New Vehicle Registrations,All
+2022-04-01,King,PHEV (Plug-in Hybrid Electric Vehicle),183,County,0.016052631578947367,New Vehicle Registrations,All
+2022-04-01,Kitsap,BEV (Battery Electric Vehicle),67,County,0.04820143884892086,New Vehicle Registrations,All
+2022-04-01,Kitsap,HEV (Hybrid Electric Vehicle),101,County,0.07266187050359713,New Vehicle Registrations,All
+2022-04-01,Kitsap,ICE (Internal Combustion Engine),1205,County,0.8669064748201439,New Vehicle Registrations,All
+2022-04-01,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),17,County,0.01223021582733813,New Vehicle Registrations,All
+2022-04-01,Pierce,BEV (Battery Electric Vehicle),181,County,0.040592061000224264,New Vehicle Registrations,All
+2022-04-01,Pierce,HEV (Hybrid Electric Vehicle),367,County,0.08230544965238842,New Vehicle Registrations,All
+2022-04-01,Pierce,ICE (Internal Combustion Engine),3880,County,0.8701502579053599,New Vehicle Registrations,All
+2022-04-01,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),31,County,0.006952231442027361,New Vehicle Registrations,All
+2022-04-01,Snohomish,BEV (Battery Electric Vehicle),295,County,0.07696321419253849,New Vehicle Registrations,All
+2022-04-01,Snohomish,HEV (Hybrid Electric Vehicle),366,County,0.09548656404904775,New Vehicle Registrations,All
+2022-04-01,Snohomish,ICE (Internal Combustion Engine),3124,County,0.8150273936864075,New Vehicle Registrations,All
+2022-04-01,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),48,County,0.012522828072006262,New Vehicle Registrations,All
+2022-04-01,Region,BEV (Battery Electric Vehicle),1790,PSRC Region,0.08490655535527938,New Vehicle Registrations,All
+2022-04-01,Region,HEV (Hybrid Electric Vehicle),2063,PSRC Region,0.09785599089270468,New Vehicle Registrations,All
+2022-04-01,Region,ICE (Internal Combustion Engine),16950,PSRC Region,0.8040034152357461,New Vehicle Registrations,All
+2022-04-01,Region,PHEV (Plug-in Hybrid Electric Vehicle),279,PSRC Region,0.013234038516269803,New Vehicle Registrations,All
+2022-04-01,98001,BEV (Battery Electric Vehicle),13,Zipcode,0.07428571428571429,New Vehicle Registrations,All
+2022-04-01,98001,HEV (Hybrid Electric Vehicle),17,Zipcode,0.09714285714285714,New Vehicle Registrations,All
+2022-04-01,98001,ICE (Internal Combustion Engine),142,Zipcode,0.8114285714285714,New Vehicle Registrations,All
+2022-04-01,98001,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.017142857142857144,New Vehicle Registrations,All
+2022-04-01,98002,HEV (Hybrid Electric Vehicle),9,Zipcode,0.06521739130434782,New Vehicle Registrations,All
+2022-04-01,98002,ICE (Internal Combustion Engine),128,Zipcode,0.927536231884058,New Vehicle Registrations,All
+2022-04-01,98002,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.007246376811594203,New Vehicle Registrations,All
+2022-04-01,98003,BEV (Battery Electric Vehicle),10,Zipcode,0.05405405405405406,New Vehicle Registrations,All
+2022-04-01,98003,HEV (Hybrid Electric Vehicle),31,Zipcode,0.16756756756756758,New Vehicle Registrations,All
+2022-04-01,98003,ICE (Internal Combustion Engine),143,Zipcode,0.772972972972973,New Vehicle Registrations,All
+2022-04-01,98003,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.005405405405405406,New Vehicle Registrations,All
+2022-04-01,98004,BEV (Battery Electric Vehicle),43,Zipcode,0.14333333333333334,New Vehicle Registrations,All
+2022-04-01,98004,HEV (Hybrid Electric Vehicle),23,Zipcode,0.07666666666666666,New Vehicle Registrations,All
+2022-04-01,98004,ICE (Internal Combustion Engine),232,Zipcode,0.7733333333333333,New Vehicle Registrations,All
+2022-04-01,98004,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.006666666666666667,New Vehicle Registrations,All
+2022-04-01,98005,BEV (Battery Electric Vehicle),19,Zipcode,0.1357142857142857,New Vehicle Registrations,All
+2022-04-01,98005,HEV (Hybrid Electric Vehicle),12,Zipcode,0.08571428571428572,New Vehicle Registrations,All
+2022-04-01,98005,ICE (Internal Combustion Engine),108,Zipcode,0.7714285714285715,New Vehicle Registrations,All
+2022-04-01,98005,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.007142857142857143,New Vehicle Registrations,All
+2022-04-01,98006,BEV (Battery Electric Vehicle),49,Zipcode,0.21875,New Vehicle Registrations,All
+2022-04-01,98006,HEV (Hybrid Electric Vehicle),28,Zipcode,0.125,New Vehicle Registrations,All
+2022-04-01,98006,ICE (Internal Combustion Engine),143,Zipcode,0.6383928571428571,New Vehicle Registrations,All
+2022-04-01,98006,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.017857142857142856,New Vehicle Registrations,All
+2022-04-01,98007,BEV (Battery Electric Vehicle),13,Zipcode,0.07386363636363637,New Vehicle Registrations,All
+2022-04-01,98007,HEV (Hybrid Electric Vehicle),27,Zipcode,0.1534090909090909,New Vehicle Registrations,All
+2022-04-01,98007,ICE (Internal Combustion Engine),133,Zipcode,0.7556818181818182,New Vehicle Registrations,All
+2022-04-01,98007,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.017045454545454544,New Vehicle Registrations,All
+2022-04-01,98008,BEV (Battery Electric Vehicle),15,Zipcode,0.1282051282051282,New Vehicle Registrations,All
+2022-04-01,98008,HEV (Hybrid Electric Vehicle),17,Zipcode,0.1452991452991453,New Vehicle Registrations,All
+2022-04-01,98008,ICE (Internal Combustion Engine),83,Zipcode,0.7094017094017094,New Vehicle Registrations,All
+2022-04-01,98008,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.017094017094017096,New Vehicle Registrations,All
+2022-04-01,98009,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98010,BEV (Battery Electric Vehicle),1,Zipcode,0.020833333333333332,New Vehicle Registrations,All
+2022-04-01,98010,HEV (Hybrid Electric Vehicle),2,Zipcode,0.041666666666666664,New Vehicle Registrations,All
+2022-04-01,98010,ICE (Internal Combustion Engine),44,Zipcode,0.9166666666666666,New Vehicle Registrations,All
+2022-04-01,98010,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.020833333333333332,New Vehicle Registrations,All
+2022-04-01,98011,BEV (Battery Electric Vehicle),25,Zipcode,0.1524390243902439,New Vehicle Registrations,All
+2022-04-01,98011,HEV (Hybrid Electric Vehicle),11,Zipcode,0.06707317073170732,New Vehicle Registrations,All
+2022-04-01,98011,ICE (Internal Combustion Engine),125,Zipcode,0.7621951219512195,New Vehicle Registrations,All
+2022-04-01,98011,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.018292682926829267,New Vehicle Registrations,All
+2022-04-01,98012,BEV (Battery Electric Vehicle),44,Zipcode,0.11369509043927649,New Vehicle Registrations,All
+2022-04-01,98012,HEV (Hybrid Electric Vehicle),40,Zipcode,0.10335917312661498,New Vehicle Registrations,All
+2022-04-01,98012,ICE (Internal Combustion Engine),301,Zipcode,0.7777777777777778,New Vehicle Registrations,All
+2022-04-01,98012,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.00516795865633075,New Vehicle Registrations,All
+2022-04-01,98014,BEV (Battery Electric Vehicle),7,Zipcode,0.15217391304347827,New Vehicle Registrations,All
+2022-04-01,98014,HEV (Hybrid Electric Vehicle),4,Zipcode,0.08695652173913043,New Vehicle Registrations,All
+2022-04-01,98014,ICE (Internal Combustion Engine),35,Zipcode,0.7608695652173914,New Vehicle Registrations,All
+2022-04-01,98019,BEV (Battery Electric Vehicle),7,Zipcode,0.11475409836065574,New Vehicle Registrations,All
+2022-04-01,98019,HEV (Hybrid Electric Vehicle),2,Zipcode,0.03278688524590164,New Vehicle Registrations,All
+2022-04-01,98019,ICE (Internal Combustion Engine),51,Zipcode,0.8360655737704918,New Vehicle Registrations,All
+2022-04-01,98019,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.01639344262295082,New Vehicle Registrations,All
+2022-04-01,98020,BEV (Battery Electric Vehicle),10,Zipcode,0.1111111111111111,New Vehicle Registrations,All
+2022-04-01,98020,HEV (Hybrid Electric Vehicle),11,Zipcode,0.12222222222222222,New Vehicle Registrations,All
+2022-04-01,98020,ICE (Internal Combustion Engine),68,Zipcode,0.7555555555555555,New Vehicle Registrations,All
+2022-04-01,98020,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.011111111111111112,New Vehicle Registrations,All
+2022-04-01,98021,BEV (Battery Electric Vehicle),24,Zipcode,0.1411764705882353,New Vehicle Registrations,All
+2022-04-01,98021,HEV (Hybrid Electric Vehicle),22,Zipcode,0.12941176470588237,New Vehicle Registrations,All
+2022-04-01,98021,ICE (Internal Combustion Engine),121,Zipcode,0.711764705882353,New Vehicle Registrations,All
+2022-04-01,98021,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.01764705882352941,New Vehicle Registrations,All
+2022-04-01,98022,BEV (Battery Electric Vehicle),6,Zipcode,0.06315789473684211,New Vehicle Registrations,All
+2022-04-01,98022,HEV (Hybrid Electric Vehicle),6,Zipcode,0.06315789473684211,New Vehicle Registrations,All
+2022-04-01,98022,ICE (Internal Combustion Engine),83,Zipcode,0.8736842105263158,New Vehicle Registrations,All
+2022-04-01,98023,BEV (Battery Electric Vehicle),12,Zipcode,0.047244094488188976,New Vehicle Registrations,All
+2022-04-01,98023,HEV (Hybrid Electric Vehicle),18,Zipcode,0.07086614173228346,New Vehicle Registrations,All
+2022-04-01,98023,ICE (Internal Combustion Engine),220,Zipcode,0.8661417322834646,New Vehicle Registrations,All
+2022-04-01,98023,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.015748031496062992,New Vehicle Registrations,All
+2022-04-01,98024,BEV (Battery Electric Vehicle),4,Zipcode,0.125,New Vehicle Registrations,All
+2022-04-01,98024,HEV (Hybrid Electric Vehicle),2,Zipcode,0.0625,New Vehicle Registrations,All
+2022-04-01,98024,ICE (Internal Combustion Engine),25,Zipcode,0.78125,New Vehicle Registrations,All
+2022-04-01,98024,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.03125,New Vehicle Registrations,All
+2022-04-01,98026,BEV (Battery Electric Vehicle),22,Zipcode,0.14102564102564102,New Vehicle Registrations,All
+2022-04-01,98026,HEV (Hybrid Electric Vehicle),18,Zipcode,0.11538461538461539,New Vehicle Registrations,All
+2022-04-01,98026,ICE (Internal Combustion Engine),112,Zipcode,0.717948717948718,New Vehicle Registrations,All
+2022-04-01,98026,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.02564102564102564,New Vehicle Registrations,All
+2022-04-01,98027,BEV (Battery Electric Vehicle),24,Zipcode,0.15789473684210525,New Vehicle Registrations,All
+2022-04-01,98027,HEV (Hybrid Electric Vehicle),21,Zipcode,0.13815789473684212,New Vehicle Registrations,All
+2022-04-01,98027,ICE (Internal Combustion Engine),103,Zipcode,0.6776315789473685,New Vehicle Registrations,All
+2022-04-01,98027,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.02631578947368421,New Vehicle Registrations,All
+2022-04-01,98028,BEV (Battery Electric Vehicle),16,Zipcode,0.1322314049586777,New Vehicle Registrations,All
+2022-04-01,98028,HEV (Hybrid Electric Vehicle),15,Zipcode,0.12396694214876033,New Vehicle Registrations,All
+2022-04-01,98028,ICE (Internal Combustion Engine),89,Zipcode,0.7355371900826446,New Vehicle Registrations,All
+2022-04-01,98028,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.008264462809917356,New Vehicle Registrations,All
+2022-04-01,98029,BEV (Battery Electric Vehicle),39,Zipcode,0.203125,New Vehicle Registrations,All
+2022-04-01,98029,HEV (Hybrid Electric Vehicle),20,Zipcode,0.10416666666666667,New Vehicle Registrations,All
+2022-04-01,98029,ICE (Internal Combustion Engine),132,Zipcode,0.6875,New Vehicle Registrations,All
+2022-04-01,98029,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.005208333333333333,New Vehicle Registrations,All
+2022-04-01,98030,BEV (Battery Electric Vehicle),9,Zipcode,0.055900621118012424,New Vehicle Registrations,All
+2022-04-01,98030,HEV (Hybrid Electric Vehicle),25,Zipcode,0.15527950310559005,New Vehicle Registrations,All
+2022-04-01,98030,ICE (Internal Combustion Engine),127,Zipcode,0.7888198757763976,New Vehicle Registrations,All
+2022-04-01,98031,BEV (Battery Electric Vehicle),16,Zipcode,0.08695652173913043,New Vehicle Registrations,All
+2022-04-01,98031,HEV (Hybrid Electric Vehicle),20,Zipcode,0.10869565217391304,New Vehicle Registrations,All
+2022-04-01,98031,ICE (Internal Combustion Engine),147,Zipcode,0.7989130434782609,New Vehicle Registrations,All
+2022-04-01,98031,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.005434782608695652,New Vehicle Registrations,All
+2022-04-01,98032,BEV (Battery Electric Vehicle),7,Zipcode,0.040229885057471264,New Vehicle Registrations,All
+2022-04-01,98032,HEV (Hybrid Electric Vehicle),16,Zipcode,0.09195402298850575,New Vehicle Registrations,All
+2022-04-01,98032,ICE (Internal Combustion Engine),151,Zipcode,0.867816091954023,New Vehicle Registrations,All
+2022-04-01,98033,BEV (Battery Electric Vehicle),45,Zipcode,0.18442622950819673,New Vehicle Registrations,All
+2022-04-01,98033,HEV (Hybrid Electric Vehicle),16,Zipcode,0.06557377049180328,New Vehicle Registrations,All
+2022-04-01,98033,ICE (Internal Combustion Engine),178,Zipcode,0.7295081967213115,New Vehicle Registrations,All
+2022-04-01,98033,PHEV (Plug-in Hybrid Electric Vehicle),5,Zipcode,0.020491803278688523,New Vehicle Registrations,All
+2022-04-01,98034,BEV (Battery Electric Vehicle),31,Zipcode,0.10130718954248366,New Vehicle Registrations,All
+2022-04-01,98034,HEV (Hybrid Electric Vehicle),37,Zipcode,0.12091503267973856,New Vehicle Registrations,All
+2022-04-01,98034,ICE (Internal Combustion Engine),234,Zipcode,0.7647058823529411,New Vehicle Registrations,All
+2022-04-01,98034,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.013071895424836602,New Vehicle Registrations,All
+2022-04-01,98036,BEV (Battery Electric Vehicle),16,Zipcode,0.08376963350785341,New Vehicle Registrations,All
+2022-04-01,98036,HEV (Hybrid Electric Vehicle),20,Zipcode,0.10471204188481675,New Vehicle Registrations,All
+2022-04-01,98036,ICE (Internal Combustion Engine),152,Zipcode,0.7958115183246073,New Vehicle Registrations,All
+2022-04-01,98036,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.015706806282722512,New Vehicle Registrations,All
+2022-04-01,98037,BEV (Battery Electric Vehicle),14,Zipcode,0.08536585365853659,New Vehicle Registrations,All
+2022-04-01,98037,HEV (Hybrid Electric Vehicle),15,Zipcode,0.09146341463414634,New Vehicle Registrations,All
+2022-04-01,98037,ICE (Internal Combustion Engine),134,Zipcode,0.8170731707317073,New Vehicle Registrations,All
+2022-04-01,98037,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.006097560975609756,New Vehicle Registrations,All
+2022-04-01,98038,BEV (Battery Electric Vehicle),19,Zipcode,0.08962264150943396,New Vehicle Registrations,All
+2022-04-01,98038,HEV (Hybrid Electric Vehicle),19,Zipcode,0.08962264150943396,New Vehicle Registrations,All
+2022-04-01,98038,ICE (Internal Combustion Engine),172,Zipcode,0.8113207547169812,New Vehicle Registrations,All
+2022-04-01,98038,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.009433962264150943,New Vehicle Registrations,All
+2022-04-01,98039,BEV (Battery Electric Vehicle),2,Zipcode,0.13333333333333333,New Vehicle Registrations,All
+2022-04-01,98039,HEV (Hybrid Electric Vehicle),3,Zipcode,0.2,New Vehicle Registrations,All
+2022-04-01,98039,ICE (Internal Combustion Engine),10,Zipcode,0.6666666666666666,New Vehicle Registrations,All
+2022-04-01,98040,BEV (Battery Electric Vehicle),23,Zipcode,0.1503267973856209,New Vehicle Registrations,All
+2022-04-01,98040,HEV (Hybrid Electric Vehicle),12,Zipcode,0.0784313725490196,New Vehicle Registrations,All
+2022-04-01,98040,ICE (Internal Combustion Engine),110,Zipcode,0.7189542483660131,New Vehicle Registrations,All
+2022-04-01,98040,PHEV (Plug-in Hybrid Electric Vehicle),8,Zipcode,0.05228758169934641,New Vehicle Registrations,All
+2022-04-01,98042,BEV (Battery Electric Vehicle),20,Zipcode,0.08196721311475409,New Vehicle Registrations,All
+2022-04-01,98042,HEV (Hybrid Electric Vehicle),24,Zipcode,0.09836065573770492,New Vehicle Registrations,All
+2022-04-01,98042,ICE (Internal Combustion Engine),198,Zipcode,0.8114754098360656,New Vehicle Registrations,All
+2022-04-01,98042,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.00819672131147541,New Vehicle Registrations,All
+2022-04-01,98043,BEV (Battery Electric Vehicle),9,Zipcode,0.10112359550561797,New Vehicle Registrations,All
+2022-04-01,98043,HEV (Hybrid Electric Vehicle),14,Zipcode,0.15730337078651685,New Vehicle Registrations,All
+2022-04-01,98043,ICE (Internal Combustion Engine),66,Zipcode,0.7415730337078652,New Vehicle Registrations,All
+2022-04-01,98045,BEV (Battery Electric Vehicle),7,Zipcode,0.06542056074766354,New Vehicle Registrations,All
+2022-04-01,98045,HEV (Hybrid Electric Vehicle),10,Zipcode,0.09345794392523364,New Vehicle Registrations,All
+2022-04-01,98045,ICE (Internal Combustion Engine),87,Zipcode,0.8130841121495327,New Vehicle Registrations,All
+2022-04-01,98045,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.028037383177570093,New Vehicle Registrations,All
+2022-04-01,98046,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98047,BEV (Battery Electric Vehicle),1,Zipcode,0.045454545454545456,New Vehicle Registrations,All
+2022-04-01,98047,HEV (Hybrid Electric Vehicle),1,Zipcode,0.045454545454545456,New Vehicle Registrations,All
+2022-04-01,98047,ICE (Internal Combustion Engine),20,Zipcode,0.9090909090909091,New Vehicle Registrations,All
+2022-04-01,98051,ICE (Internal Combustion Engine),23,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98052,BEV (Battery Electric Vehicle),55,Zipcode,0.10826771653543307,New Vehicle Registrations,All
+2022-04-01,98052,HEV (Hybrid Electric Vehicle),51,Zipcode,0.10039370078740158,New Vehicle Registrations,All
+2022-04-01,98052,ICE (Internal Combustion Engine),396,Zipcode,0.7795275590551181,New Vehicle Registrations,All
+2022-04-01,98052,PHEV (Plug-in Hybrid Electric Vehicle),6,Zipcode,0.011811023622047244,New Vehicle Registrations,All
+2022-04-01,98053,BEV (Battery Electric Vehicle),24,Zipcode,0.21621621621621623,New Vehicle Registrations,All
+2022-04-01,98053,HEV (Hybrid Electric Vehicle),12,Zipcode,0.10810810810810811,New Vehicle Registrations,All
+2022-04-01,98053,ICE (Internal Combustion Engine),74,Zipcode,0.6666666666666666,New Vehicle Registrations,All
+2022-04-01,98053,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.009009009009009009,New Vehicle Registrations,All
+2022-04-01,98055,BEV (Battery Electric Vehicle),3,Zipcode,0.026785714285714284,New Vehicle Registrations,All
+2022-04-01,98055,HEV (Hybrid Electric Vehicle),17,Zipcode,0.15178571428571427,New Vehicle Registrations,All
+2022-04-01,98055,ICE (Internal Combustion Engine),92,Zipcode,0.8214285714285714,New Vehicle Registrations,All
+2022-04-01,98056,BEV (Battery Electric Vehicle),21,Zipcode,0.12650602409638553,New Vehicle Registrations,All
+2022-04-01,98056,HEV (Hybrid Electric Vehicle),22,Zipcode,0.13253012048192772,New Vehicle Registrations,All
+2022-04-01,98056,ICE (Internal Combustion Engine),120,Zipcode,0.7228915662650602,New Vehicle Registrations,All
+2022-04-01,98056,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.018072289156626505,New Vehicle Registrations,All
+2022-04-01,98057,BEV (Battery Electric Vehicle),4,Zipcode,0.018604651162790697,New Vehicle Registrations,All
+2022-04-01,98057,HEV (Hybrid Electric Vehicle),13,Zipcode,0.06046511627906977,New Vehicle Registrations,All
+2022-04-01,98057,ICE (Internal Combustion Engine),196,Zipcode,0.9116279069767442,New Vehicle Registrations,All
+2022-04-01,98057,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.009302325581395349,New Vehicle Registrations,All
+2022-04-01,98058,BEV (Battery Electric Vehicle),12,Zipcode,0.06666666666666667,New Vehicle Registrations,All
+2022-04-01,98058,HEV (Hybrid Electric Vehicle),17,Zipcode,0.09444444444444444,New Vehicle Registrations,All
+2022-04-01,98058,ICE (Internal Combustion Engine),149,Zipcode,0.8277777777777777,New Vehicle Registrations,All
+2022-04-01,98058,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.011111111111111112,New Vehicle Registrations,All
+2022-04-01,98059,BEV (Battery Electric Vehicle),26,Zipcode,0.16560509554140126,New Vehicle Registrations,All
+2022-04-01,98059,HEV (Hybrid Electric Vehicle),16,Zipcode,0.10191082802547771,New Vehicle Registrations,All
+2022-04-01,98059,ICE (Internal Combustion Engine),113,Zipcode,0.7197452229299363,New Vehicle Registrations,All
+2022-04-01,98059,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.012738853503184714,New Vehicle Registrations,All
+2022-04-01,98065,BEV (Battery Electric Vehicle),15,Zipcode,0.15789473684210525,New Vehicle Registrations,All
+2022-04-01,98065,HEV (Hybrid Electric Vehicle),9,Zipcode,0.09473684210526316,New Vehicle Registrations,All
+2022-04-01,98065,ICE (Internal Combustion Engine),70,Zipcode,0.7368421052631579,New Vehicle Registrations,All
+2022-04-01,98065,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.010526315789473684,New Vehicle Registrations,All
+2022-04-01,98070,BEV (Battery Electric Vehicle),5,Zipcode,0.15625,New Vehicle Registrations,All
+2022-04-01,98070,HEV (Hybrid Electric Vehicle),4,Zipcode,0.125,New Vehicle Registrations,All
+2022-04-01,98070,ICE (Internal Combustion Engine),21,Zipcode,0.65625,New Vehicle Registrations,All
+2022-04-01,98070,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.0625,New Vehicle Registrations,All
+2022-04-01,98072,BEV (Battery Electric Vehicle),23,Zipcode,0.1554054054054054,New Vehicle Registrations,All
+2022-04-01,98072,HEV (Hybrid Electric Vehicle),9,Zipcode,0.060810810810810814,New Vehicle Registrations,All
+2022-04-01,98072,ICE (Internal Combustion Engine),113,Zipcode,0.7635135135135135,New Vehicle Registrations,All
+2022-04-01,98072,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.02027027027027027,New Vehicle Registrations,All
+2022-04-01,98074,BEV (Battery Electric Vehicle),31,Zipcode,0.18787878787878787,New Vehicle Registrations,All
+2022-04-01,98074,HEV (Hybrid Electric Vehicle),21,Zipcode,0.12727272727272726,New Vehicle Registrations,All
+2022-04-01,98074,ICE (Internal Combustion Engine),107,Zipcode,0.6484848484848484,New Vehicle Registrations,All
+2022-04-01,98074,PHEV (Plug-in Hybrid Electric Vehicle),6,Zipcode,0.03636363636363636,New Vehicle Registrations,All
+2022-04-01,98075,BEV (Battery Electric Vehicle),32,Zipcode,0.21768707482993196,New Vehicle Registrations,All
+2022-04-01,98075,HEV (Hybrid Electric Vehicle),13,Zipcode,0.08843537414965986,New Vehicle Registrations,All
+2022-04-01,98075,ICE (Internal Combustion Engine),98,Zipcode,0.6666666666666666,New Vehicle Registrations,All
+2022-04-01,98075,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.027210884353741496,New Vehicle Registrations,All
+2022-04-01,98077,BEV (Battery Electric Vehicle),10,Zipcode,0.136986301369863,New Vehicle Registrations,All
+2022-04-01,98077,HEV (Hybrid Electric Vehicle),6,Zipcode,0.0821917808219178,New Vehicle Registrations,All
+2022-04-01,98077,ICE (Internal Combustion Engine),55,Zipcode,0.7534246575342466,New Vehicle Registrations,All
+2022-04-01,98077,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.0273972602739726,New Vehicle Registrations,All
+2022-04-01,98087,BEV (Battery Electric Vehicle),16,Zipcode,0.08205128205128205,New Vehicle Registrations,All
+2022-04-01,98087,HEV (Hybrid Electric Vehicle),26,Zipcode,0.13333333333333333,New Vehicle Registrations,All
+2022-04-01,98087,ICE (Internal Combustion Engine),151,Zipcode,0.7743589743589744,New Vehicle Registrations,All
+2022-04-01,98087,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.010256410256410256,New Vehicle Registrations,All
+2022-04-01,98092,BEV (Battery Electric Vehicle),15,Zipcode,0.05905511811023622,New Vehicle Registrations,All
+2022-04-01,98092,HEV (Hybrid Electric Vehicle),22,Zipcode,0.08661417322834646,New Vehicle Registrations,All
+2022-04-01,98092,ICE (Internal Combustion Engine),213,Zipcode,0.8385826771653543,New Vehicle Registrations,All
+2022-04-01,98092,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.015748031496062992,New Vehicle Registrations,All
+2022-04-01,98101,BEV (Battery Electric Vehicle),14,Zipcode,0.16279069767441862,New Vehicle Registrations,All
+2022-04-01,98101,HEV (Hybrid Electric Vehicle),5,Zipcode,0.05813953488372093,New Vehicle Registrations,All
+2022-04-01,98101,ICE (Internal Combustion Engine),65,Zipcode,0.7558139534883721,New Vehicle Registrations,All
+2022-04-01,98101,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.023255813953488372,New Vehicle Registrations,All
+2022-04-01,98102,BEV (Battery Electric Vehicle),15,Zipcode,0.08670520231213873,New Vehicle Registrations,All
+2022-04-01,98102,HEV (Hybrid Electric Vehicle),12,Zipcode,0.06936416184971098,New Vehicle Registrations,All
+2022-04-01,98102,ICE (Internal Combustion Engine),142,Zipcode,0.8208092485549133,New Vehicle Registrations,All
+2022-04-01,98102,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.023121387283236993,New Vehicle Registrations,All
+2022-04-01,98103,BEV (Battery Electric Vehicle),24,Zipcode,0.08921933085501858,New Vehicle Registrations,All
+2022-04-01,98103,HEV (Hybrid Electric Vehicle),26,Zipcode,0.09665427509293681,New Vehicle Registrations,All
+2022-04-01,98103,ICE (Internal Combustion Engine),208,Zipcode,0.7732342007434945,New Vehicle Registrations,All
+2022-04-01,98103,PHEV (Plug-in Hybrid Electric Vehicle),11,Zipcode,0.040892193308550186,New Vehicle Registrations,All
+2022-04-01,98104,BEV (Battery Electric Vehicle),4,Zipcode,0.0784313725490196,New Vehicle Registrations,All
+2022-04-01,98104,HEV (Hybrid Electric Vehicle),2,Zipcode,0.0392156862745098,New Vehicle Registrations,All
+2022-04-01,98104,ICE (Internal Combustion Engine),45,Zipcode,0.8823529411764706,New Vehicle Registrations,All
+2022-04-01,98105,BEV (Battery Electric Vehicle),21,Zipcode,0.12962962962962962,New Vehicle Registrations,All
+2022-04-01,98105,HEV (Hybrid Electric Vehicle),17,Zipcode,0.10493827160493827,New Vehicle Registrations,All
+2022-04-01,98105,ICE (Internal Combustion Engine),118,Zipcode,0.7283950617283951,New Vehicle Registrations,All
+2022-04-01,98105,PHEV (Plug-in Hybrid Electric Vehicle),6,Zipcode,0.037037037037037035,New Vehicle Registrations,All
+2022-04-01,98106,BEV (Battery Electric Vehicle),13,Zipcode,0.10483870967741936,New Vehicle Registrations,All
+2022-04-01,98106,HEV (Hybrid Electric Vehicle),18,Zipcode,0.14516129032258066,New Vehicle Registrations,All
+2022-04-01,98106,ICE (Internal Combustion Engine),91,Zipcode,0.7338709677419355,New Vehicle Registrations,All
+2022-04-01,98106,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.016129032258064516,New Vehicle Registrations,All
+2022-04-01,98107,BEV (Battery Electric Vehicle),21,Zipcode,0.13125,New Vehicle Registrations,All
+2022-04-01,98107,HEV (Hybrid Electric Vehicle),21,Zipcode,0.13125,New Vehicle Registrations,All
+2022-04-01,98107,ICE (Internal Combustion Engine),116,Zipcode,0.725,New Vehicle Registrations,All
+2022-04-01,98107,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.0125,New Vehicle Registrations,All
+2022-04-01,98108,BEV (Battery Electric Vehicle),10,Zipcode,0.1111111111111111,New Vehicle Registrations,All
+2022-04-01,98108,HEV (Hybrid Electric Vehicle),10,Zipcode,0.1111111111111111,New Vehicle Registrations,All
+2022-04-01,98108,ICE (Internal Combustion Engine),70,Zipcode,0.7777777777777778,New Vehicle Registrations,All
+2022-04-01,98109,BEV (Battery Electric Vehicle),29,Zipcode,0.10583941605839416,New Vehicle Registrations,All
+2022-04-01,98109,HEV (Hybrid Electric Vehicle),30,Zipcode,0.10948905109489052,New Vehicle Registrations,All
+2022-04-01,98109,ICE (Internal Combustion Engine),209,Zipcode,0.7627737226277372,New Vehicle Registrations,All
+2022-04-01,98109,PHEV (Plug-in Hybrid Electric Vehicle),6,Zipcode,0.021897810218978103,New Vehicle Registrations,All
+2022-04-01,98110,BEV (Battery Electric Vehicle),20,Zipcode,0.14184397163120568,New Vehicle Registrations,All
+2022-04-01,98110,HEV (Hybrid Electric Vehicle),13,Zipcode,0.09219858156028368,New Vehicle Registrations,All
+2022-04-01,98110,ICE (Internal Combustion Engine),103,Zipcode,0.7304964539007093,New Vehicle Registrations,All
+2022-04-01,98110,PHEV (Plug-in Hybrid Electric Vehicle),5,Zipcode,0.03546099290780142,New Vehicle Registrations,All
+2022-04-01,98112,BEV (Battery Electric Vehicle),18,Zipcode,0.16363636363636364,New Vehicle Registrations,All
+2022-04-01,98112,HEV (Hybrid Electric Vehicle),12,Zipcode,0.10909090909090909,New Vehicle Registrations,All
+2022-04-01,98112,ICE (Internal Combustion Engine),74,Zipcode,0.6727272727272727,New Vehicle Registrations,All
+2022-04-01,98112,PHEV (Plug-in Hybrid Electric Vehicle),6,Zipcode,0.05454545454545454,New Vehicle Registrations,All
+2022-04-01,98115,BEV (Battery Electric Vehicle),33,Zipcode,0.1274131274131274,New Vehicle Registrations,All
+2022-04-01,98115,HEV (Hybrid Electric Vehicle),38,Zipcode,0.14671814671814673,New Vehicle Registrations,All
+2022-04-01,98115,ICE (Internal Combustion Engine),181,Zipcode,0.6988416988416989,New Vehicle Registrations,All
+2022-04-01,98115,PHEV (Plug-in Hybrid Electric Vehicle),7,Zipcode,0.02702702702702703,New Vehicle Registrations,All
+2022-04-01,98116,BEV (Battery Electric Vehicle),22,Zipcode,0.14193548387096774,New Vehicle Registrations,All
+2022-04-01,98116,HEV (Hybrid Electric Vehicle),14,Zipcode,0.09032258064516129,New Vehicle Registrations,All
+2022-04-01,98116,ICE (Internal Combustion Engine),115,Zipcode,0.7419354838709677,New Vehicle Registrations,All
+2022-04-01,98116,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.025806451612903226,New Vehicle Registrations,All
+2022-04-01,98117,BEV (Battery Electric Vehicle),22,Zipcode,0.14666666666666667,New Vehicle Registrations,All
+2022-04-01,98117,HEV (Hybrid Electric Vehicle),19,Zipcode,0.12666666666666668,New Vehicle Registrations,All
+2022-04-01,98117,ICE (Internal Combustion Engine),106,Zipcode,0.7066666666666667,New Vehicle Registrations,All
+2022-04-01,98117,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.02,New Vehicle Registrations,All
+2022-04-01,98118,BEV (Battery Electric Vehicle),20,Zipcode,0.09900990099009901,New Vehicle Registrations,All
+2022-04-01,98118,HEV (Hybrid Electric Vehicle),38,Zipcode,0.18811881188118812,New Vehicle Registrations,All
+2022-04-01,98118,ICE (Internal Combustion Engine),140,Zipcode,0.693069306930693,New Vehicle Registrations,All
+2022-04-01,98118,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.019801980198019802,New Vehicle Registrations,All
+2022-04-01,98119,BEV (Battery Electric Vehicle),14,Zipcode,0.10294117647058823,New Vehicle Registrations,All
+2022-04-01,98119,HEV (Hybrid Electric Vehicle),9,Zipcode,0.0661764705882353,New Vehicle Registrations,All
+2022-04-01,98119,ICE (Internal Combustion Engine),109,Zipcode,0.8014705882352942,New Vehicle Registrations,All
+2022-04-01,98119,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.029411764705882353,New Vehicle Registrations,All
+2022-04-01,98121,BEV (Battery Electric Vehicle),20,Zipcode,0.11560693641618497,New Vehicle Registrations,All
+2022-04-01,98121,HEV (Hybrid Electric Vehicle),15,Zipcode,0.08670520231213873,New Vehicle Registrations,All
+2022-04-01,98121,ICE (Internal Combustion Engine),136,Zipcode,0.7861271676300579,New Vehicle Registrations,All
+2022-04-01,98121,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.011560693641618497,New Vehicle Registrations,All
+2022-04-01,98122,BEV (Battery Electric Vehicle),16,Zipcode,0.0851063829787234,New Vehicle Registrations,All
+2022-04-01,98122,HEV (Hybrid Electric Vehicle),19,Zipcode,0.10106382978723404,New Vehicle Registrations,All
+2022-04-01,98122,ICE (Internal Combustion Engine),149,Zipcode,0.7925531914893617,New Vehicle Registrations,All
+2022-04-01,98122,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.02127659574468085,New Vehicle Registrations,All
+2022-04-01,98125,BEV (Battery Electric Vehicle),14,Zipcode,0.07734806629834254,New Vehicle Registrations,All
+2022-04-01,98125,HEV (Hybrid Electric Vehicle),30,Zipcode,0.16574585635359115,New Vehicle Registrations,All
+2022-04-01,98125,ICE (Internal Combustion Engine),133,Zipcode,0.7348066298342542,New Vehicle Registrations,All
+2022-04-01,98125,PHEV (Plug-in Hybrid Electric Vehicle),4,Zipcode,0.022099447513812154,New Vehicle Registrations,All
+2022-04-01,98126,BEV (Battery Electric Vehicle),10,Zipcode,0.10989010989010989,New Vehicle Registrations,All
+2022-04-01,98126,HEV (Hybrid Electric Vehicle),10,Zipcode,0.10989010989010989,New Vehicle Registrations,All
+2022-04-01,98126,ICE (Internal Combustion Engine),68,Zipcode,0.7472527472527473,New Vehicle Registrations,All
+2022-04-01,98126,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.03296703296703297,New Vehicle Registrations,All
+2022-04-01,98133,BEV (Battery Electric Vehicle),12,Zipcode,0.06315789473684211,New Vehicle Registrations,All
+2022-04-01,98133,HEV (Hybrid Electric Vehicle),28,Zipcode,0.14736842105263157,New Vehicle Registrations,All
+2022-04-01,98133,ICE (Internal Combustion Engine),149,Zipcode,0.7842105263157895,New Vehicle Registrations,All
+2022-04-01,98133,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.005263157894736842,New Vehicle Registrations,All
+2022-04-01,98134,BEV (Battery Electric Vehicle),1,Zipcode,0.037037037037037035,New Vehicle Registrations,All
+2022-04-01,98134,HEV (Hybrid Electric Vehicle),1,Zipcode,0.037037037037037035,New Vehicle Registrations,All
+2022-04-01,98134,ICE (Internal Combustion Engine),25,Zipcode,0.9259259259259259,New Vehicle Registrations,All
+2022-04-01,98136,BEV (Battery Electric Vehicle),15,Zipcode,0.20270270270270271,New Vehicle Registrations,All
+2022-04-01,98136,HEV (Hybrid Electric Vehicle),11,Zipcode,0.14864864864864866,New Vehicle Registrations,All
+2022-04-01,98136,ICE (Internal Combustion Engine),47,Zipcode,0.6351351351351351,New Vehicle Registrations,All
+2022-04-01,98136,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.013513513513513514,New Vehicle Registrations,All
+2022-04-01,98144,BEV (Battery Electric Vehicle),15,Zipcode,0.10067114093959731,New Vehicle Registrations,All
+2022-04-01,98144,HEV (Hybrid Electric Vehicle),23,Zipcode,0.15436241610738255,New Vehicle Registrations,All
+2022-04-01,98144,ICE (Internal Combustion Engine),110,Zipcode,0.738255033557047,New Vehicle Registrations,All
+2022-04-01,98144,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.006711409395973154,New Vehicle Registrations,All
+2022-04-01,98146,BEV (Battery Electric Vehicle),5,Zipcode,0.05102040816326531,New Vehicle Registrations,All
+2022-04-01,98146,HEV (Hybrid Electric Vehicle),14,Zipcode,0.14285714285714285,New Vehicle Registrations,All
+2022-04-01,98146,ICE (Internal Combustion Engine),79,Zipcode,0.8061224489795918,New Vehicle Registrations,All
+2022-04-01,98148,BEV (Battery Electric Vehicle),7,Zipcode,0.1111111111111111,New Vehicle Registrations,All
+2022-04-01,98148,HEV (Hybrid Electric Vehicle),7,Zipcode,0.1111111111111111,New Vehicle Registrations,All
+2022-04-01,98148,ICE (Internal Combustion Engine),49,Zipcode,0.7777777777777778,New Vehicle Registrations,All
+2022-04-01,98155,BEV (Battery Electric Vehicle),25,Zipcode,0.16556291390728478,New Vehicle Registrations,All
+2022-04-01,98155,HEV (Hybrid Electric Vehicle),26,Zipcode,0.17218543046357615,New Vehicle Registrations,All
+2022-04-01,98155,ICE (Internal Combustion Engine),99,Zipcode,0.6556291390728477,New Vehicle Registrations,All
+2022-04-01,98155,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.006622516556291391,New Vehicle Registrations,All
+2022-04-01,98158,ICE (Internal Combustion Engine),3,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98166,BEV (Battery Electric Vehicle),6,Zipcode,0.06382978723404255,New Vehicle Registrations,All
+2022-04-01,98166,HEV (Hybrid Electric Vehicle),12,Zipcode,0.1276595744680851,New Vehicle Registrations,All
+2022-04-01,98166,ICE (Internal Combustion Engine),75,Zipcode,0.7978723404255319,New Vehicle Registrations,All
+2022-04-01,98166,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.010638297872340425,New Vehicle Registrations,All
+2022-04-01,98168,BEV (Battery Electric Vehicle),11,Zipcode,0.07236842105263158,New Vehicle Registrations,All
+2022-04-01,98168,HEV (Hybrid Electric Vehicle),17,Zipcode,0.1118421052631579,New Vehicle Registrations,All
+2022-04-01,98168,ICE (Internal Combustion Engine),123,Zipcode,0.8092105263157895,New Vehicle Registrations,All
+2022-04-01,98168,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.006578947368421052,New Vehicle Registrations,All
+2022-04-01,98177,BEV (Battery Electric Vehicle),13,Zipcode,0.17333333333333334,New Vehicle Registrations,All
+2022-04-01,98177,HEV (Hybrid Electric Vehicle),16,Zipcode,0.21333333333333335,New Vehicle Registrations,All
+2022-04-01,98177,ICE (Internal Combustion Engine),45,Zipcode,0.6,New Vehicle Registrations,All
+2022-04-01,98177,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.013333333333333334,New Vehicle Registrations,All
+2022-04-01,98178,BEV (Battery Electric Vehicle),6,Zipcode,0.06666666666666667,New Vehicle Registrations,All
+2022-04-01,98178,HEV (Hybrid Electric Vehicle),11,Zipcode,0.12222222222222222,New Vehicle Registrations,All
+2022-04-01,98178,ICE (Internal Combustion Engine),73,Zipcode,0.8111111111111111,New Vehicle Registrations,All
+2022-04-01,98188,BEV (Battery Electric Vehicle),6,Zipcode,0.031413612565445025,New Vehicle Registrations,All
+2022-04-01,98188,HEV (Hybrid Electric Vehicle),19,Zipcode,0.09947643979057591,New Vehicle Registrations,All
+2022-04-01,98188,ICE (Internal Combustion Engine),164,Zipcode,0.8586387434554974,New Vehicle Registrations,All
+2022-04-01,98188,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.010471204188481676,New Vehicle Registrations,All
+2022-04-01,98195,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98198,BEV (Battery Electric Vehicle),8,Zipcode,0.05333333333333334,New Vehicle Registrations,All
+2022-04-01,98198,HEV (Hybrid Electric Vehicle),14,Zipcode,0.09333333333333334,New Vehicle Registrations,All
+2022-04-01,98198,ICE (Internal Combustion Engine),125,Zipcode,0.8333333333333334,New Vehicle Registrations,All
+2022-04-01,98198,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.02,New Vehicle Registrations,All
+2022-04-01,98199,BEV (Battery Electric Vehicle),24,Zipcode,0.20869565217391303,New Vehicle Registrations,All
+2022-04-01,98199,HEV (Hybrid Electric Vehicle),12,Zipcode,0.10434782608695652,New Vehicle Registrations,All
+2022-04-01,98199,ICE (Internal Combustion Engine),78,Zipcode,0.6782608695652174,New Vehicle Registrations,All
+2022-04-01,98199,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.008695652173913044,New Vehicle Registrations,All
+2022-04-01,98201,BEV (Battery Electric Vehicle),2,Zipcode,0.022727272727272728,New Vehicle Registrations,All
+2022-04-01,98201,HEV (Hybrid Electric Vehicle),6,Zipcode,0.06818181818181818,New Vehicle Registrations,All
+2022-04-01,98201,ICE (Internal Combustion Engine),79,Zipcode,0.8977272727272727,New Vehicle Registrations,All
+2022-04-01,98201,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.011363636363636364,New Vehicle Registrations,All
+2022-04-01,98203,BEV (Battery Electric Vehicle),8,Zipcode,0.053691275167785234,New Vehicle Registrations,All
+2022-04-01,98203,HEV (Hybrid Electric Vehicle),12,Zipcode,0.08053691275167785,New Vehicle Registrations,All
+2022-04-01,98203,ICE (Internal Combustion Engine),127,Zipcode,0.8523489932885906,New Vehicle Registrations,All
+2022-04-01,98203,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.013422818791946308,New Vehicle Registrations,All
+2022-04-01,98204,BEV (Battery Electric Vehicle),10,Zipcode,0.05917159763313609,New Vehicle Registrations,All
+2022-04-01,98204,HEV (Hybrid Electric Vehicle),10,Zipcode,0.05917159763313609,New Vehicle Registrations,All
+2022-04-01,98204,ICE (Internal Combustion Engine),149,Zipcode,0.8816568047337278,New Vehicle Registrations,All
+2022-04-01,98206,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98207,ICE (Internal Combustion Engine),6,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98208,BEV (Battery Electric Vehicle),22,Zipcode,0.09205020920502092,New Vehicle Registrations,All
+2022-04-01,98208,HEV (Hybrid Electric Vehicle),31,Zipcode,0.1297071129707113,New Vehicle Registrations,All
+2022-04-01,98208,ICE (Internal Combustion Engine),183,Zipcode,0.7656903765690377,New Vehicle Registrations,All
+2022-04-01,98208,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.012552301255230125,New Vehicle Registrations,All
+2022-04-01,98223,BEV (Battery Electric Vehicle),9,Zipcode,0.045,New Vehicle Registrations,All
+2022-04-01,98223,HEV (Hybrid Electric Vehicle),14,Zipcode,0.07,New Vehicle Registrations,All
+2022-04-01,98223,ICE (Internal Combustion Engine),175,Zipcode,0.875,New Vehicle Registrations,All
+2022-04-01,98223,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.01,New Vehicle Registrations,All
+2022-04-01,98241,HEV (Hybrid Electric Vehicle),1,Zipcode,0.125,New Vehicle Registrations,All
+2022-04-01,98241,ICE (Internal Combustion Engine),7,Zipcode,0.875,New Vehicle Registrations,All
+2022-04-01,98251,HEV (Hybrid Electric Vehicle),1,Zipcode,0.05,New Vehicle Registrations,All
+2022-04-01,98251,ICE (Internal Combustion Engine),19,Zipcode,0.95,New Vehicle Registrations,All
+2022-04-01,98252,BEV (Battery Electric Vehicle),3,Zipcode,0.046153846153846156,New Vehicle Registrations,All
+2022-04-01,98252,HEV (Hybrid Electric Vehicle),6,Zipcode,0.09230769230769231,New Vehicle Registrations,All
+2022-04-01,98252,ICE (Internal Combustion Engine),56,Zipcode,0.8615384615384616,New Vehicle Registrations,All
+2022-04-01,98256,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98258,BEV (Battery Electric Vehicle),22,Zipcode,0.07432432432432433,New Vehicle Registrations,All
+2022-04-01,98258,HEV (Hybrid Electric Vehicle),25,Zipcode,0.08445945945945946,New Vehicle Registrations,All
+2022-04-01,98258,ICE (Internal Combustion Engine),244,Zipcode,0.8243243243243243,New Vehicle Registrations,All
+2022-04-01,98258,PHEV (Plug-in Hybrid Electric Vehicle),5,Zipcode,0.016891891891891893,New Vehicle Registrations,All
+2022-04-01,98270,BEV (Battery Electric Vehicle),10,Zipcode,0.04291845493562232,New Vehicle Registrations,All
+2022-04-01,98270,HEV (Hybrid Electric Vehicle),15,Zipcode,0.06437768240343347,New Vehicle Registrations,All
+2022-04-01,98270,ICE (Internal Combustion Engine),205,Zipcode,0.8798283261802575,New Vehicle Registrations,All
+2022-04-01,98270,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.012875536480686695,New Vehicle Registrations,All
+2022-04-01,98271,BEV (Battery Electric Vehicle),3,Zipcode,0.021897810218978103,New Vehicle Registrations,All
+2022-04-01,98271,HEV (Hybrid Electric Vehicle),12,Zipcode,0.08759124087591241,New Vehicle Registrations,All
+2022-04-01,98271,ICE (Internal Combustion Engine),121,Zipcode,0.8832116788321168,New Vehicle Registrations,All
+2022-04-01,98271,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.0072992700729927005,New Vehicle Registrations,All
+2022-04-01,98272,BEV (Battery Electric Vehicle),8,Zipcode,0.0625,New Vehicle Registrations,All
+2022-04-01,98272,HEV (Hybrid Electric Vehicle),8,Zipcode,0.0625,New Vehicle Registrations,All
+2022-04-01,98272,ICE (Internal Combustion Engine),109,Zipcode,0.8515625,New Vehicle Registrations,All
+2022-04-01,98272,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.0234375,New Vehicle Registrations,All
+2022-04-01,98275,BEV (Battery Electric Vehicle),6,Zipcode,0.05,New Vehicle Registrations,All
+2022-04-01,98275,HEV (Hybrid Electric Vehicle),14,Zipcode,0.11666666666666667,New Vehicle Registrations,All
+2022-04-01,98275,ICE (Internal Combustion Engine),97,Zipcode,0.8083333333333333,New Vehicle Registrations,All
+2022-04-01,98275,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.025,New Vehicle Registrations,All
+2022-04-01,98290,BEV (Battery Electric Vehicle),8,Zipcode,0.0449438202247191,New Vehicle Registrations,All
+2022-04-01,98290,HEV (Hybrid Electric Vehicle),8,Zipcode,0.0449438202247191,New Vehicle Registrations,All
+2022-04-01,98290,ICE (Internal Combustion Engine),157,Zipcode,0.8820224719101124,New Vehicle Registrations,All
+2022-04-01,98290,PHEV (Plug-in Hybrid Electric Vehicle),5,Zipcode,0.028089887640449437,New Vehicle Registrations,All
+2022-04-01,98292,BEV (Battery Electric Vehicle),8,Zipcode,0.06896551724137931,New Vehicle Registrations,All
+2022-04-01,98292,HEV (Hybrid Electric Vehicle),10,Zipcode,0.08620689655172414,New Vehicle Registrations,All
+2022-04-01,98292,ICE (Internal Combustion Engine),97,Zipcode,0.8362068965517241,New Vehicle Registrations,All
+2022-04-01,98292,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.008620689655172414,New Vehicle Registrations,All
+2022-04-01,98294,BEV (Battery Electric Vehicle),2,Zipcode,0.047619047619047616,New Vehicle Registrations,All
+2022-04-01,98294,HEV (Hybrid Electric Vehicle),6,Zipcode,0.14285714285714285,New Vehicle Registrations,All
+2022-04-01,98294,ICE (Internal Combustion Engine),33,Zipcode,0.7857142857142857,New Vehicle Registrations,All
+2022-04-01,98294,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.023809523809523808,New Vehicle Registrations,All
+2022-04-01,98296,BEV (Battery Electric Vehicle),16,Zipcode,0.09467455621301775,New Vehicle Registrations,All
+2022-04-01,98296,HEV (Hybrid Electric Vehicle),20,Zipcode,0.11834319526627218,New Vehicle Registrations,All
+2022-04-01,98296,ICE (Internal Combustion Engine),131,Zipcode,0.7751479289940828,New Vehicle Registrations,All
+2022-04-01,98296,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.011834319526627219,New Vehicle Registrations,All
+2022-04-01,98303,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98304,ICE (Internal Combustion Engine),2,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98310,BEV (Battery Electric Vehicle),1,Zipcode,0.010526315789473684,New Vehicle Registrations,All
+2022-04-01,98310,HEV (Hybrid Electric Vehicle),4,Zipcode,0.042105263157894736,New Vehicle Registrations,All
+2022-04-01,98310,ICE (Internal Combustion Engine),89,Zipcode,0.9368421052631579,New Vehicle Registrations,All
+2022-04-01,98310,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.010526315789473684,New Vehicle Registrations,All
+2022-04-01,98311,BEV (Battery Electric Vehicle),4,Zipcode,0.032520325203252036,New Vehicle Registrations,All
+2022-04-01,98311,HEV (Hybrid Electric Vehicle),10,Zipcode,0.08130081300813008,New Vehicle Registrations,All
+2022-04-01,98311,ICE (Internal Combustion Engine),107,Zipcode,0.8699186991869918,New Vehicle Registrations,All
+2022-04-01,98311,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.016260162601626018,New Vehicle Registrations,All
+2022-04-01,98312,BEV (Battery Electric Vehicle),8,Zipcode,0.042328042328042326,New Vehicle Registrations,All
+2022-04-01,98312,HEV (Hybrid Electric Vehicle),15,Zipcode,0.07936507936507936,New Vehicle Registrations,All
+2022-04-01,98312,ICE (Internal Combustion Engine),164,Zipcode,0.8677248677248677,New Vehicle Registrations,All
+2022-04-01,98312,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.010582010582010581,New Vehicle Registrations,All
+2022-04-01,98314,HEV (Hybrid Electric Vehicle),1,Zipcode,0.2,New Vehicle Registrations,All
+2022-04-01,98314,ICE (Internal Combustion Engine),4,Zipcode,0.8,New Vehicle Registrations,All
+2022-04-01,98315,HEV (Hybrid Electric Vehicle),1,Zipcode,0.02702702702702703,New Vehicle Registrations,All
+2022-04-01,98315,ICE (Internal Combustion Engine),36,Zipcode,0.972972972972973,New Vehicle Registrations,All
+2022-04-01,98321,BEV (Battery Electric Vehicle),5,Zipcode,0.05319148936170213,New Vehicle Registrations,All
+2022-04-01,98321,HEV (Hybrid Electric Vehicle),5,Zipcode,0.05319148936170213,New Vehicle Registrations,All
+2022-04-01,98321,ICE (Internal Combustion Engine),84,Zipcode,0.8936170212765957,New Vehicle Registrations,All
+2022-04-01,98323,HEV (Hybrid Electric Vehicle),1,Zipcode,0.2,New Vehicle Registrations,All
+2022-04-01,98323,ICE (Internal Combustion Engine),4,Zipcode,0.8,New Vehicle Registrations,All
+2022-04-01,98327,BEV (Battery Electric Vehicle),3,Zipcode,0.03225806451612903,New Vehicle Registrations,All
+2022-04-01,98327,HEV (Hybrid Electric Vehicle),8,Zipcode,0.08602150537634409,New Vehicle Registrations,All
+2022-04-01,98327,ICE (Internal Combustion Engine),82,Zipcode,0.8817204301075269,New Vehicle Registrations,All
+2022-04-01,98328,HEV (Hybrid Electric Vehicle),1,Zipcode,0.021739130434782608,New Vehicle Registrations,All
+2022-04-01,98328,ICE (Internal Combustion Engine),45,Zipcode,0.9782608695652174,New Vehicle Registrations,All
+2022-04-01,98329,BEV (Battery Electric Vehicle),3,Zipcode,0.0625,New Vehicle Registrations,All
+2022-04-01,98329,HEV (Hybrid Electric Vehicle),3,Zipcode,0.0625,New Vehicle Registrations,All
+2022-04-01,98329,ICE (Internal Combustion Engine),40,Zipcode,0.8333333333333334,New Vehicle Registrations,All
+2022-04-01,98329,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.041666666666666664,New Vehicle Registrations,All
+2022-04-01,98332,BEV (Battery Electric Vehicle),10,Zipcode,0.0847457627118644,New Vehicle Registrations,All
+2022-04-01,98332,HEV (Hybrid Electric Vehicle),6,Zipcode,0.05084745762711865,New Vehicle Registrations,All
+2022-04-01,98332,ICE (Internal Combustion Engine),100,Zipcode,0.847457627118644,New Vehicle Registrations,All
+2022-04-01,98332,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.01694915254237288,New Vehicle Registrations,All
+2022-04-01,98333,BEV (Battery Electric Vehicle),3,Zipcode,0.15789473684210525,New Vehicle Registrations,All
+2022-04-01,98333,HEV (Hybrid Electric Vehicle),3,Zipcode,0.15789473684210525,New Vehicle Registrations,All
+2022-04-01,98333,ICE (Internal Combustion Engine),13,Zipcode,0.6842105263157895,New Vehicle Registrations,All
+2022-04-01,98335,BEV (Battery Electric Vehicle),17,Zipcode,0.09714285714285714,New Vehicle Registrations,All
+2022-04-01,98335,HEV (Hybrid Electric Vehicle),17,Zipcode,0.09714285714285714,New Vehicle Registrations,All
+2022-04-01,98335,ICE (Internal Combustion Engine),140,Zipcode,0.8,New Vehicle Registrations,All
+2022-04-01,98335,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.005714285714285714,New Vehicle Registrations,All
+2022-04-01,98337,HEV (Hybrid Electric Vehicle),2,Zipcode,0.07407407407407407,New Vehicle Registrations,All
+2022-04-01,98337,ICE (Internal Combustion Engine),25,Zipcode,0.9259259259259259,New Vehicle Registrations,All
+2022-04-01,98338,BEV (Battery Electric Vehicle),5,Zipcode,0.034722222222222224,New Vehicle Registrations,All
+2022-04-01,98338,HEV (Hybrid Electric Vehicle),10,Zipcode,0.06944444444444445,New Vehicle Registrations,All
+2022-04-01,98338,ICE (Internal Combustion Engine),128,Zipcode,0.8888888888888888,New Vehicle Registrations,All
+2022-04-01,98338,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.006944444444444444,New Vehicle Registrations,All
+2022-04-01,98340,BEV (Battery Electric Vehicle),2,Zipcode,0.15384615384615385,New Vehicle Registrations,All
+2022-04-01,98340,ICE (Internal Combustion Engine),11,Zipcode,0.8461538461538461,New Vehicle Registrations,All
+2022-04-01,98342,ICE (Internal Combustion Engine),2,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98346,BEV (Battery Electric Vehicle),4,Zipcode,0.09523809523809523,New Vehicle Registrations,All
+2022-04-01,98346,HEV (Hybrid Electric Vehicle),4,Zipcode,0.09523809523809523,New Vehicle Registrations,All
+2022-04-01,98346,ICE (Internal Combustion Engine),33,Zipcode,0.7857142857142857,New Vehicle Registrations,All
+2022-04-01,98346,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.023809523809523808,New Vehicle Registrations,All
+2022-04-01,98349,BEV (Battery Electric Vehicle),1,Zipcode,0.03125,New Vehicle Registrations,All
+2022-04-01,98349,HEV (Hybrid Electric Vehicle),1,Zipcode,0.03125,New Vehicle Registrations,All
+2022-04-01,98349,ICE (Internal Combustion Engine),30,Zipcode,0.9375,New Vehicle Registrations,All
+2022-04-01,98351,HEV (Hybrid Electric Vehicle),1,Zipcode,0.2,New Vehicle Registrations,All
+2022-04-01,98351,ICE (Internal Combustion Engine),4,Zipcode,0.8,New Vehicle Registrations,All
+2022-04-01,98354,BEV (Battery Electric Vehicle),1,Zipcode,0.03333333333333333,New Vehicle Registrations,All
+2022-04-01,98354,HEV (Hybrid Electric Vehicle),1,Zipcode,0.03333333333333333,New Vehicle Registrations,All
+2022-04-01,98354,ICE (Internal Combustion Engine),28,Zipcode,0.9333333333333333,New Vehicle Registrations,All
+2022-04-01,98359,BEV (Battery Electric Vehicle),3,Zipcode,0.1111111111111111,New Vehicle Registrations,All
+2022-04-01,98359,HEV (Hybrid Electric Vehicle),1,Zipcode,0.037037037037037035,New Vehicle Registrations,All
+2022-04-01,98359,ICE (Internal Combustion Engine),23,Zipcode,0.8518518518518519,New Vehicle Registrations,All
+2022-04-01,98360,BEV (Battery Electric Vehicle),2,Zipcode,0.025974025974025976,New Vehicle Registrations,All
+2022-04-01,98360,HEV (Hybrid Electric Vehicle),8,Zipcode,0.1038961038961039,New Vehicle Registrations,All
+2022-04-01,98360,ICE (Internal Combustion Engine),67,Zipcode,0.8701298701298701,New Vehicle Registrations,All
+2022-04-01,98366,BEV (Battery Electric Vehicle),7,Zipcode,0.040697674418604654,New Vehicle Registrations,All
+2022-04-01,98366,HEV (Hybrid Electric Vehicle),12,Zipcode,0.06976744186046512,New Vehicle Registrations,All
+2022-04-01,98366,ICE (Internal Combustion Engine),152,Zipcode,0.8837209302325582,New Vehicle Registrations,All
+2022-04-01,98366,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.005813953488372093,New Vehicle Registrations,All
+2022-04-01,98367,BEV (Battery Electric Vehicle),7,Zipcode,0.03763440860215054,New Vehicle Registrations,All
+2022-04-01,98367,HEV (Hybrid Electric Vehicle),11,Zipcode,0.05913978494623656,New Vehicle Registrations,All
+2022-04-01,98367,ICE (Internal Combustion Engine),166,Zipcode,0.8924731182795699,New Vehicle Registrations,All
+2022-04-01,98367,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.010752688172043012,New Vehicle Registrations,All
+2022-04-01,98370,BEV (Battery Electric Vehicle),7,Zipcode,0.043209876543209874,New Vehicle Registrations,All
+2022-04-01,98370,HEV (Hybrid Electric Vehicle),14,Zipcode,0.08641975308641975,New Vehicle Registrations,All
+2022-04-01,98370,ICE (Internal Combustion Engine),139,Zipcode,0.8580246913580247,New Vehicle Registrations,All
+2022-04-01,98370,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.012345679012345678,New Vehicle Registrations,All
+2022-04-01,98371,BEV (Battery Electric Vehicle),7,Zipcode,0.050724637681159424,New Vehicle Registrations,All
+2022-04-01,98371,HEV (Hybrid Electric Vehicle),14,Zipcode,0.10144927536231885,New Vehicle Registrations,All
+2022-04-01,98371,ICE (Internal Combustion Engine),117,Zipcode,0.8478260869565217,New Vehicle Registrations,All
+2022-04-01,98372,BEV (Battery Electric Vehicle),2,Zipcode,0.014925373134328358,New Vehicle Registrations,All
+2022-04-01,98372,HEV (Hybrid Electric Vehicle),15,Zipcode,0.11194029850746269,New Vehicle Registrations,All
+2022-04-01,98372,ICE (Internal Combustion Engine),116,Zipcode,0.8656716417910447,New Vehicle Registrations,All
+2022-04-01,98372,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.007462686567164179,New Vehicle Registrations,All
+2022-04-01,98373,BEV (Battery Electric Vehicle),2,Zipcode,0.015625,New Vehicle Registrations,All
+2022-04-01,98373,HEV (Hybrid Electric Vehicle),12,Zipcode,0.09375,New Vehicle Registrations,All
+2022-04-01,98373,ICE (Internal Combustion Engine),113,Zipcode,0.8828125,New Vehicle Registrations,All
+2022-04-01,98373,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.0078125,New Vehicle Registrations,All
+2022-04-01,98374,BEV (Battery Electric Vehicle),6,Zipcode,0.025210084033613446,New Vehicle Registrations,All
+2022-04-01,98374,HEV (Hybrid Electric Vehicle),17,Zipcode,0.07142857142857142,New Vehicle Registrations,All
+2022-04-01,98374,ICE (Internal Combustion Engine),215,Zipcode,0.9033613445378151,New Vehicle Registrations,All
+2022-04-01,98375,BEV (Battery Electric Vehicle),7,Zipcode,0.04430379746835443,New Vehicle Registrations,All
+2022-04-01,98375,HEV (Hybrid Electric Vehicle),15,Zipcode,0.0949367088607595,New Vehicle Registrations,All
+2022-04-01,98375,ICE (Internal Combustion Engine),136,Zipcode,0.8607594936708861,New Vehicle Registrations,All
+2022-04-01,98380,HEV (Hybrid Electric Vehicle),2,Zipcode,0.10526315789473684,New Vehicle Registrations,All
+2022-04-01,98380,ICE (Internal Combustion Engine),17,Zipcode,0.8947368421052632,New Vehicle Registrations,All
+2022-04-01,98383,BEV (Battery Electric Vehicle),1,Zipcode,0.0072992700729927005,New Vehicle Registrations,All
+2022-04-01,98383,HEV (Hybrid Electric Vehicle),11,Zipcode,0.08029197080291971,New Vehicle Registrations,All
+2022-04-01,98383,ICE (Internal Combustion Engine),124,Zipcode,0.9051094890510949,New Vehicle Registrations,All
+2022-04-01,98383,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.0072992700729927005,New Vehicle Registrations,All
+2022-04-01,98385,ICE (Internal Combustion Engine),3,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98387,BEV (Battery Electric Vehicle),8,Zipcode,0.03065134099616858,New Vehicle Registrations,All
+2022-04-01,98387,HEV (Hybrid Electric Vehicle),15,Zipcode,0.05747126436781609,New Vehicle Registrations,All
+2022-04-01,98387,ICE (Internal Combustion Engine),236,Zipcode,0.9042145593869731,New Vehicle Registrations,All
+2022-04-01,98387,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.007662835249042145,New Vehicle Registrations,All
+2022-04-01,98388,BEV (Battery Electric Vehicle),2,Zipcode,0.05263157894736842,New Vehicle Registrations,All
+2022-04-01,98388,HEV (Hybrid Electric Vehicle),3,Zipcode,0.07894736842105263,New Vehicle Registrations,All
+2022-04-01,98388,ICE (Internal Combustion Engine),33,Zipcode,0.868421052631579,New Vehicle Registrations,All
+2022-04-01,98390,BEV (Battery Electric Vehicle),3,Zipcode,0.061224489795918366,New Vehicle Registrations,All
+2022-04-01,98390,HEV (Hybrid Electric Vehicle),5,Zipcode,0.10204081632653061,New Vehicle Registrations,All
+2022-04-01,98390,ICE (Internal Combustion Engine),41,Zipcode,0.8367346938775511,New Vehicle Registrations,All
+2022-04-01,98391,BEV (Battery Electric Vehicle),25,Zipcode,0.07530120481927711,New Vehicle Registrations,All
+2022-04-01,98391,HEV (Hybrid Electric Vehicle),33,Zipcode,0.09939759036144578,New Vehicle Registrations,All
+2022-04-01,98391,ICE (Internal Combustion Engine),273,Zipcode,0.822289156626506,New Vehicle Registrations,All
+2022-04-01,98391,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.0030120481927710845,New Vehicle Registrations,All
+2022-04-01,98392,BEV (Battery Electric Vehicle),3,Zipcode,0.23076923076923078,New Vehicle Registrations,All
+2022-04-01,98392,ICE (Internal Combustion Engine),10,Zipcode,0.7692307692307693,New Vehicle Registrations,All
+2022-04-01,98394,BEV (Battery Electric Vehicle),1,Zipcode,0.08333333333333333,New Vehicle Registrations,All
+2022-04-01,98394,HEV (Hybrid Electric Vehicle),3,Zipcode,0.25,New Vehicle Registrations,All
+2022-04-01,98394,ICE (Internal Combustion Engine),8,Zipcode,0.6666666666666666,New Vehicle Registrations,All
+2022-04-01,98396,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98401,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98402,BEV (Battery Electric Vehicle),2,Zipcode,0.05555555555555555,New Vehicle Registrations,All
+2022-04-01,98402,HEV (Hybrid Electric Vehicle),1,Zipcode,0.027777777777777776,New Vehicle Registrations,All
+2022-04-01,98402,ICE (Internal Combustion Engine),32,Zipcode,0.8888888888888888,New Vehicle Registrations,All
+2022-04-01,98402,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.027777777777777776,New Vehicle Registrations,All
+2022-04-01,98403,BEV (Battery Electric Vehicle),3,Zipcode,0.06976744186046512,New Vehicle Registrations,All
+2022-04-01,98403,HEV (Hybrid Electric Vehicle),5,Zipcode,0.11627906976744186,New Vehicle Registrations,All
+2022-04-01,98403,ICE (Internal Combustion Engine),35,Zipcode,0.813953488372093,New Vehicle Registrations,All
+2022-04-01,98404,BEV (Battery Electric Vehicle),5,Zipcode,0.04032258064516129,New Vehicle Registrations,All
+2022-04-01,98404,HEV (Hybrid Electric Vehicle),3,Zipcode,0.024193548387096774,New Vehicle Registrations,All
+2022-04-01,98404,ICE (Internal Combustion Engine),115,Zipcode,0.9274193548387096,New Vehicle Registrations,All
+2022-04-01,98404,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.008064516129032258,New Vehicle Registrations,All
+2022-04-01,98405,BEV (Battery Electric Vehicle),7,Zipcode,0.07446808510638298,New Vehicle Registrations,All
+2022-04-01,98405,HEV (Hybrid Electric Vehicle),9,Zipcode,0.09574468085106383,New Vehicle Registrations,All
+2022-04-01,98405,ICE (Internal Combustion Engine),77,Zipcode,0.8191489361702128,New Vehicle Registrations,All
+2022-04-01,98405,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.010638297872340425,New Vehicle Registrations,All
+2022-04-01,98406,BEV (Battery Electric Vehicle),4,Zipcode,0.045454545454545456,New Vehicle Registrations,All
+2022-04-01,98406,HEV (Hybrid Electric Vehicle),13,Zipcode,0.14772727272727273,New Vehicle Registrations,All
+2022-04-01,98406,ICE (Internal Combustion Engine),70,Zipcode,0.7954545454545454,New Vehicle Registrations,All
+2022-04-01,98406,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.011363636363636364,New Vehicle Registrations,All
+2022-04-01,98407,BEV (Battery Electric Vehicle),8,Zipcode,0.06611570247933884,New Vehicle Registrations,All
+2022-04-01,98407,HEV (Hybrid Electric Vehicle),16,Zipcode,0.1322314049586777,New Vehicle Registrations,All
+2022-04-01,98407,ICE (Internal Combustion Engine),97,Zipcode,0.8016528925619835,New Vehicle Registrations,All
+2022-04-01,98408,BEV (Battery Electric Vehicle),3,Zipcode,0.037037037037037035,New Vehicle Registrations,All
+2022-04-01,98408,HEV (Hybrid Electric Vehicle),7,Zipcode,0.08641975308641975,New Vehicle Registrations,All
+2022-04-01,98408,ICE (Internal Combustion Engine),71,Zipcode,0.8765432098765432,New Vehicle Registrations,All
+2022-04-01,98409,BEV (Battery Electric Vehicle),1,Zipcode,0.008130081300813009,New Vehicle Registrations,All
+2022-04-01,98409,HEV (Hybrid Electric Vehicle),9,Zipcode,0.07317073170731707,New Vehicle Registrations,All
+2022-04-01,98409,ICE (Internal Combustion Engine),112,Zipcode,0.9105691056910569,New Vehicle Registrations,All
+2022-04-01,98409,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.008130081300813009,New Vehicle Registrations,All
+2022-04-01,98418,BEV (Battery Electric Vehicle),1,Zipcode,0.027777777777777776,New Vehicle Registrations,All
+2022-04-01,98418,HEV (Hybrid Electric Vehicle),1,Zipcode,0.027777777777777776,New Vehicle Registrations,All
+2022-04-01,98418,ICE (Internal Combustion Engine),34,Zipcode,0.9444444444444444,New Vehicle Registrations,All
+2022-04-01,98421,ICE (Internal Combustion Engine),3,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98422,BEV (Battery Electric Vehicle),5,Zipcode,0.05319148936170213,New Vehicle Registrations,All
+2022-04-01,98422,HEV (Hybrid Electric Vehicle),9,Zipcode,0.09574468085106383,New Vehicle Registrations,All
+2022-04-01,98422,ICE (Internal Combustion Engine),77,Zipcode,0.8191489361702128,New Vehicle Registrations,All
+2022-04-01,98422,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.031914893617021274,New Vehicle Registrations,All
+2022-04-01,98424,BEV (Battery Electric Vehicle),4,Zipcode,0.05128205128205128,New Vehicle Registrations,All
+2022-04-01,98424,HEV (Hybrid Electric Vehicle),7,Zipcode,0.08974358974358974,New Vehicle Registrations,All
+2022-04-01,98424,ICE (Internal Combustion Engine),66,Zipcode,0.8461538461538461,New Vehicle Registrations,All
+2022-04-01,98424,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.01282051282051282,New Vehicle Registrations,All
+2022-04-01,98433,BEV (Battery Electric Vehicle),2,Zipcode,0.015267175572519083,New Vehicle Registrations,All
+2022-04-01,98433,HEV (Hybrid Electric Vehicle),3,Zipcode,0.022900763358778626,New Vehicle Registrations,All
+2022-04-01,98433,ICE (Internal Combustion Engine),125,Zipcode,0.9541984732824428,New Vehicle Registrations,All
+2022-04-01,98433,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.007633587786259542,New Vehicle Registrations,All
+2022-04-01,98438,ICE (Internal Combustion Engine),6,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98439,ICE (Internal Combustion Engine),21,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98443,HEV (Hybrid Electric Vehicle),2,Zipcode,0.1,New Vehicle Registrations,All
+2022-04-01,98443,ICE (Internal Combustion Engine),18,Zipcode,0.9,New Vehicle Registrations,All
+2022-04-01,98444,BEV (Battery Electric Vehicle),1,Zipcode,0.006802721088435374,New Vehicle Registrations,All
+2022-04-01,98444,HEV (Hybrid Electric Vehicle),14,Zipcode,0.09523809523809523,New Vehicle Registrations,All
+2022-04-01,98444,ICE (Internal Combustion Engine),132,Zipcode,0.8979591836734694,New Vehicle Registrations,All
+2022-04-01,98445,BEV (Battery Electric Vehicle),2,Zipcode,0.014925373134328358,New Vehicle Registrations,All
+2022-04-01,98445,HEV (Hybrid Electric Vehicle),11,Zipcode,0.08208955223880597,New Vehicle Registrations,All
+2022-04-01,98445,ICE (Internal Combustion Engine),120,Zipcode,0.8955223880597015,New Vehicle Registrations,All
+2022-04-01,98445,PHEV (Plug-in Hybrid Electric Vehicle),1,Zipcode,0.007462686567164179,New Vehicle Registrations,All
+2022-04-01,98446,BEV (Battery Electric Vehicle),4,Zipcode,0.05970149253731343,New Vehicle Registrations,All
+2022-04-01,98446,HEV (Hybrid Electric Vehicle),6,Zipcode,0.08955223880597014,New Vehicle Registrations,All
+2022-04-01,98446,ICE (Internal Combustion Engine),57,Zipcode,0.8507462686567164,New Vehicle Registrations,All
+2022-04-01,98447,ICE (Internal Combustion Engine),1,Zipcode,1,New Vehicle Registrations,All
+2022-04-01,98465,BEV (Battery Electric Vehicle),1,Zipcode,0.037037037037037035,New Vehicle Registrations,All
+2022-04-01,98465,ICE (Internal Combustion Engine),24,Zipcode,0.8888888888888888,New Vehicle Registrations,All
+2022-04-01,98465,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.07407407407407407,New Vehicle Registrations,All
+2022-04-01,98466,BEV (Battery Electric Vehicle),6,Zipcode,0.045454545454545456,New Vehicle Registrations,All
+2022-04-01,98466,HEV (Hybrid Electric Vehicle),10,Zipcode,0.07575757575757576,New Vehicle Registrations,All
+2022-04-01,98466,ICE (Internal Combustion Engine),113,Zipcode,0.8560606060606061,New Vehicle Registrations,All
+2022-04-01,98466,PHEV (Plug-in Hybrid Electric Vehicle),3,Zipcode,0.022727272727272728,New Vehicle Registrations,All
+2022-04-01,98467,BEV (Battery Electric Vehicle),2,Zipcode,0.028169014084507043,New Vehicle Registrations,All
+2022-04-01,98467,HEV (Hybrid Electric Vehicle),10,Zipcode,0.14084507042253522,New Vehicle Registrations,All
+2022-04-01,98467,ICE (Internal Combustion Engine),57,Zipcode,0.8028169014084507,New Vehicle Registrations,All
+2022-04-01,98467,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.028169014084507043,New Vehicle Registrations,All
+2022-04-01,98498,BEV (Battery Electric Vehicle),2,Zipcode,0.015384615384615385,New Vehicle Registrations,All
+2022-04-01,98498,HEV (Hybrid Electric Vehicle),14,Zipcode,0.1076923076923077,New Vehicle Registrations,All
+2022-04-01,98498,ICE (Internal Combustion Engine),114,Zipcode,0.8769230769230769,New Vehicle Registrations,All
+2022-04-01,98499,BEV (Battery Electric Vehicle),1,Zipcode,0.007246376811594203,New Vehicle Registrations,All
+2022-04-01,98499,HEV (Hybrid Electric Vehicle),10,Zipcode,0.07246376811594203,New Vehicle Registrations,All
+2022-04-01,98499,ICE (Internal Combustion Engine),127,Zipcode,0.9202898550724637,New Vehicle Registrations,All
+2022-04-01,98580,BEV (Battery Electric Vehicle),1,Zipcode,0.014285714285714285,New Vehicle Registrations,All
+2022-04-01,98580,HEV (Hybrid Electric Vehicle),4,Zipcode,0.05714285714285714,New Vehicle Registrations,All
+2022-04-01,98580,ICE (Internal Combustion Engine),63,Zipcode,0.9,New Vehicle Registrations,All
+2022-04-01,98580,PHEV (Plug-in Hybrid Electric Vehicle),2,Zipcode,0.02857142857142857,New Vehicle Registrations,All
+2017-01-31,King,BEV (Battery Electric Vehicle),8813,County,0.0055384201582657135,Total Vehicle Registrations,All
+2017-01-31,King,ICE (Internal Combustion Engine),1578808,County,0.9921822368354901,Total Vehicle Registrations,All
+2017-01-31,King,PHEV (Plug-in Hybrid Electric Vehicle),3627,County,0.0022793430062441554,Total Vehicle Registrations,All
+2017-01-31,Kitsap,BEV (Battery Electric Vehicle),557,County,0.002468424551296255,Total Vehicle Registrations,All
+2017-01-31,Kitsap,ICE (Internal Combustion Engine),224829,County,0.9963616219809439,Total Vehicle Registrations,All
+2017-01-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),264,County,0.001169953467759805,Total Vehicle Registrations,All
+2017-01-31,Pierce,BEV (Battery Electric Vehicle),822,County,0.0012290706610964745,Total Vehicle Registrations,All
+2017-01-31,Pierce,ICE (Internal Combustion Engine),667226,County,0.9976495145021367,Total Vehicle Registrations,All
+2017-01-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),750,County,0.0011214148367668564,Total Vehicle Registrations,All
+2017-01-31,Snohomish,BEV (Battery Electric Vehicle),1549,County,0.002419359877048412,Total Vehicle Registrations,All
+2017-01-31,Snohomish,ICE (Internal Combustion Engine),637899,County,0.9963248845766979,Total Vehicle Registrations,All
+2017-01-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),804,County,0.0012557555462536626,Total Vehicle Registrations,All
+2017-02-28,King,BEV (Battery Electric Vehicle),9107,County,0.005731493951942805,Total Vehicle Registrations,All
+2017-02-28,King,ICE (Internal Combustion Engine),1576114,County,0.9919279519679787,Total Vehicle Registrations,All
+2017-02-28,King,PHEV (Plug-in Hybrid Electric Vehicle),3719,County,0.002340554080078543,Total Vehicle Registrations,All
+2017-02-28,Kitsap,BEV (Battery Electric Vehicle),562,County,0.0024938541139717953,Total Vehicle Registrations,All
+2017-02-28,Kitsap,ICE (Internal Combustion Engine),224510,County,0.996254781366206,Total Vehicle Registrations,All
+2017-02-28,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),282,County,0.0012513645198221465,Total Vehicle Registrations,All
+2017-02-28,Pierce,BEV (Battery Electric Vehicle),862,County,0.0012921271680979497,Total Vehicle Registrations,All
+2017-02-28,Pierce,ICE (Internal Combustion Engine),665478,County,0.9975431595956931,Total Vehicle Registrations,All
+2017-02-28,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),777,County,0.0011647132362089408,Total Vehicle Registrations,All
+2017-02-28,Snohomish,BEV (Battery Electric Vehicle),1604,County,0.002509767596146474,Total Vehicle Registrations,All
+2017-02-28,Snohomish,ICE (Internal Combustion Engine),636674,County,0.996199360666434,Total Vehicle Registrations,All
+2017-02-28,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),825,County,0.001290871737419477,Total Vehicle Registrations,All
+2017-03-31,King,BEV (Battery Electric Vehicle),9326,County,0.005880246256592106,Total Vehicle Registrations,All
+2017-03-31,King,ICE (Internal Combustion Engine),1572868,County,0.9917275540546334,Total Vehicle Registrations,All
+2017-03-31,King,PHEV (Plug-in Hybrid Electric Vehicle),3794,County,0.0023921996887744422,Total Vehicle Registrations,All
+2017-03-31,Kitsap,BEV (Battery Electric Vehicle),573,County,0.002538599561393793,Total Vehicle Registrations,All
+2017-03-31,Kitsap,ICE (Internal Combustion Engine),224851,County,0.9961721640121391,Total Vehicle Registrations,All
+2017-03-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),291,County,0.0012892364264670048,Total Vehicle Registrations,All
+2017-03-31,Pierce,BEV (Battery Electric Vehicle),876,County,0.0013146047181703583,Total Vehicle Registrations,All
+2017-03-31,Pierce,ICE (Internal Combustion Engine),664700,County,0.9975088540728735,Total Vehicle Registrations,All
+2017-03-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),784,County,0.00117654120895612,Total Vehicle Registrations,All
+2017-03-31,Snohomish,BEV (Battery Electric Vehicle),1656,County,0.0025948425936517237,Total Vehicle Registrations,All
+2017-03-31,Snohomish,ICE (Internal Combustion Engine),635683,County,0.9960732635629884,Total Vehicle Registrations,All
+2017-03-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),850,County,0.0013318938433598824,Total Vehicle Registrations,All
+2017-04-30,King,BEV (Battery Electric Vehicle),9567,County,0.006049970594373091,Total Vehicle Registrations,All
+2017-04-30,King,ICE (Internal Combustion Engine),1567874,County,0.9914907071895177,Total Vehicle Registrations,All
+2017-04-30,King,PHEV (Plug-in Hybrid Electric Vehicle),3889,County,0.0024593222161092246,Total Vehicle Registrations,All
+2017-04-30,Kitsap,BEV (Battery Electric Vehicle),585,County,0.002589366335581877,Total Vehicle Registrations,All
+2017-04-30,Kitsap,ICE (Internal Combustion Engine),225039,County,0.9960827534923249,Total Vehicle Registrations,All
+2017-04-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),300,County,0.0013278801720932702,Total Vehicle Registrations,All
+2017-04-30,Pierce,BEV (Battery Electric Vehicle),917,County,0.0013780169479554406,Total Vehicle Registrations,All
+2017-04-30,Pierce,ICE (Internal Combustion Engine),663725,County,0.9974092680280532,Total Vehicle Registrations,All
+2017-04-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),807,County,0.00121271502399132,Total Vehicle Registrations,All
+2017-04-30,Snohomish,BEV (Battery Electric Vehicle),1709,County,0.0026810702945569095,Total Vehicle Registrations,All
+2017-04-30,Snohomish,ICE (Internal Combustion Engine),634861,County,0.9959666285972465,Total Vehicle Registrations,All
+2017-04-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),862,County,0.001352301108196639,Total Vehicle Registrations,All
+2017-05-31,King,BEV (Battery Electric Vehicle),9806,County,0.0062079321748907314,Total Vehicle Registrations,All
+2017-05-31,King,ICE (Internal Combustion Engine),1565788,County,0.9912610344949835,Total Vehicle Registrations,All
+2017-05-31,King,PHEV (Plug-in Hybrid Electric Vehicle),3998,County,0.002531033330125754,Total Vehicle Registrations,All
+2017-05-31,Kitsap,BEV (Battery Electric Vehicle),596,County,0.0026350927145876255,Total Vehicle Registrations,All
+2017-05-31,Kitsap,ICE (Internal Combustion Engine),225278,County,0.9960208331491126,Total Vehicle Registrations,All
+2017-05-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),304,County,0.0013440741362997285,Total Vehicle Registrations,All
+2017-05-31,Pierce,BEV (Battery Electric Vehicle),933,County,0.0014033810502945897,Total Vehicle Registrations,All
+2017-05-31,Pierce,ICE (Internal Combustion Engine),663067,County,0.9973586954723287,Total Vehicle Registrations,All
+2017-05-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),823,County,0.0012379234773766852,Total Vehicle Registrations,All
+2017-05-31,Snohomish,BEV (Battery Electric Vehicle),1739,County,0.002729174546327699,Total Vehicle Registrations,All
+2017-05-31,Snohomish,ICE (Internal Combustion Engine),634581,County,0.9959070228770428,Total Vehicle Registrations,All
+2017-05-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),869,County,0.00136380257662954,Total Vehicle Registrations,All
+2017-06-30,King,BEV (Battery Electric Vehicle),10038,County,0.006362551333644763,Total Vehicle Registrations,All
+2017-06-30,King,ICE (Internal Combustion Engine),1563519,County,0.9910310717900903,Total Vehicle Registrations,All
+2017-06-30,King,PHEV (Plug-in Hybrid Electric Vehicle),4112,County,0.00260637687626492,Total Vehicle Registrations,All
+2017-06-30,Kitsap,BEV (Battery Electric Vehicle),606,County,0.002671027287673165,Total Vehicle Registrations,All
+2017-06-30,Kitsap,ICE (Internal Combustion Engine),225952,County,0.9959141216243019,Total Vehicle Registrations,All
+2017-06-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),321,County,0.0014148510880248944,Total Vehicle Registrations,All
+2017-06-30,Pierce,BEV (Battery Electric Vehicle),957,County,0.0014402694522912625,Total Vehicle Registrations,All
+2017-06-30,Pierce,ICE (Internal Combustion Engine),662660,County,0.997292534227093,Total Vehicle Registrations,All
+2017-06-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),842,County,0.001267196320615719,Total Vehicle Registrations,All
+2017-06-30,Snohomish,BEV (Battery Electric Vehicle),1793,County,0.0028109836875151875,Total Vehicle Registrations,All
+2017-06-30,Snohomish,ICE (Internal Combustion Engine),635157,County,0.9957701985560982,Total Vehicle Registrations,All
+2017-06-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),905,County,0.0014188177563866397,Total Vehicle Registrations,All
+2017-07-31,King,BEV (Battery Electric Vehicle),10265,County,0.006515677297196767,Total Vehicle Registrations,All
+2017-07-31,King,ICE (Internal Combustion Engine),1560985,County,0.9908304457637307,Total Vehicle Registrations,All
+2017-07-31,King,PHEV (Plug-in Hybrid Electric Vehicle),4181,County,0.0026538769390725457,Total Vehicle Registrations,All
+2017-07-31,Kitsap,BEV (Battery Electric Vehicle),623,County,0.0027456545499418257,Total Vehicle Registrations,All
+2017-07-31,Kitsap,ICE (Internal Combustion Engine),225955,County,0.9958176144977612,Total Vehicle Registrations,All
+2017-07-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),326,County,0.0014367309522970067,Total Vehicle Registrations,All
+2017-07-31,Pierce,BEV (Battery Electric Vehicle),987,County,0.0014864995120305554,Total Vehicle Registrations,All
+2017-07-31,Pierce,ICE (Internal Combustion Engine),662133,County,0.9972242972637565,Total Vehicle Registrations,All
+2017-07-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),856,County,0.0012892032242129235,Total Vehicle Registrations,All
+2017-07-31,Snohomish,BEV (Battery Electric Vehicle),1818,County,0.002850061375084067,Total Vehicle Registrations,All
+2017-07-31,Snohomish,ICE (Internal Combustion Engine),635141,County,0.9957045279605443,Total Vehicle Registrations,All
+2017-07-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),922,County,0.0014454106643715678,Total Vehicle Registrations,All
+2017-08-31,King,BEV (Battery Electric Vehicle),10450,County,0.006637790689180528,Total Vehicle Registrations,All
+2017-08-31,King,ICE (Internal Combustion Engine),1559595,County,0.9906473846787087,Total Vehicle Registrations,All
+2017-08-31,King,PHEV (Plug-in Hybrid Electric Vehicle),4274,County,0.002714824632110773,Total Vehicle Registrations,All
+2017-08-31,Kitsap,BEV (Battery Electric Vehicle),638,County,0.0028053081002172137,Total Vehicle Registrations,All
+2017-08-31,Kitsap,ICE (Internal Combustion Engine),226450,County,0.9957084941915172,Total Vehicle Registrations,All
+2017-08-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),338,County,0.0014861977082655457,Total Vehicle Registrations,All
+2017-08-31,Pierce,BEV (Battery Electric Vehicle),1000,County,0.0015055910122238935,Total Vehicle Registrations,All
+2017-08-31,Pierce,ICE (Internal Combustion Engine),662326,County,0.9971920727622025,Total Vehicle Registrations,All
+2017-08-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),865,County,0.001302336225573668,Total Vehicle Registrations,All
+2017-08-31,Snohomish,BEV (Battery Electric Vehicle),1847,County,0.002893727958237568,Total Vehicle Registrations,All
+2017-08-31,Snohomish,ICE (Internal Combustion Engine),635486,County,0.9956272903457276,Total Vehicle Registrations,All
+2017-08-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),944,County,0.0014789816960347937,Total Vehicle Registrations,All
+2017-09-30,King,BEV (Battery Electric Vehicle),10663,County,0.006772816254250874,Total Vehicle Registrations,All
+2017-09-30,King,ICE (Internal Combustion Engine),1559362,County,0.9904597486505816,Total Vehicle Registrations,All
+2017-09-30,King,PHEV (Plug-in Hybrid Electric Vehicle),4357,County,0.0027674350951675006,Total Vehicle Registrations,All
+2017-09-30,Kitsap,BEV (Battery Electric Vehicle),654,County,0.002868861448029303,Total Vehicle Registrations,All
+2017-09-30,Kitsap,ICE (Internal Combustion Engine),226963,County,0.9956045884236615,Total Vehicle Registrations,All
+2017-09-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),348,County,0.0015265501283091704,Total Vehicle Registrations,All
+2017-09-30,Pierce,BEV (Battery Electric Vehicle),1013,County,0.0015248767152981413,Total Vehicle Registrations,All
+2017-09-30,Pierce,ICE (Internal Combustion Engine),662407,County,0.9971263675720591,Total Vehicle Registrations,All
+2017-09-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),896,County,0.0013487557126427784,Total Vehicle Registrations,All
+2017-09-30,Snohomish,BEV (Battery Electric Vehicle),1911,County,0.0029911720510894064,Total Vehicle Registrations,All
+2017-09-30,Snohomish,ICE (Internal Combustion Engine),635991,County,0.9954780240420736,Total Vehicle Registrations,All
+2017-09-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),978,County,0.0015308039068369647,Total Vehicle Registrations,All
+2017-10-31,King,BEV (Battery Electric Vehicle),10951,County,0.006957707355689995,Total Vehicle Registrations,All
+2017-10-31,King,ICE (Internal Combustion Engine),1558497,County,0.9901895754470633,Total Vehicle Registrations,All
+2017-10-31,King,PHEV (Plug-in Hybrid Electric Vehicle),4490,County,0.0028527171972466516,Total Vehicle Registrations,All
+2017-10-31,Kitsap,BEV (Battery Electric Vehicle),662,County,0.002896508875480746,Total Vehicle Registrations,All
+2017-10-31,Kitsap,ICE (Internal Combustion Engine),227532,County,0.9955414765194639,Total Vehicle Registrations,All
+2017-10-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),357,County,0.0015620146050553268,Total Vehicle Registrations,All
+2017-10-31,Pierce,BEV (Battery Electric Vehicle),1041,County,0.0015663132807116269,Total Vehicle Registrations,All
+2017-10-31,Pierce,ICE (Internal Combustion Engine),662663,County,0.9970584606495762,Total Vehicle Registrations,All
+2017-10-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),914,County,0.0013752260697122256,Total Vehicle Registrations,All
+2017-10-31,Snohomish,BEV (Battery Electric Vehicle),1947,County,0.003043404861944778,Total Vehicle Registrations,All
+2017-10-31,Snohomish,ICE (Internal Combustion Engine),636795,County,0.9953903436374549,Total Vehicle Registrations,All
+2017-10-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1002,County,0.0015662515006002401,Total Vehicle Registrations,All
+2017-11-30,King,BEV (Battery Electric Vehicle),11140,County,0.007080888022175765,Total Vehicle Registrations,All
+2017-11-30,King,ICE (Internal Combustion Engine),1557488,County,0.9899818782659324,Total Vehicle Registrations,All
+2017-11-30,King,PHEV (Plug-in Hybrid Electric Vehicle),4621,County,0.0029372337118917604,Total Vehicle Registrations,All
+2017-11-30,Kitsap,BEV (Battery Electric Vehicle),677,County,0.002954938282382108,Total Vehicle Registrations,All
+2017-11-30,Kitsap,ICE (Internal Combustion Engine),228062,County,0.9954344675873387,Total Vehicle Registrations,All
+2017-11-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),369,County,0.0016105941302791697,Total Vehicle Registrations,All
+2017-11-30,Pierce,BEV (Battery Electric Vehicle),1051,County,0.0015799925735839073,Total Vehicle Registrations,All
+2017-11-30,Pierce,ICE (Internal Combustion Engine),663202,County,0.9970068837164552,Total Vehicle Registrations,All
+2017-11-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),940,County,0.0014131237099608686,Total Vehicle Registrations,All
+2017-11-30,Snohomish,BEV (Battery Electric Vehicle),1987,County,0.0031023171358134176,Total Vehicle Registrations,All
+2017-11-30,Snohomish,ICE (Internal Combustion Engine),637480,County,0.995302027044961,Total Vehicle Registrations,All
+2017-11-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1022,County,0.001595655819225623,Total Vehicle Registrations,All
+2017-12-31,King,BEV (Battery Electric Vehicle),11287,County,0.007178646341478927,Total Vehicle Registrations,All
+2017-12-31,King,ICE (Internal Combustion Engine),1556323,County,0.989837194126828,Total Vehicle Registrations,All
+2017-12-31,King,PHEV (Plug-in Hybrid Electric Vehicle),4692,County,0.002984159531693021,Total Vehicle Registrations,All
+2017-12-31,Kitsap,BEV (Battery Electric Vehicle),694,County,0.0030217005120345536,Total Vehicle Registrations,All
+2017-12-31,Kitsap,ICE (Internal Combustion Engine),228599,County,0.9953281201017102,Total Vehicle Registrations,All
+2017-12-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),379,County,0.0016501793862551814,Total Vehicle Registrations,All
+2017-12-31,Pierce,BEV (Battery Electric Vehicle),1072,County,0.0016104293326483,Total Vehicle Registrations,All
+2017-12-31,Pierce,ICE (Internal Combustion Engine),663628,County,0.9969458928794086,Total Vehicle Registrations,All
+2017-12-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),961,County,0.0014436777879431122,Total Vehicle Registrations,All
+2017-12-31,Snohomish,BEV (Battery Electric Vehicle),2016,County,0.0031427177337513233,Total Vehicle Registrations,All
+2017-12-31,Snohomish,ICE (Internal Combustion Engine),638413,County,0.9952142145621942,Total Vehicle Registrations,All
+2017-12-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1054,County,0.001643067704054511,Total Vehicle Registrations,All
+2018-01-31,King,BEV (Battery Electric Vehicle),11628,County,0.0073939880289629655,Total Vehicle Registrations,All
+2018-01-31,King,ICE (Internal Combustion Engine),1556115,County,0.9894991126324136,Total Vehicle Registrations,All
+2018-01-31,King,PHEV (Plug-in Hybrid Electric Vehicle),4886,County,0.0031068993386234134,Total Vehicle Registrations,All
+2018-01-31,Kitsap,BEV (Battery Electric Vehicle),707,County,0.0030696022542255875,Total Vehicle Registrations,All
+2018-01-31,Kitsap,ICE (Internal Combustion Engine),229212,County,0.9951763393147883,Total Vehicle Registrations,All
+2018-01-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),404,County,0.00175405843098605,Total Vehicle Registrations,All
+2018-01-31,Pierce,BEV (Battery Electric Vehicle),1096,County,0.0016436195020852673,Total Vehicle Registrations,All
+2018-01-31,Pierce,ICE (Internal Combustion Engine),664731,County,0.9968657255845271,Total Vehicle Registrations,All
+2018-01-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),994,County,0.0014906549133875508,Total Vehicle Registrations,All
+2018-01-31,Snohomish,BEV (Battery Electric Vehicle),2073,County,0.003224501858793884,Total Vehicle Registrations,All
+2018-01-31,Snohomish,ICE (Internal Combustion Engine),639720,County,0.9950691409105756,Total Vehicle Registrations,All
+2018-01-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1097,County,0.0017063572306304344,Total Vehicle Registrations,All
+2018-02-28,King,BEV (Battery Electric Vehicle),11768,County,0.007497422920146839,Total Vehicle Registrations,All
+2018-02-28,King,ICE (Internal Combustion Engine),1552811,County,0.9892998625132676,Total Vehicle Registrations,All
+2018-02-28,King,PHEV (Plug-in Hybrid Electric Vehicle),5027,County,0.0032027145665854996,Total Vehicle Registrations,All
+2018-02-28,Kitsap,BEV (Battery Electric Vehicle),717,County,0.003111938646632205,Total Vehicle Registrations,All
+2018-02-28,Kitsap,ICE (Internal Combustion Engine),229266,County,0.9950651684222862,Total Vehicle Registrations,All
+2018-02-28,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),420,County,0.0018228929310816265,Total Vehicle Registrations,All
+2018-02-28,Pierce,BEV (Battery Electric Vehicle),1117,County,0.0016778372272575697,Total Vehicle Registrations,All
+2018-02-28,Pierce,ICE (Internal Combustion Engine),663595,County,0.9967810159552256,Total Vehicle Registrations,All
+2018-02-28,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1026,County,0.001541146817516801,Total Vehicle Registrations,All
+2018-02-28,Snohomish,BEV (Battery Electric Vehicle),2088,County,0.0032526657683410315,Total Vehicle Registrations,All
+2018-02-28,Snohomish,ICE (Internal Combustion Engine),638725,County,0.9949994937182114,Total Vehicle Registrations,All
+2018-02-28,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1122,County,0.0017478405134476232,Total Vehicle Registrations,All
+2018-03-31,King,BEV (Battery Electric Vehicle),11981,County,0.007634648214195819,Total Vehicle Registrations,All
+2018-03-31,King,ICE (Internal Combustion Engine),1552153,County,0.9890778841172426,Total Vehicle Registrations,All
+2018-03-31,King,PHEV (Plug-in Hybrid Electric Vehicle),5159,County,0.003287467668561575,Total Vehicle Registrations,All
+2018-03-31,Kitsap,BEV (Battery Electric Vehicle),742,County,0.003211106446880423,Total Vehicle Registrations,All
+2018-03-31,Kitsap,ICE (Internal Combustion Engine),229900,County,0.9949236821264276,Total Vehicle Registrations,All
+2018-03-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),431,County,0.0018652114266919978,Total Vehicle Registrations,All
+2018-03-31,Pierce,BEV (Battery Electric Vehicle),1127,County,0.001688875301959515,Total Vehicle Registrations,All
+2018-03-31,Pierce,ICE (Internal Combustion Engine),665129,County,0.9967346412750934,Total Vehicle Registrations,All
+2018-03-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1052,County,0.0015764834229471249,Total Vehicle Registrations,All
+2018-03-31,Snohomish,BEV (Battery Electric Vehicle),2133,County,0.003319472370411409,Total Vehicle Registrations,All
+2018-03-31,Snohomish,ICE (Internal Combustion Engine),639276,County,0.9948706137211083,Total Vehicle Registrations,All
+2018-03-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1163,County,0.001809913908480295,Total Vehicle Registrations,All
+2018-04-30,King,BEV (Battery Electric Vehicle),12296,County,0.007832500673623085,Total Vehicle Registrations,All
+2018-04-30,King,ICE (Internal Combustion Engine),1552277,County,0.9887939694331183,Total Vehicle Registrations,All
+2018-04-30,King,PHEV (Plug-in Hybrid Electric Vehicle),5296,County,0.0033735298932586096,Total Vehicle Registrations,All
+2018-04-30,Kitsap,BEV (Battery Electric Vehicle),744,County,0.003212213318596297,Total Vehicle Registrations,All
+2018-04-30,Kitsap,ICE (Internal Combustion Engine),230428,County,0.994870820668693,Total Vehicle Registrations,All
+2018-04-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),444,County,0.0019169660127106936,Total Vehicle Registrations,All
+2018-04-30,Pierce,BEV (Battery Electric Vehicle),1155,County,0.0017266225767487472,Total Vehicle Registrations,All
+2018-04-30,Pierce,ICE (Internal Combustion Engine),666690,County,0.9966424291711016,Total Vehicle Registrations,All
+2018-04-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1091,County,0.0016309482521496825,Total Vehicle Registrations,All
+2018-04-30,Snohomish,BEV (Battery Electric Vehicle),2189,County,0.003401233704687767,Total Vehicle Registrations,All
+2018-04-30,Snohomish,ICE (Internal Combustion Engine),640203,County,0.994737332773971,Total Vehicle Registrations,All
+2018-04-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1198,County,0.0018614335213412265,Total Vehicle Registrations,All
+2018-05-31,King,BEV (Battery Electric Vehicle),12757,County,0.008117737418525138,Total Vehicle Registrations,All
+2018-05-31,King,ICE (Internal Combustion Engine),1553254,County,0.9883913236869049,Total Vehicle Registrations,All
+2018-05-31,King,PHEV (Plug-in Hybrid Electric Vehicle),5486,County,0.0034909388945699544,Total Vehicle Registrations,All
+2018-05-31,Kitsap,BEV (Battery Electric Vehicle),781,County,0.0033620463282235395,Total Vehicle Registrations,All
+2018-05-31,Kitsap,ICE (Internal Combustion Engine),231062,County,0.9946749663149648,Total Vehicle Registrations,All
+2018-05-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),456,County,0.0019629873568116954,Total Vehicle Registrations,All
+2018-05-31,Pierce,BEV (Battery Electric Vehicle),1186,County,0.0017688002135684575,Total Vehicle Registrations,All
+2018-05-31,Pierce,ICE (Internal Combustion Engine),668200,County,0.9965533749632742,Total Vehicle Registrations,All
+2018-05-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1125,County,0.0016778248231572636,Total Vehicle Registrations,All
+2018-05-31,Snohomish,BEV (Battery Electric Vehicle),2283,County,0.003538596744119001,Total Vehicle Registrations,All
+2018-05-31,Snohomish,ICE (Internal Combustion Engine),641661,County,0.9945595818782927,Total Vehicle Registrations,All
+2018-05-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1227,County,0.0019018213775882672,Total Vehicle Registrations,All
+2018-06-30,King,BEV (Battery Electric Vehicle),13181,County,0.008376329196537115,Total Vehicle Registrations,All
+2018-06-30,King,ICE (Internal Combustion Engine),1554736,County,0.9880115734547703,Total Vehicle Registrations,All
+2018-06-30,King,PHEV (Plug-in Hybrid Electric Vehicle),5684,County,0.0036120973486925847,Total Vehicle Registrations,All
+2018-06-30,Kitsap,BEV (Battery Electric Vehicle),797,County,0.003419690897701041,Total Vehicle Registrations,All
+2018-06-30,Kitsap,ICE (Internal Combustion Engine),231802,County,0.994593713260849,Total Vehicle Registrations,All
+2018-06-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),463,County,0.001986595841449915,Total Vehicle Registrations,All
+2018-06-30,Pierce,BEV (Battery Electric Vehicle),1229,County,0.0018269415155735987,Total Vehicle Registrations,All
+2018-06-30,Pierce,ICE (Internal Combustion Engine),670307,County,0.9964293624732239,Total Vehicle Registrations,All
+2018-06-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1173,County,0.0017436960112024663,Total Vehicle Registrations,All
+2018-06-30,Snohomish,BEV (Battery Electric Vehicle),2350,County,0.0036325806935292144,Total Vehicle Registrations,All
+2018-06-30,Snohomish,ICE (Internal Combustion Engine),643307,County,0.9944104630690206,Total Vehicle Registrations,All
+2018-06-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1266,County,0.0019569562374502068,Total Vehicle Registrations,All
+2018-07-31,King,BEV (Battery Electric Vehicle),13493,County,0.008565504877887755,Total Vehicle Registrations,All
+2018-07-31,King,ICE (Internal Combustion Engine),1555971,County,0.9877475128104861,Total Vehicle Registrations,All
+2018-07-31,King,PHEV (Plug-in Hybrid Electric Vehicle),5808,County,0.003686982311626183,Total Vehicle Registrations,All
+2018-07-31,Kitsap,BEV (Battery Electric Vehicle),810,County,0.003467732958875256,Total Vehicle Registrations,All
+2018-07-31,Kitsap,ICE (Internal Combustion Engine),232296,County,0.9944944387838104,Total Vehicle Registrations,All
+2018-07-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),476,County,0.002037828257314348,Total Vehicle Registrations,All
+2018-07-31,Pierce,BEV (Battery Electric Vehicle),1263,County,0.0018732146617979895,Total Vehicle Registrations,All
+2018-07-31,Pierce,ICE (Internal Combustion Engine),671785,County,0.9963559078194476,Total Vehicle Registrations,All
+2018-07-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1194,County,0.0017708775187543937,Total Vehicle Registrations,All
+2018-07-31,Snohomish,BEV (Battery Electric Vehicle),2405,County,0.0037103318471435843,Total Vehicle Registrations,All
+2018-07-31,Snohomish,ICE (Internal Combustion Engine),644486,County,0.9942856261281414,Total Vehicle Registrations,All
+2018-07-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1299,County,0.0020040420247149754,Total Vehicle Registrations,All
+2018-08-31,King,BEV (Battery Electric Vehicle),13816,County,0.008760721833765684,Total Vehicle Registrations,All
+2018-08-31,King,ICE (Internal Combustion Engine),1557279,County,0.9874701893865656,Total Vehicle Registrations,All
+2018-08-31,King,PHEV (Plug-in Hybrid Electric Vehicle),5944,County,0.0037690887796687335,Total Vehicle Registrations,All
+2018-08-31,Kitsap,BEV (Battery Electric Vehicle),829,County,0.0035402387205602888,Total Vehicle Registrations,All
+2018-08-31,Kitsap,ICE (Internal Combustion Engine),232845,County,0.9943629492024855,Total Vehicle Registrations,All
+2018-08-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),491,County,0.0020968120769542845,Total Vehicle Registrations,All
+2018-08-31,Pierce,BEV (Battery Electric Vehicle),1304,County,0.0019292423729089395,Total Vehicle Registrations,All
+2018-08-31,Pierce,ICE (Internal Combustion Engine),673385,County,0.996259873681968,Total Vehicle Registrations,All
+2018-08-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1224,County,0.0018108839451231149,Total Vehicle Registrations,All
+2018-08-31,Snohomish,BEV (Battery Electric Vehicle),2472,County,0.0038073411451595017,Total Vehicle Registrations,All
+2018-08-31,Snohomish,ICE (Internal Combustion Engine),645486,County,0.9941688537315639,Total Vehicle Registrations,All
+2018-08-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1314,County,0.0020238051232765314,Total Vehicle Registrations,All
+2018-09-30,King,BEV (Battery Electric Vehicle),14218,County,0.00901186983305413,Total Vehicle Registrations,All
+2018-09-30,King,ICE (Internal Combustion Engine),1557393,County,0.9871306087290526,Total Vehicle Registrations,All
+2018-09-30,King,PHEV (Plug-in Hybrid Electric Vehicle),6086,County,0.0038575214378933345,Total Vehicle Registrations,All
+2018-09-30,Kitsap,BEV (Battery Electric Vehicle),842,County,0.003591782411357199,Total Vehicle Registrations,All
+2018-09-30,Kitsap,ICE (Internal Combustion Engine),233080,County,0.9942667986213016,Total Vehicle Registrations,All
+2018-09-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),502,County,0.002141418967341228,Total Vehicle Registrations,All
+2018-09-30,Pierce,BEV (Battery Electric Vehicle),1326,County,0.001959037500941845,Total Vehicle Registrations,All
+2018-09-30,Pierce,ICE (Internal Combustion Engine),674270,County,0.9961690918250813,Total Vehicle Registrations,All
+2018-09-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1267,County,0.001871870673976861,Total Vehicle Registrations,All
+2018-09-30,Snohomish,BEV (Battery Electric Vehicle),2517,County,0.0038703248950922066,Total Vehicle Registrations,All
+2018-09-30,Snohomish,ICE (Internal Combustion Engine),646483,County,0.994079955961023,Total Vehicle Registrations,All
+2018-09-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1333,County,0.002049719143884748,Total Vehicle Registrations,All
+2018-10-31,King,BEV (Battery Electric Vehicle),15050,County,0.009519381904319143,Total Vehicle Registrations,All
+2018-10-31,King,ICE (Internal Combustion Engine),1559706,County,0.9865406692663118,Total Vehicle Registrations,All
+2018-10-31,King,PHEV (Plug-in Hybrid Electric Vehicle),6229,County,0.003939948829369032,Total Vehicle Registrations,All
+2018-10-31,Kitsap,BEV (Battery Electric Vehicle),881,County,0.0037485692889632077,Total Vehicle Registrations,All
+2018-10-31,Kitsap,ICE (Internal Combustion Engine),233632,County,0.9940814303280956,Total Vehicle Registrations,All
+2018-10-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),510,County,0.002170000382941244,Total Vehicle Registrations,All
+2018-10-31,Pierce,BEV (Battery Electric Vehicle),1406,County,0.002070991100335542,Total Vehicle Registrations,All
+2018-10-31,Pierce,ICE (Internal Combustion Engine),676191,County,0.9960067874302918,Total Vehicle Registrations,All
+2018-10-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1305,County,0.0019222214693726046,Total Vehicle Registrations,All
+2018-10-31,Snohomish,BEV (Battery Electric Vehicle),2638,County,0.004046105355184551,Total Vehicle Registrations,All
+2018-10-31,Snohomish,ICE (Internal Combustion Engine),647965,County,0.9938342139773154,Total Vehicle Registrations,All
+2018-10-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1382,County,0.0021196806675000193,Total Vehicle Registrations,All
+2018-11-30,King,BEV (Battery Electric Vehicle),15799,County,0.00998228348446709,Total Vehicle Registrations,All
+2018-11-30,King,ICE (Internal Combustion Engine),1560499,County,0.9859702130025576,Total Vehicle Registrations,All
+2018-11-30,King,PHEV (Plug-in Hybrid Electric Vehicle),6406,County,0.004047503512975263,Total Vehicle Registrations,All
+2018-11-30,Kitsap,BEV (Battery Electric Vehicle),917,County,0.0038936279525970965,Total Vehicle Registrations,All
+2018-11-30,Kitsap,ICE (Internal Combustion Engine),234071,County,0.9938771957386641,Total Vehicle Registrations,All
+2018-11-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),525,County,0.0022291763087387956,Total Vehicle Registrations,All
+2018-11-30,Pierce,BEV (Battery Electric Vehicle),1471,County,0.002161512441553938,Total Vehicle Registrations,All
+2018-11-30,Pierce,ICE (Internal Combustion Engine),677732,County,0.9958709381639929,Total Vehicle Registrations,All
+2018-11-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1339,County,0.0019675493944532447,Total Vehicle Registrations,All
+2018-11-30,Snohomish,BEV (Battery Electric Vehicle),2790,County,0.004271999265032384,Total Vehicle Registrations,All
+2018-11-30,Snohomish,ICE (Internal Combustion Engine),648881,County,0.993555252721677,Total Vehicle Registrations,All
+2018-11-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1419,County,0.0021727480132906645,Total Vehicle Registrations,All
+2018-12-31,King,BEV (Battery Electric Vehicle),16295,County,0.010285948743845474,Total Vehicle Registrations,All
+2018-12-31,King,ICE (Internal Combustion Engine),1561367,County,0.9855870470900139,Total Vehicle Registrations,All
+2018-12-31,King,PHEV (Plug-in Hybrid Electric Vehicle),6538,County,0.004127004166140639,Total Vehicle Registrations,All
+2018-12-31,Kitsap,BEV (Battery Electric Vehicle),947,County,0.004028998579001557,Total Vehicle Registrations,All
+2018-12-31,Kitsap,ICE (Internal Combustion Engine),233552,County,0.9936437973843418,Total Vehicle Registrations,All
+2018-12-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),547,County,0.0023272040366566545,Total Vehicle Registrations,All
+2018-12-31,Pierce,BEV (Battery Electric Vehicle),1510,County,0.002216839169052338,Total Vehicle Registrations,All
+2018-12-31,Pierce,ICE (Internal Combustion Engine),678267,County,0.995767452103061,Total Vehicle Registrations,All
+2018-12-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1373,County,0.002015708727886662,Total Vehicle Registrations,All
+2018-12-31,Snohomish,BEV (Battery Electric Vehicle),2917,County,0.0044622164840426425,Total Vehicle Registrations,All
+2018-12-31,Snohomish,ICE (Internal Combustion Engine),649354,County,0.9933349752413528,Total Vehicle Registrations,All
+2018-12-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1440,County,0.002202808274604527,Total Vehicle Registrations,All
+2019-01-31,King,BEV (Battery Electric Vehicle),17181,County,0.010820346104965104,Total Vehicle Registrations,All
+2019-01-31,King,ICE (Internal Combustion Engine),1563974,County,0.9849682777001741,Total Vehicle Registrations,All
+2019-01-31,King,PHEV (Plug-in Hybrid Electric Vehicle),6687,County,0.004211376194860698,Total Vehicle Registrations,All
+2019-01-31,Kitsap,BEV (Battery Electric Vehicle),982,County,0.004173324720361745,Total Vehicle Registrations,All
+2019-01-31,Kitsap,ICE (Internal Combustion Engine),233763,County,0.9934510250569476,Total Vehicle Registrations,All
+2019-01-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),559,County,0.002375650222690647,Total Vehicle Registrations,All
+2019-01-31,Pierce,BEV (Battery Electric Vehicle),1582,County,0.0023190190344261454,Total Vehicle Registrations,All
+2019-01-31,Pierce,ICE (Internal Combustion Engine),679180,County,0.9955950365370098,Total Vehicle Registrations,All
+2019-01-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1423,County,0.0020859444285640993,Total Vehicle Registrations,All
+2019-01-31,Snohomish,BEV (Battery Electric Vehicle),3077,County,0.00469755214328679,Total Vehicle Registrations,All
+2019-01-31,Snohomish,ICE (Internal Combustion Engine),650454,County,0.9930261884333655,Total Vehicle Registrations,All
+2019-01-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1491,County,0.0022762594233476127,Total Vehicle Registrations,All
+2019-02-28,King,BEV (Battery Electric Vehicle),17542,County,0.011055608285340825,Total Vehicle Registrations,All
+2019-02-28,King,ICE (Internal Combustion Engine),1562393,County,0.9846770605266508,Total Vehicle Registrations,All
+2019-02-28,King,PHEV (Plug-in Hybrid Electric Vehicle),6771,County,0.004267331188008364,Total Vehicle Registrations,All
+2019-02-28,Kitsap,BEV (Battery Electric Vehicle),989,County,0.004205897612547098,Total Vehicle Registrations,All
+2019-02-28,Kitsap,ICE (Internal Combustion Engine),233583,County,0.9933530657548927,Total Vehicle Registrations,All
+2019-02-28,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),574,County,0.0024410366325601967,Total Vehicle Registrations,All
+2019-02-28,Pierce,BEV (Battery Electric Vehicle),1612,County,0.0023664816935318124,Total Vehicle Registrations,All
+2019-02-28,Pierce,ICE (Internal Combustion Engine),678140,County,0.9955371561114537,Total Vehicle Registrations,All
+2019-02-28,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1428,County,0.0020963621950145337,Total Vehicle Registrations,All
+2019-02-28,Snohomish,BEV (Battery Electric Vehicle),3148,County,0.004810858970616777,Total Vehicle Registrations,All
+2019-02-28,Snohomish,ICE (Internal Combustion Engine),649705,County,0.9928968003508809,Total Vehicle Registrations,All
+2019-02-28,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1500,County,0.0022923406785022764,Total Vehicle Registrations,All
+2019-03-31,King,BEV (Battery Electric Vehicle),17693,County,0.011140593241469982,Total Vehicle Registrations,All
+2019-03-31,King,ICE (Internal Combustion Engine),1563674,County,0.9845846377811751,Total Vehicle Registrations,All
+2019-03-31,King,PHEV (Plug-in Hybrid Electric Vehicle),6789,County,0.00427476897735487,Total Vehicle Registrations,All
+2019-03-31,Kitsap,BEV (Battery Electric Vehicle),998,County,0.004240619011400382,Total Vehicle Registrations,All
+2019-03-31,Kitsap,ICE (Internal Combustion Engine),233773,County,0.9933288859239493,Total Vehicle Registrations,All
+2019-03-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),572,County,0.002430495064650319,Total Vehicle Registrations,All
+2019-03-31,Pierce,BEV (Battery Electric Vehicle),1636,County,0.0023993687724207517,Total Vehicle Registrations,All
+2019-03-31,Pierce,ICE (Internal Combustion Engine),678754,County,0.9954652516843979,Total Vehicle Registrations,All
+2019-03-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1456,County,0.002135379543181305,Total Vehicle Registrations,All
+2019-03-31,Snohomish,BEV (Battery Electric Vehicle),3199,County,0.004885550743141291,Total Vehicle Registrations,All
+2019-03-31,Snohomish,ICE (Internal Combustion Engine),650068,County,0.9927915600163717,Total Vehicle Registrations,All
+2019-03-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1521,County,0.0023228892404869974,Total Vehicle Registrations,All
+2019-04-30,King,BEV (Battery Electric Vehicle),18291,County,0.011491970824932632,Total Vehicle Registrations,All
+2019-04-30,King,ICE (Internal Combustion Engine),1566461,County,0.9841847963695148,Total Vehicle Registrations,All
+2019-04-30,King,PHEV (Plug-in Hybrid Electric Vehicle),6881,County,0.004323232805552536,Total Vehicle Registrations,All
+2019-04-30,Kitsap,BEV (Battery Electric Vehicle),1010,County,0.004283908621260063,Total Vehicle Registrations,All
+2019-04-30,Kitsap,ICE (Internal Combustion Engine),234178,County,0.9932645080291476,Total Vehicle Registrations,All
+2019-04-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),578,County,0.0024515833495923926,Total Vehicle Registrations,All
+2019-04-30,Pierce,BEV (Battery Electric Vehicle),1692,County,0.0024744764771176737,Total Vehicle Registrations,All
+2019-04-30,Pierce,ICE (Internal Combustion Engine),680604,County,0.995353775550944,Total Vehicle Registrations,All
+2019-04-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1485,County,0.002171747971938384,Total Vehicle Registrations,All
+2019-04-30,Snohomish,BEV (Battery Electric Vehicle),3297,County,0.005024497664530582,Total Vehicle Registrations,All
+2019-04-30,Snohomish,ICE (Internal Combustion Engine),651347,County,0.9926270792535642,Total Vehicle Registrations,All
+2019-04-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1541,County,0.0023484230819052552,Total Vehicle Registrations,All
+2019-05-31,King,BEV (Battery Electric Vehicle),18629,County,0.011676695499561239,Total Vehicle Registrations,All
+2019-05-31,King,ICE (Internal Combustion Engine),1569813,County,0.9839620157954118,Total Vehicle Registrations,All
+2019-05-31,King,PHEV (Plug-in Hybrid Electric Vehicle),6958,County,0.004361288705026952,Total Vehicle Registrations,All
+2019-05-31,Kitsap,BEV (Battery Electric Vehicle),1037,County,0.004385556843075726,Total Vehicle Registrations,All
+2019-05-31,Kitsap,ICE (Internal Combustion Engine),234830,County,0.9931150563736477,Total Vehicle Registrations,All
+2019-05-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),591,County,0.0024993867832765228,Total Vehicle Registrations,All
+2019-05-31,Pierce,BEV (Battery Electric Vehicle),1751,County,0.00255506672211643,Total Vehicle Registrations,All
+2019-05-31,Pierce,ICE (Internal Combustion Engine),682035,County,0.9952284019524154,Total Vehicle Registrations,All
+2019-05-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1519,County,0.002216531325468222,Total Vehicle Registrations,All
+2019-05-31,Snohomish,BEV (Battery Electric Vehicle),3378,County,0.005137259732734747,Total Vehicle Registrations,All
+2019-05-31,Snohomish,ICE (Internal Combustion Engine),652596,County,0.9924674815108836,Total Vehicle Registrations,All
+2019-05-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1575,County,0.002395258756381654,Total Vehicle Registrations,All
+2019-06-30,King,BEV (Battery Electric Vehicle),19094,County,0.011948902702239278,Total Vehicle Registrations,All
+2019-06-30,King,ICE (Internal Combustion Engine),1571854,County,0.9836561489538922,Total Vehicle Registrations,All
+2019-06-30,King,PHEV (Plug-in Hybrid Electric Vehicle),7023,County,0.004394948343868568,Total Vehicle Registrations,All
+2019-06-30,Kitsap,BEV (Battery Electric Vehicle),1051,County,0.004440257205384076,Total Vehicle Registrations,All
+2019-06-30,Kitsap,ICE (Internal Combustion Engine),235039,County,0.992991068788076,Total Vehicle Registrations,All
+2019-06-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),608,County,0.002568674006539979,Total Vehicle Registrations,All
+2019-06-30,Pierce,BEV (Battery Electric Vehicle),1808,County,0.00263334974321927,Total Vehicle Registrations,All
+2019-06-30,Pierce,ICE (Internal Combustion Engine),683215,County,0.9951017946977619,Total Vehicle Registrations,All
+2019-06-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1555,County,0.0022648555590187858,Total Vehicle Registrations,All
+2019-06-30,Snohomish,BEV (Battery Electric Vehicle),3478,County,0.005276516467495111,Total Vehicle Registrations,All
+2019-06-30,Snohomish,ICE (Internal Combustion Engine),654073,County,0.9923021723530563,Total Vehicle Registrations,All
+2019-06-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1596,County,0.0024213111794485903,Total Vehicle Registrations,All
+2019-07-31,King,BEV (Battery Electric Vehicle),19642,County,0.012269172221274853,Total Vehicle Registrations,All
+2019-07-31,King,ICE (Internal Combustion Engine),1574158,County,0.9832815194734538,Total Vehicle Registrations,All
+2019-07-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7123,County,0.004449308305271397,Total Vehicle Registrations,All
+2019-07-31,Kitsap,BEV (Battery Electric Vehicle),1095,County,0.004615695895192089,Total Vehicle Registrations,All
+2019-07-31,Kitsap,ICE (Internal Combustion Engine),235511,County,0.9927371287420859,Total Vehicle Registrations,All
+2019-07-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),628,County,0.002647175362722038,Total Vehicle Registrations,All
+2019-07-31,Pierce,BEV (Battery Electric Vehicle),1877,County,0.002727428602981136,Total Vehicle Registrations,All
+2019-07-31,Pierce,ICE (Internal Combustion Engine),684748,County,0.9949926910144523,Total Vehicle Registrations,All
+2019-07-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1569,County,0.0022798803825665437,Total Vehicle Registrations,All
+2019-07-31,Snohomish,BEV (Battery Electric Vehicle),3561,County,0.005389395558326851,Total Vehicle Registrations,All
+2019-07-31,Snohomish,ICE (Internal Combustion Engine),655561,County,0.9921588153923921,Total Vehicle Registrations,All
+2019-07-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1620,County,0.0024517890492809597,Total Vehicle Registrations,All
+2019-08-31,King,BEV (Battery Electric Vehicle),20021,County,0.012487844918942217,Total Vehicle Registrations,All
+2019-08-31,King,ICE (Internal Combustion Engine),1576005,County,0.9830131377792082,Total Vehicle Registrations,All
+2019-08-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7213,County,0.004499017301849568,Total Vehicle Registrations,All
+2019-08-31,Kitsap,BEV (Battery Electric Vehicle),1116,County,0.004697562823588837,Total Vehicle Registrations,All
+2019-08-31,Kitsap,ICE (Internal Combustion Engine),235818,County,0.9926253314812477,Total Vehicle Registrations,All
+2019-08-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),636,County,0.002677105695163531,Total Vehicle Registrations,All
+2019-08-31,Pierce,BEV (Battery Electric Vehicle),1930,County,0.0028010838598064784,Total Vehicle Registrations,All
+2019-08-31,Pierce,ICE (Internal Combustion Engine),685506,County,0.9949014468396372,Total Vehicle Registrations,All
+2019-08-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1583,County,0.002297469300556298,Total Vehicle Registrations,All
+2019-08-31,Snohomish,BEV (Battery Electric Vehicle),3646,County,0.005511999105018248,Total Vehicle Registrations,All
+2019-08-31,Snohomish,ICE (Internal Combustion Engine),656177,County,0.992004124172671,Total Vehicle Registrations,All
+2019-08-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1643,County,0.0024838767223107463,Total Vehicle Registrations,All
+2019-09-30,King,BEV (Battery Electric Vehicle),20437,County,0.012728107275579685,Total Vehicle Registrations,All
+2019-09-30,King,ICE (Internal Combustion Engine),1577929,County,0.9827298324239455,Total Vehicle Registrations,All
+2019-09-30,King,PHEV (Plug-in Hybrid Electric Vehicle),7293,County,0.0045420603004747585,Total Vehicle Registrations,All
+2019-09-30,Kitsap,BEV (Battery Electric Vehicle),1137,County,0.004782173470503621,Total Vehicle Registrations,All
+2019-09-30,Kitsap,ICE (Internal Combustion Engine),235977,County,0.9925091900167398,Total Vehicle Registrations,All
+2019-09-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),644,County,0.0027086365127566687,Total Vehicle Registrations,All
+2019-09-30,Pierce,BEV (Battery Electric Vehicle),1967,County,0.0028512700980477426,Total Vehicle Registrations,All
+2019-09-30,Pierce,ICE (Internal Combustion Engine),686300,County,0.9948279960804096,Total Vehicle Registrations,All
+2019-09-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1601,County,0.0023207338215426717,Total Vehicle Registrations,All
+2019-09-30,Snohomish,BEV (Battery Electric Vehicle),3745,County,0.005652659542353438,Total Vehicle Registrations,All
+2019-09-30,Snohomish,ICE (Internal Combustion Engine),657110,County,0.991834208778603,Total Vehicle Registrations,All
+2019-09-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1665,County,0.0025131316790436516,Total Vehicle Registrations,All
+2019-10-31,King,BEV (Battery Electric Vehicle),21384,County,0.013298796926550019,Total Vehicle Registrations,All
+2019-10-31,King,ICE (Internal Combustion Engine),1579180,County,0.9820984909497408,Total Vehicle Registrations,All
+2019-10-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7401,County,0.00460271212370916,Total Vehicle Registrations,All
+2019-10-31,Kitsap,BEV (Battery Electric Vehicle),1180,County,0.004947713569314113,Total Vehicle Registrations,All
+2019-10-31,Kitsap,ICE (Internal Combustion Engine),236666,County,0.9923352369451642,Total Vehicle Registrations,All
+2019-10-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),648,County,0.0027170494855216485,Total Vehicle Registrations,All
+2019-10-31,Pierce,BEV (Battery Electric Vehicle),2058,County,0.0029750976520147685,Total Vehicle Registrations,All
+2019-10-31,Pierce,ICE (Internal Combustion Engine),688056,County,0.9946714237389085,Total Vehicle Registrations,All
+2019-10-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1628,County,0.0023534786090767946,Total Vehicle Registrations,All
+2019-10-31,Snohomish,BEV (Battery Electric Vehicle),3902,County,0.005877125600590423,Total Vehicle Registrations,All
+2019-10-31,Snohomish,ICE (Internal Combustion Engine),658340,County,0.9915804376967451,Total Vehicle Registrations,All
+2019-10-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1688,County,0.0025424367026644374,Total Vehicle Registrations,All
+2019-11-30,King,BEV (Battery Electric Vehicle),21615,County,0.013445241199478488,Total Vehicle Registrations,All
+2019-11-30,King,ICE (Internal Combustion Engine),1578551,County,0.981910661146332,Total Vehicle Registrations,All
+2019-11-30,King,PHEV (Plug-in Hybrid Electric Vehicle),7466,County,0.004644097654189516,Total Vehicle Registrations,All
+2019-11-30,Kitsap,BEV (Battery Electric Vehicle),1193,County,0.00499891054757555,Total Vehicle Registrations,All
+2019-11-30,Kitsap,ICE (Internal Combustion Engine),236807,County,0.9922690779880328,Total Vehicle Registrations,All
+2019-11-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),652,County,0.0027320114643916665,Total Vehicle Registrations,All
+2019-11-30,Pierce,BEV (Battery Electric Vehicle),2084,County,0.0030098904654064797,Total Vehicle Registrations,All
+2019-11-30,Pierce,ICE (Internal Combustion Engine),688664,County,0.9946272588621343,Total Vehicle Registrations,All
+2019-11-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1636,County,0.0023628506724592134,Total Vehicle Registrations,All
+2019-11-30,Snohomish,BEV (Battery Electric Vehicle),3948,County,0.005941702686107131,Total Vehicle Registrations,All
+2019-11-30,Snohomish,ICE (Internal Combustion Engine),658797,County,0.9914832584851367,Total Vehicle Registrations,All
+2019-11-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1711,County,0.0025750388287561553,Total Vehicle Registrations,All
+2019-12-31,King,BEV (Battery Electric Vehicle),21967,County,0.013667503918200296,Total Vehicle Registrations,All
+2019-12-31,King,ICE (Internal Combustion Engine),1577724,County,0.9816337666426297,Total Vehicle Registrations,All
+2019-12-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7552,County,0.004698729439170057,Total Vehicle Registrations,All
+2019-12-31,Kitsap,BEV (Battery Electric Vehicle),1202,County,0.005033205758456372,Total Vehicle Registrations,All
+2019-12-31,Kitsap,ICE (Internal Combustion Engine),236957,County,0.9922240739655129,Total Vehicle Registrations,All
+2019-12-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),655,County,0.0027427202760307184,Total Vehicle Registrations,All
+2019-12-31,Pierce,BEV (Battery Electric Vehicle),2128,County,0.0030708001252563208,Total Vehicle Registrations,All
+2019-12-31,Pierce,ICE (Internal Combustion Engine),689199,County,0.9945452892511895,Total Vehicle Registrations,All
+2019-12-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1652,County,0.002383910623554249,Total Vehicle Registrations,All
+2019-12-31,Snohomish,BEV (Battery Electric Vehicle),4026,County,0.006051041572729732,Total Vehicle Registrations,All
+2019-12-31,Snohomish,ICE (Internal Combustion Engine),659601,County,0.9913743349265037,Total Vehicle Registrations,All
+2019-12-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1713,County,0.0025746235007665253,Total Vehicle Registrations,All
+2020-01-31,King,BEV (Battery Electric Vehicle),23214,County,0.014388408944688858,Total Vehicle Registrations,All
+2020-01-31,King,ICE (Internal Combustion Engine),1582538,County,0.9808823948699068,Total Vehicle Registrations,All
+2020-01-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7630,County,0.0047291961854043245,Total Vehicle Registrations,All
+2020-01-31,Kitsap,BEV (Battery Electric Vehicle),1260,County,0.005271459231956758,Total Vehicle Registrations,All
+2020-01-31,Kitsap,ICE (Internal Combustion Engine),237104,County,0.9919714839157738,Total Vehicle Registrations,All
+2020-01-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),659,County,0.0027570568522694468,Total Vehicle Registrations,All
+2020-01-31,Pierce,BEV (Battery Electric Vehicle),2230,County,0.003202357394573512,Total Vehicle Registrations,All
+2020-01-31,Pierce,ICE (Internal Combustion Engine),692452,County,0.9943851042992007,Total Vehicle Registrations,All
+2020-01-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1680,County,0.002412538306225785,Total Vehicle Registrations,All
+2020-01-31,Snohomish,BEV (Battery Electric Vehicle),4249,County,0.006363197982466387,Total Vehicle Registrations,All
+2020-01-31,Snohomish,ICE (Internal Combustion Engine),661775,County,0.9910579771350184,Total Vehicle Registrations,All
+2020-01-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1722,County,0.002578824882515208,Total Vehicle Registrations,All
+2020-02-29,King,BEV (Battery Electric Vehicle),23465,County,0.014531355277238318,Total Vehicle Registrations,All
+2020-02-29,King,ICE (Internal Combustion Engine),1583634,County,0.9807094942729182,Total Vehicle Registrations,All
+2020-02-29,King,PHEV (Plug-in Hybrid Electric Vehicle),7685,County,0.0047591504498434465,Total Vehicle Registrations,All
+2020-02-29,Kitsap,BEV (Battery Electric Vehicle),1275,County,0.005338681785255189,Total Vehicle Registrations,All
+2020-02-29,Kitsap,ICE (Internal Combustion Engine),236884,County,0.9918810164850119,Total Vehicle Registrations,All
+2020-02-29,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),664,County,0.0027803017297328985,Total Vehicle Registrations,All
+2020-02-29,Pierce,BEV (Battery Electric Vehicle),2254,County,0.003233367665749542,Total Vehicle Registrations,All
+2020-02-29,Pierce,ICE (Internal Combustion Engine),693167,County,0.9943494963463232,Total Vehicle Registrations,All
+2020-02-29,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1685,County,0.0024171359879272304,Total Vehicle Registrations,All
+2020-02-29,Snohomish,BEV (Battery Electric Vehicle),4307,County,0.00644605117628835,Total Vehicle Registrations,All
+2020-02-29,Snohomish,ICE (Internal Combustion Engine),662121,County,0.9909602625714461,Total Vehicle Registrations,All
+2020-02-29,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1733,County,0.002593686252265547,Total Vehicle Registrations,All
+2020-03-31,King,BEV (Battery Electric Vehicle),23902,County,0.014828647293843214,Total Vehicle Registrations,All
+2020-03-31,King,ICE (Internal Combustion Engine),1580249,County,0.9803763307442241,Total Vehicle Registrations,All
+2020-03-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7729,County,0.00479502196193265,Total Vehicle Registrations,All
+2020-03-31,Kitsap,BEV (Battery Electric Vehicle),1299,County,0.0054539271214265024,Total Vehicle Registrations,All
+2020-03-31,Kitsap,ICE (Internal Combustion Engine),236201,County,0.9917036489669447,Total Vehicle Registrations,All
+2020-03-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),677,County,0.0028424239116287466,Total Vehicle Registrations,All
+2020-03-31,Pierce,BEV (Battery Electric Vehicle),2311,County,0.0033143402942606413,Total Vehicle Registrations,All
+2020-03-31,Pierce,ICE (Internal Combustion Engine),693268,County,0.9942561952061818,Total Vehicle Registrations,All
+2020-03-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1694,County,0.002429464499557562,Total Vehicle Registrations,All
+2020-03-31,Snohomish,BEV (Battery Electric Vehicle),4375,County,0.006554022372061738,Total Vehicle Registrations,All
+2020-03-31,Snohomish,ICE (Internal Combustion Engine),661393,County,0.9908078899942924,Total Vehicle Registrations,All
+2020-03-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1761,County,0.002638087633645879,Total Vehicle Registrations,All
+2020-04-30,King,BEV (Battery Electric Vehicle),24104,County,0.015064105568731856,Total Vehicle Registrations,All
+2020-04-30,King,ICE (Internal Combustion Engine),1568288,County,0.9801218052678122,Total Vehicle Registrations,All
+2020-04-30,King,PHEV (Plug-in Hybrid Electric Vehicle),7703,County,0.0048140891634559195,Total Vehicle Registrations,All
+2020-04-30,Kitsap,BEV (Battery Electric Vehicle),1314,County,0.005552269078002197,Total Vehicle Registrations,All
+2020-04-30,Kitsap,ICE (Internal Combustion Engine),234667,County,0.991578636017916,Total Vehicle Registrations,All
+2020-04-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),679,County,0.002869094904081805,Total Vehicle Registrations,All
+2020-04-30,Pierce,BEV (Battery Electric Vehicle),2349,County,0.0033820264515070104,Total Vehicle Registrations,All
+2020-04-30,Pierce,ICE (Internal Combustion Engine),690522,County,0.9941948358227006,Total Vehicle Registrations,All
+2020-04-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1683,County,0.002423137725792379,Total Vehicle Registrations,All
+2020-04-30,Snohomish,BEV (Battery Electric Vehicle),4405,County,0.006624737567149723,Total Vehicle Registrations,All
+2020-04-30,Snohomish,ICE (Internal Combustion Engine),658772,County,0.9907358947982651,Total Vehicle Registrations,All
+2020-04-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1755,County,0.0026393676345851905,Total Vehicle Registrations,All
+2020-05-31,King,BEV (Battery Electric Vehicle),24035,County,0.015127312367199379,Total Vehicle Registrations,All
+2020-05-31,King,ICE (Internal Combustion Engine),1557117,County,0.9800289266185311,Total Vehicle Registrations,All
+2020-05-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7696,County,0.004843761014269458,Total Vehicle Registrations,All
+2020-05-31,Kitsap,BEV (Battery Electric Vehicle),1313,County,0.005570238888158258,Total Vehicle Registrations,All
+2020-05-31,Kitsap,ICE (Internal Combustion Engine),233723,County,0.9915407034706873,Total Vehicle Registrations,All
+2020-05-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),681,County,0.002889057641154435,Total Vehicle Registrations,All
+2020-05-31,Pierce,BEV (Battery Electric Vehicle),2353,County,0.003393095850271174,Total Vehicle Registrations,All
+2020-05-31,Pierce,ICE (Internal Combustion Engine),689438,County,0.9941900623966246,Total Vehicle Registrations,All
+2020-05-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1676,County,0.002416841753104329,Total Vehicle Registrations,All
+2020-05-31,Snohomish,BEV (Battery Electric Vehicle),4407,County,0.006640408399431037,Total Vehicle Registrations,All
+2020-05-31,Snohomish,ICE (Internal Combustion Engine),657505,County,0.9907197015357169,Total Vehicle Registrations,All
+2020-05-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1752,County,0.002639890064852094,Total Vehicle Registrations,All
+2020-06-30,King,BEV (Battery Electric Vehicle),24127,County,0.015214220538409491,Total Vehicle Registrations,All
+2020-06-30,King,ICE (Internal Combustion Engine),1553972,County,0.9799176324662524,Total Vehicle Registrations,All
+2020-06-30,King,PHEV (Plug-in Hybrid Electric Vehicle),7720,County,0.004868146995338055,Total Vehicle Registrations,All
+2020-06-30,Kitsap,BEV (Battery Electric Vehicle),1331,County,0.005637131373537247,Total Vehicle Registrations,All
+2020-06-30,Kitsap,ICE (Internal Combustion Engine),234093,County,0.9914447743241583,Total Vehicle Registrations,All
+2020-06-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),689,County,0.002918094302304405,Total Vehicle Registrations,All
+2020-06-30,Pierce,BEV (Battery Electric Vehicle),2382,County,0.0034202024553090676,Total Vehicle Registrations,All
+2020-06-30,Pierce,ICE (Internal Combustion Engine),692374,County,0.9941474621293703,Total Vehicle Registrations,All
+2020-06-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1694,County,0.0024323354153205543,Total Vehicle Registrations,All
+2020-06-30,Snohomish,BEV (Battery Electric Vehicle),4439,County,0.006675589509143407,Total Vehicle Registrations,All
+2020-06-30,Snohomish,ICE (Internal Combustion Engine),658752,County,0.9906641000962464,Total Vehicle Registrations,All
+2020-06-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1769,County,0.002660310394610202,Total Vehicle Registrations,All
+2020-07-31,King,BEV (Battery Electric Vehicle),24925,County,0.015699808326913787,Total Vehicle Registrations,All
+2020-07-31,King,ICE (Internal Combustion Engine),1554911,County,0.9794104178700037,Total Vehicle Registrations,All
+2020-07-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7763,County,0.004889773803082516,Total Vehicle Registrations,All
+2020-07-31,Kitsap,BEV (Battery Electric Vehicle),1376,County,0.005822539490443164,Total Vehicle Registrations,All
+2020-07-31,Kitsap,ICE (Internal Combustion Engine),234248,County,0.9912196443003854,Total Vehicle Registrations,All
+2020-07-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),699,County,0.002957816209171346,Total Vehicle Registrations,All
+2020-07-31,Pierce,BEV (Battery Electric Vehicle),2469,County,0.003531532046972666,Total Vehicle Registrations,All
+2020-07-31,Pierce,ICE (Internal Combustion Engine),694963,County,0.9940397350993377,Total Vehicle Registrations,All
+2020-07-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1698,County,0.0024287328536895855,Total Vehicle Registrations,All
+2020-07-31,Snohomish,BEV (Battery Electric Vehicle),4588,County,0.006882781195665708,Total Vehicle Registrations,All
+2020-07-31,Snohomish,ICE (Internal Combustion Engine),660224,County,0.9904484158952042,Total Vehicle Registrations,All
+2020-07-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1779,County,0.002668802909130186,Total Vehicle Registrations,All
+2020-08-31,King,BEV (Battery Electric Vehicle),25194,County,0.01586491959859751,Total Vehicle Registrations,All
+2020-08-31,King,ICE (Internal Combustion Engine),1555016,County,0.9792094869624793,Total Vehicle Registrations,All
+2020-08-31,King,PHEV (Plug-in Hybrid Electric Vehicle),7822,County,0.004925593438923145,Total Vehicle Registrations,All
+2020-08-31,Kitsap,BEV (Battery Electric Vehicle),1399,County,0.005924301067983366,Total Vehicle Registrations,All
+2020-08-31,Kitsap,ICE (Internal Combustion Engine),234045,County,0.9911029617270671,Total Vehicle Registrations,All
+2020-08-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),702,County,0.0029727372049494806,Total Vehicle Registrations,All
+2020-08-31,Pierce,BEV (Battery Electric Vehicle),2521,County,0.003597784529669235,Total Vehicle Registrations,All
+2020-08-31,Pierce,ICE (Internal Combustion Engine),696483,County,0.9939689657190075,Total Vehicle Registrations,All
+2020-08-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1705,County,0.0024332497513233024,Total Vehicle Registrations,All
+2020-08-31,Snohomish,BEV (Battery Electric Vehicle),4650,County,0.006967388128469647,Total Vehicle Registrations,All
+2020-08-31,Snohomish,ICE (Internal Combustion Engine),660959,County,0.9903565354849827,Total Vehicle Registrations,All
+2020-08-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1786,County,0.0026760763865476965,Total Vehicle Registrations,All
+2020-09-30,King,BEV (Battery Electric Vehicle),25413,County,0.01598894181555306,Total Vehicle Registrations,All
+2020-09-30,King,ICE (Internal Combustion Engine),1556095,County,0.9790387759994111,Total Vehicle Registrations,All
+2020-09-30,King,PHEV (Plug-in Hybrid Electric Vehicle),7903,County,0.0049722821850358406,Total Vehicle Registrations,All
+2020-09-30,Kitsap,BEV (Battery Electric Vehicle),1425,County,0.006032231163564477,Total Vehicle Registrations,All
+2020-09-30,Kitsap,ICE (Internal Combustion Engine),234090,County,0.9909368372482866,Total Vehicle Registrations,All
+2020-09-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),716,County,0.0030309315881488883,Total Vehicle Registrations,All
+2020-09-30,Pierce,BEV (Battery Electric Vehicle),2576,County,0.003665406446049799,Total Vehicle Registrations,All
+2020-09-30,Pierce,ICE (Internal Combustion Engine),698500,County,0.9939000009960344,Total Vehicle Registrations,All
+2020-09-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1711,County,0.002434592557915841,Total Vehicle Registrations,All
+2020-09-30,Snohomish,BEV (Battery Electric Vehicle),4699,County,0.007024462290043471,Total Vehicle Registrations,All
+2020-09-30,Snohomish,ICE (Internal Combustion Engine),662437,County,0.9902668069864923,Total Vehicle Registrations,All
+2020-09-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1812,County,0.0027087307234643053,Total Vehicle Registrations,All
+2020-10-31,King,BEV (Battery Electric Vehicle),25900,County,0.016270765643178968,Total Vehicle Registrations,All
+2020-10-31,King,ICE (Internal Combustion Engine),1557896,County,0.9786934638010016,Total Vehicle Registrations,All
+2020-10-31,King,PHEV (Plug-in Hybrid Electric Vehicle),8016,County,0.0050357705558194054,Total Vehicle Registrations,All
+2020-10-31,Kitsap,BEV (Battery Electric Vehicle),1464,County,0.006192919597798637,Total Vehicle Registrations,All
+2020-10-31,Kitsap,ICE (Internal Combustion Engine),234202,County,0.9907063904669647,Total Vehicle Registrations,All
+2020-10-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),733,County,0.0031006899352366128,Total Vehicle Registrations,All
+2020-10-31,Pierce,BEV (Battery Electric Vehicle),2663,County,0.003781231008650116,Total Vehicle Registrations,All
+2020-10-31,Pierce,ICE (Internal Combustion Engine),699864,County,0.9937466986999267,Total Vehicle Registrations,All
+2020-10-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1741,County,0.0024720702914231515,Total Vehicle Registrations,All
+2020-10-31,Snohomish,BEV (Battery Electric Vehicle),4836,County,0.007216607150052005,Total Vehicle Registrations,All
+2020-10-31,Snohomish,ICE (Internal Combustion Engine),663465,County,0.9900674654278854,Total Vehicle Registrations,All
+2020-10-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1820,County,0.0027159274220625827,Total Vehicle Registrations,All
+2020-11-30,King,BEV (Battery Electric Vehicle),26626,County,0.016735849388669455,Total Vehicle Registrations,All
+2020-11-30,King,ICE (Internal Combustion Engine),1556246,County,0.9781829290062076,Total Vehicle Registrations,All
+2020-11-30,King,PHEV (Plug-in Hybrid Electric Vehicle),8084,County,0.005081221605122957,Total Vehicle Registrations,All
+2020-11-30,Kitsap,BEV (Battery Electric Vehicle),1521,County,0.006428707284600267,Total Vehicle Registrations,All
+2020-11-30,Kitsap,ICE (Internal Combustion Engine),234334,County,0.9904435850292694,Total Vehicle Registrations,All
+2020-11-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),740,County,0.003127707686130307,Total Vehicle Registrations,All
+2020-11-30,Pierce,BEV (Battery Electric Vehicle),2762,County,0.003919637497392348,Total Vehicle Registrations,All
+2020-11-30,Pierce,ICE (Internal Combustion Engine),700138,County,0.9935869508143679,Total Vehicle Registrations,All
+2020-11-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1757,County,0.0024934116882398103,Total Vehicle Registrations,All
+2020-11-30,Snohomish,BEV (Battery Electric Vehicle),4961,County,0.0073976320419909935,Total Vehicle Registrations,All
+2020-11-30,Snohomish,ICE (Internal Combustion Engine),663832,County,0.9898780233217023,Total Vehicle Registrations,All
+2020-11-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1827,County,0.0027243446363067014,Total Vehicle Registrations,All
+2020-12-31,King,BEV (Battery Electric Vehicle),26945,County,0.016940766103630083,Total Vehicle Registrations,All
+2020-12-31,King,ICE (Internal Combustion Engine),1555424,County,0.9779207339384939,Total Vehicle Registrations,All
+2020-12-31,King,PHEV (Plug-in Hybrid Electric Vehicle),8173,County,0.005138499957875994,Total Vehicle Registrations,All
+2020-12-31,Kitsap,BEV (Battery Electric Vehicle),1556,County,0.006570890448560401,Total Vehicle Registrations,All
+2020-12-31,Kitsap,ICE (Internal Combustion Engine),234487,County,0.9902239001359786,Total Vehicle Registrations,All
+2020-12-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),759,County,0.003205209415461018,Total Vehicle Registrations,All
+2020-12-31,Pierce,BEV (Battery Electric Vehicle),2828,County,0.004007135762269728,Total Vehicle Registrations,All
+2020-12-31,Pierce,ICE (Internal Combustion Engine),701141,County,0.9934820281094623,Total Vehicle Registrations,All
+2020-12-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1772,County,0.002510836128268019,Total Vehicle Registrations,All
+2020-12-31,Snohomish,BEV (Battery Electric Vehicle),5042,County,0.007508328108875225,Total Vehicle Registrations,All
+2020-12-31,Snohomish,ICE (Internal Combustion Engine),664627,County,0.9897337536726327,Total Vehicle Registrations,All
+2020-12-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1852,County,0.0027579182184920502,Total Vehicle Registrations,All
+2021-01-31,King,BEV (Battery Electric Vehicle),27820,County,0.01751148128751561,Total Vehicle Registrations,All
+2021-01-31,King,ICE (Internal Combustion Engine),1552526,County,0.9772476634572775,Total Vehicle Registrations,All
+2021-01-31,King,PHEV (Plug-in Hybrid Electric Vehicle),8326,County,0.005240855255206864,Total Vehicle Registrations,All
+2021-01-31,Kitsap,BEV (Battery Electric Vehicle),1607,County,0.006800849788822399,Total Vehicle Registrations,All
+2021-01-31,Kitsap,ICE (Internal Combustion Engine),233919,County,0.9899489618864634,Total Vehicle Registrations,All
+2021-01-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),768,County,0.0032501883247141273,Total Vehicle Registrations,All
+2021-01-31,Pierce,BEV (Battery Electric Vehicle),2966,County,0.0042005500652883875,Total Vehicle Registrations,All
+2021-01-31,Pierce,ICE (Internal Combustion Engine),701341,County,0.9932629748278567,Total Vehicle Registrations,All
+2021-01-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1791,County,0.002536475106854856,Total Vehicle Registrations,All
+2021-01-31,Snohomish,BEV (Battery Electric Vehicle),5184,County,0.007720340207275646,Total Vehicle Registrations,All
+2021-01-31,Snohomish,ICE (Internal Combustion Engine),664409,County,0.9894798450570611,Total Vehicle Registrations,All
+2021-01-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1880,County,0.002799814735663236,Total Vehicle Registrations,All
+2021-02-28,King,BEV (Battery Electric Vehicle),28257,County,0.0178060671825051,Total Vehicle Registrations,All
+2021-02-28,King,ICE (Internal Combustion Engine),1550223,County,0.9768685595025871,Total Vehicle Registrations,All
+2021-02-28,King,PHEV (Plug-in Hybrid Electric Vehicle),8451,County,0.005325373314907831,Total Vehicle Registrations,All
+2021-02-28,Kitsap,BEV (Battery Electric Vehicle),1642,County,0.00694682421827074,Total Vehicle Registrations,All
+2021-02-28,Kitsap,ICE (Internal Combustion Engine),233945,County,0.9897532227425995,Total Vehicle Registrations,All
+2021-02-28,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),780,County,0.003299953039129828,Total Vehicle Registrations,All
+2021-02-28,Pierce,BEV (Battery Electric Vehicle),3032,County,0.004293753947506309,Total Vehicle Registrations,All
+2021-02-28,Pierce,ICE (Internal Combustion Engine),701299,County,0.9931416060792305,Total Vehicle Registrations,All
+2021-02-28,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1811,County,0.002564639973263168,Total Vehicle Registrations,All
+2021-02-28,Snohomish,BEV (Battery Electric Vehicle),5277,County,0.007858350148544708,Total Vehicle Registrations,All
+2021-02-28,Snohomish,ICE (Internal Combustion Engine),664340,County,0.9893152051703983,Total Vehicle Registrations,All
+2021-02-28,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1898,County,0.002826444681057013,Total Vehicle Registrations,All
+2021-03-31,King,BEV (Battery Electric Vehicle),28552,County,0.017981400158577913,Total Vehicle Registrations,All
+2021-03-31,King,ICE (Internal Combustion Engine),1550740,County,0.9766207789966767,Total Vehicle Registrations,All
+2021-03-31,King,PHEV (Plug-in Hybrid Electric Vehicle),8571,County,0.005397820844745422,Total Vehicle Registrations,All
+2021-03-31,Kitsap,BEV (Battery Electric Vehicle),1675,County,0.007068643917590162,Total Vehicle Registrations,All
+2021-03-31,Kitsap,ICE (Internal Combustion Engine),234484,County,0.9895426270878875,Total Vehicle Registrations,All
+2021-03-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),803,County,0.0033887289945223283,Total Vehicle Registrations,All
+2021-03-31,Pierce,BEV (Battery Electric Vehicle),3128,County,0.00441872193271055,Total Vehicle Registrations,All
+2021-03-31,Pierce,ICE (Internal Combustion Engine),702923,County,0.9929735540622435,Total Vehicle Registrations,All
+2021-03-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1846,County,0.0026077240050459316,Total Vehicle Registrations,All
+2021-03-31,Snohomish,BEV (Battery Electric Vehicle),5390,County,0.008014548114796878,Total Vehicle Registrations,All
+2021-03-31,Snohomish,ICE (Internal Combustion Engine),665202,County,0.9891082439812825,Total Vehicle Registrations,All
+2021-03-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1935,County,0.002877207903920586,Total Vehicle Registrations,All
+2021-04-30,King,BEV (Battery Electric Vehicle),29491,County,0.0185039710973882,Total Vehicle Registrations,All
+2021-04-30,King,ICE (Internal Combustion Engine),1555517,County,0.976000868383439,Total Vehicle Registrations,All
+2021-04-30,King,PHEV (Plug-in Hybrid Electric Vehicle),8758,County,0.005495160519172827,Total Vehicle Registrations,All
+2021-04-30,Kitsap,BEV (Battery Electric Vehicle),1733,County,0.00728010552582274,Total Vehicle Registrations,All
+2021-04-30,Kitsap,ICE (Internal Combustion Engine),235496,County,0.9892877847138788,Total Vehicle Registrations,All
+2021-04-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),817,County,0.0034321097602984297,Total Vehicle Registrations,All
+2021-04-30,Pierce,BEV (Battery Electric Vehicle),3273,County,0.004597756047812168,Total Vehicle Registrations,All
+2021-04-30,Pierce,ICE (Internal Combustion Engine),706694,County,0.9927304040490595,Total Vehicle Registrations,All
+2021-04-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1902,County,0.002671839903128244,Total Vehicle Registrations,All
+2021-04-30,Snohomish,BEV (Battery Electric Vehicle),5593,County,0.008288381742738589,Total Vehicle Registrations,All
+2021-04-30,Snohomish,ICE (Internal Combustion Engine),667236,County,0.9887907528156491,Total Vehicle Registrations,All
+2021-04-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),1971,County,0.0029208654416123295,Total Vehicle Registrations,All
+2021-05-31,King,BEV (Battery Electric Vehicle),30075,County,0.01887356063605939,Total Vehicle Registrations,All
+2021-05-31,King,ICE (Internal Combustion Engine),1554501,County,0.9755268123795496,Total Vehicle Registrations,All
+2021-05-31,King,PHEV (Plug-in Hybrid Electric Vehicle),8923,County,0.005599626984390953,Total Vehicle Registrations,All
+2021-05-31,Kitsap,BEV (Battery Electric Vehicle),1796,County,0.007546123368192838,Total Vehicle Registrations,All
+2021-05-31,Kitsap,ICE (Internal Combustion Engine),235371,County,0.9889413158657664,Total Vehicle Registrations,All
+2021-05-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),836,County,0.0035125607660407643,Total Vehicle Registrations,All
+2021-05-31,Pierce,BEV (Battery Electric Vehicle),3383,County,0.004750623844115504,Total Vehicle Registrations,All
+2021-05-31,Pierce,ICE (Internal Combustion Engine),706794,County,0.99252510472295985,Total Vehicle Registrations,All
+2021-05-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1940,County,0.0027242714329246457,Total Vehicle Registrations,All
+2021-05-31,Snohomish,BEV (Battery Electric Vehicle),5734,County,0.00849715625342687,Total Vehicle Registrations,All
+2021-05-31,Snohomish,ICE (Internal Combustion Engine),667074,County,0.9885301727587157,Total Vehicle Registrations,All
+2021-05-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2006,County,0.0029726709878573946,Total Vehicle Registrations,All
+2021-06-30,King,BEV (Battery Electric Vehicle),30526,County,0.019150252254354697,Total Vehicle Registrations,All
+2021-06-30,King,ICE (Internal Combustion Engine),1554339,County,0.9751026645738526,Total Vehicle Registrations,All
+2021-06-30,King,PHEV (Plug-in Hybrid Electric Vehicle),9161,County,0.005747083171792681,Total Vehicle Registrations,All
+2021-06-30,Kitsap,BEV (Battery Electric Vehicle),1851,County,0.007772901925378462,Total Vehicle Registrations,All
+2021-06-30,Kitsap,ICE (Internal Combustion Engine),235421,County,0.9886031032817519,Total Vehicle Registrations,All
+2021-06-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),863,County,0.003623994792869591,Total Vehicle Registrations,All
+2021-06-30,Pierce,BEV (Battery Electric Vehicle),3470,County,0.0048669512968251205,Total Vehicle Registrations,All
+2021-06-30,Pierce,ICE (Internal Combustion Engine),707506,County,0.9923334997727821,Total Vehicle Registrations,All
+2021-06-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),1996,County,0.0027995489303927782,Total Vehicle Registrations,All
+2021-06-30,Snohomish,BEV (Battery Electric Vehicle),5891,County,0.008727989273358964,Total Vehicle Registrations,All
+2021-06-30,Snohomish,ICE (Internal Combustion Engine),667012,County,0.9882318080464624,Total Vehicle Registrations,All
+2021-06-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2052,County,0.0030402026801786787,Total Vehicle Registrations,All
+2021-07-31,King,BEV (Battery Electric Vehicle),31587,County,0.01982271450760131,Total Vehicle Registrations,All
+2021-07-31,King,ICE (Internal Combustion Engine),1552544,County,0.9743133717190418,Total Vehicle Registrations,All
+2021-07-31,King,PHEV (Plug-in Hybrid Electric Vehicle),9344,County,0.0058639137733569715,Total Vehicle Registrations,All
+2021-07-31,Kitsap,BEV (Battery Electric Vehicle),1911,County,0.008019168792802471,Total Vehicle Registrations,All
+2021-07-31,Kitsap,ICE (Internal Combustion Engine),235519,County,0.9883132469450786,Total Vehicle Registrations,All
+2021-07-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),874,County,0.003667584262118974,Total Vehicle Registrations,All
+2021-07-31,Pierce,BEV (Battery Electric Vehicle),3637,County,0.005107292460951049,Total Vehicle Registrations,All
+2021-07-31,Pierce,ICE (Internal Combustion Engine),706465,County,0.992060315761832,Total Vehicle Registrations,All
+2021-07-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2017,County,0.00283239177721701,Total Vehicle Registrations,All
+2021-07-31,Snohomish,BEV (Battery Electric Vehicle),6130,County,0.009086314054437841,Total Vehicle Registrations,All
+2021-07-31,Snohomish,ICE (Internal Combustion Engine),666406,County,0.9877935079546011,Total Vehicle Registrations,All
+2021-07-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2105,County,0.0031201779909611187,Total Vehicle Registrations,All
+2021-08-31,King,BEV (Battery Electric Vehicle),32323,County,0.02028897811918794,Total Vehicle Registrations,All
+2021-08-31,King,ICE (Internal Combustion Engine),1551264,County,0.9737203029757127,Total Vehicle Registrations,All
+2021-08-31,King,PHEV (Plug-in Hybrid Electric Vehicle),9544,County,0.005990718905099455,Total Vehicle Registrations,All
+2021-08-31,Kitsap,BEV (Battery Electric Vehicle),1952,County,0.008188469024766764,Total Vehicle Registrations,All
+2021-08-31,Kitsap,ICE (Internal Combustion Engine),235541,County,0.98807386401771935,Total Vehicle Registrations,All
+2021-08-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),891,County,0.0037376669575139273,Total Vehicle Registrations,All
+2021-08-31,Pierce,BEV (Battery Electric Vehicle),3772,County,0.0053009393286975875,Total Vehicle Registrations,All
+2021-08-31,Pierce,ICE (Internal Combustion Engine),705771,County,0.9918476275064224,Total Vehicle Registrations,All
+2021-08-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2029,County,0.002851433164880012,Total Vehicle Registrations,All
+2021-08-31,Snohomish,BEV (Battery Electric Vehicle),6315,County,0.009364642727387316,Total Vehicle Registrations,All
+2021-08-31,Snohomish,ICE (Internal Combustion Engine),665888,County,0.9874589416396652,Total Vehicle Registrations,All
+2021-08-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2142,County,0.003176415632947527,Total Vehicle Registrations,All
+2021-09-30,King,BEV (Battery Electric Vehicle),32911,County,0.020654575122379816,Total Vehicle Registrations,All
+2021-09-30,King,ICE (Internal Combustion Engine),1550807,County,0.9732691100790762,Total Vehicle Registrations,All
+2021-09-30,King,PHEV (Plug-in Hybrid Electric Vehicle),9682,County,0.006076314798543994,Total Vehicle Registrations,All
+2021-09-30,Kitsap,BEV (Battery Electric Vehicle),1993,County,0.00835509795126123,Total Vehicle Registrations,All
+2021-09-30,Kitsap,ICE (Internal Combustion Engine),235634,County,0.9878299802546355,Total Vehicle Registrations,All
+2021-09-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),910,County,0.003814921794103221,Total Vehicle Registrations,All
+2021-09-30,Pierce,BEV (Battery Electric Vehicle),3875,County,0.005446270955845149,Total Vehicle Registrations,All
+2021-09-30,Pierce,ICE (Internal Combustion Engine),705554,County,0.9916485827046111,Total Vehicle Registrations,All
+2021-09-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2067,County,0.002905146339543722,Total Vehicle Registrations,All
+2021-09-30,Snohomish,BEV (Battery Electric Vehicle),6462,County,0.009579762418334081,Total Vehicle Registrations,All
+2021-09-30,Snohomish,ICE (Internal Combustion Engine),665917,County,0.9872062287727912,Total Vehicle Registrations,All
+2021-09-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2168,County,0.003214008808874697,Total Vehicle Registrations,All
+2021-10-31,King,BEV (Battery Electric Vehicle),33875,County,0.02126980917763226,Total Vehicle Registrations,All
+2021-10-31,King,ICE (Internal Combustion Engine),1548851,County,0.9725096742312886,Total Vehicle Registrations,All
+2021-10-31,King,PHEV (Plug-in Hybrid Electric Vehicle),9907,County,0.00622051659107905,Total Vehicle Registrations,All
+2021-10-31,Kitsap,BEV (Battery Electric Vehicle),2042,County,0.00856651424256408,Total Vehicle Registrations,All
+2021-10-31,Kitsap,ICE (Internal Combustion Engine),235409,County,0.9875781348324034,Total Vehicle Registrations,All
+2021-10-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),919,County,0.0038553509250325124,Total Vehicle Registrations,All
+2021-10-31,Pierce,BEV (Battery Electric Vehicle),3999,County,0.005629611276678713,Total Vehicle Registrations,All
+2021-10-31,Pierce,ICE (Internal Combustion Engine),704271,County,0.9914408510722164,Total Vehicle Registrations,All
+2021-10-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2081,County,0.0029295376511048765,Total Vehicle Registrations,All
+2021-10-31,Snohomish,BEV (Battery Electric Vehicle),6663,County,0.009886871516669535,Total Vehicle Registrations,All
+2021-10-31,Snohomish,ICE (Internal Combustion Engine),665060,County,0.9868471815813059,Total Vehicle Registrations,All
+2021-10-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2201,County,0.0032659469020245606,Total Vehicle Registrations,All
+2021-11-30,King,BEV (Battery Electric Vehicle),34755,County,0.02182351803524917,Total Vehicle Registrations,All
+2021-11-30,King,ICE (Internal Combustion Engine),1547710,County,0.9718451186400661,Total Vehicle Registrations,All
+2021-11-30,King,PHEV (Plug-in Hybrid Electric Vehicle),10083,County,0.006331363324684719,Total Vehicle Registrations,All
+2021-11-30,Kitsap,BEV (Battery Electric Vehicle),2084,County,0.00874340783130761,Total Vehicle Registrations,All
+2021-11-30,Kitsap,ICE (Internal Combustion Engine),235323,County,0.9872960465867565,Total Vehicle Registrations,All
+2021-11-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),944,County,0.003960545581935884,Total Vehicle Registrations,All
+2021-11-30,Pierce,BEV (Battery Electric Vehicle),4128,County,0.005815165636428181,Total Vehicle Registrations,All
+2021-11-30,Pierce,ICE (Internal Combustion Engine),703634,County,0.9912180856159173,Total Vehicle Registrations,All
+2021-11-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2106,County,0.0029667487476544934,Total Vehicle Registrations,All
+2021-11-30,Snohomish,BEV (Battery Electric Vehicle),6851,County,0.010169637449678776,Total Vehicle Registrations,All
+2021-11-30,Snohomish,ICE (Internal Combustion Engine),664587,County,0.9865142086950326,Total Vehicle Registrations,All
+2021-11-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2234,County,0.0033161538552886273,Total Vehicle Registrations,All
+2021-12-31,King,BEV (Battery Electric Vehicle),35523,County,0.022347595288528258,Total Vehicle Registrations,All
+2021-12-31,King,ICE (Internal Combustion Engine),1543830,County,0.9712267554623366,Total Vehicle Registrations,All
+2021-12-31,King,PHEV (Plug-in Hybrid Electric Vehicle),10214,County,0.006425649249135142,Total Vehicle Registrations,All
+2021-12-31,Kitsap,BEV (Battery Electric Vehicle),2130,County,0.00894875263631093,Total Vehicle Registrations,All
+2021-12-31,Kitsap,ICE (Internal Combustion Engine),234931,County,0.9870138054465554,Total Vehicle Registrations,All
+2021-12-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),961,County,0.00403744191713371,Total Vehicle Registrations,All
+2021-12-31,Pierce,BEV (Battery Electric Vehicle),4235,County,0.005980126493443042,Total Vehicle Registrations,All
+2021-12-31,Pierce,ICE (Internal Combustion Engine),701822,County,0.9910234559341635,Total Vehicle Registrations,All
+2021-12-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2122,County,0.0029964175723934203,Total Vehicle Registrations,All
+2021-12-31,Snohomish,BEV (Battery Electric Vehicle),7038,County,0.010461896133201136,Total Vehicle Registrations,All
+2021-12-31,Snohomish,ICE (Internal Combustion Engine),663449,County,0.9862083727871782,Total Vehicle Registrations,All
+2021-12-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2240,County,0.003329731079620708,Total Vehicle Registrations,All
+2022-01-31,King,BEV (Battery Electric Vehicle),36408,County,0.022932959767798113,Total Vehicle Registrations,All
+2022-01-31,King,ICE (Internal Combustion Engine),1540778,County,0.9705174655325325,Total Vehicle Registrations,All
+2022-01-31,King,PHEV (Plug-in Hybrid Electric Vehicle),10398,County,0.006549574699669435,Total Vehicle Registrations,All
+2022-01-31,Kitsap,BEV (Battery Electric Vehicle),2192,County,0.009215931115960125,Total Vehicle Registrations,All
+2022-01-31,Kitsap,ICE (Internal Combustion Engine),234685,County,0.9866974424950283,Total Vehicle Registrations,All
+2022-01-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),972,County,0.004086626389011516,Total Vehicle Registrations,All
+2022-01-31,Pierce,BEV (Battery Electric Vehicle),4367,County,0.006182417414398931,Total Vehicle Registrations,All
+2022-01-31,Pierce,ICE (Internal Combustion Engine),699844,County,0.9907780473923987,Total Vehicle Registrations,All
+2022-01-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2147,County,0.003039535193202314,Total Vehicle Registrations,All
+2022-01-31,Snohomish,BEV (Battery Electric Vehicle),7236,County,0.010767136129277058,Total Vehicle Registrations,All
+2022-01-31,Snohomish,ICE (Internal Combustion Engine),662527,County,0.9858372579217165,Total Vehicle Registrations,All
+2022-01-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2282,County,0.003395605949006391,Total Vehicle Registrations,All
+2022-02-28,King,BEV (Battery Electric Vehicle),37279,County,0.023495488908987203,Total Vehicle Registrations,All
+2022-02-28,King,ICE (Internal Combustion Engine),1538847,County,0.9698747987104865,Total Vehicle Registrations,All
+2022-02-28,King,PHEV (Plug-in Hybrid Electric Vehicle),10519,County,0.006629712380526205,Total Vehicle Registrations,All
+2022-02-28,Kitsap,BEV (Battery Electric Vehicle),2232,County,0.009394334778399764,Total Vehicle Registrations,All
+2022-02-28,Kitsap,ICE (Internal Combustion Engine),234374,County,0.9864640767709079,Total Vehicle Registrations,All
+2022-02-28,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),984,County,0.00414158845069237,Total Vehicle Registrations,All
+2022-02-28,Pierce,BEV (Battery Electric Vehicle),4488,County,0.006369372514624863,Total Vehicle Registrations,All
+2022-02-28,Pierce,ICE (Internal Combustion Engine),697965,County,0.9905523812767697,Total Vehicle Registrations,All
+2022-02-28,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2169,County,0.003078246208605465,Total Vehicle Registrations,All
+2022-02-28,Snohomish,BEV (Battery Electric Vehicle),7471,County,0.01112696445805383,Total Vehicle Registrations,All
+2022-02-28,Snohomish,ICE (Internal Combustion Engine),661646,County,0.9854251808075873,Total Vehicle Registrations,All
+2022-02-28,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2315,County,0.003447854734358803,Total Vehicle Registrations,All
+2022-03-31,King,BEV (Battery Electric Vehicle),37997,County,0.023984098549604926,Total Vehicle Registrations,All
+2022-03-31,King,ICE (Internal Combustion Engine),1535564,County,0.9692638446515656,Total Vehicle Registrations,All
+2022-03-31,King,PHEV (Plug-in Hybrid Electric Vehicle),10697,County,0.006752056798829484,Total Vehicle Registrations,All
+2022-03-31,Kitsap,BEV (Battery Electric Vehicle),2277,County,0.009599129881243966,Total Vehicle Registrations,All
+2022-03-31,Kitsap,ICE (Internal Combustion Engine),233924,County,0.9861514529381263,Total Vehicle Registrations,All
+2022-03-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1008,County,0.00424941718062974,Total Vehicle Registrations,All
+2022-03-31,Pierce,BEV (Battery Electric Vehicle),4633,County,0.006602263836894299,Total Vehicle Registrations,All
+2022-03-31,Pierce,ICE (Internal Combustion Engine),694869,County,0.9902241463584945,Total Vehicle Registrations,All
+2022-03-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2227,County,0.0031735898046111816,Total Vehicle Registrations,All
+2022-03-31,Snohomish,BEV (Battery Electric Vehicle),7684,County,0.011464207919314892,Total Vehicle Registrations,All
+2022-03-31,Snohomish,ICE (Internal Combustion Engine),660211,County,0.9850073105958882,Total Vehicle Registrations,All
+2022-03-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2365,County,0.0035284814847969443,Total Vehicle Registrations,All
+2022-04-30,King,BEV (Battery Electric Vehicle),39387,County,0.024867822412924425,Total Vehicle Registrations,All
+2022-04-30,King,ICE (Internal Combustion Engine),1533651,County,0.9683032653262232,Total Vehicle Registrations,All
+2022-04-30,King,PHEV (Plug-in Hybrid Electric Vehicle),10816,County,0.006828912260852326,Total Vehicle Registrations,All
+2022-04-30,Kitsap,BEV (Battery Electric Vehicle),2334,County,0.009853090172239109,Total Vehicle Registrations,All
+2022-04-30,Kitsap,ICE (Internal Combustion Engine),233524,County,0.9858324890239784,Total Vehicle Registrations,All
+2022-04-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1022,County,0.004314420803782506,Total Vehicle Registrations,All
+2022-04-30,Pierce,BEV (Battery Electric Vehicle),4835,County,0.006907221796820535,Total Vehicle Registrations,All
+2022-04-30,Pierce,ICE (Internal Combustion Engine),692902,County,0.9898713128150036,Total Vehicle Registrations,All
+2022-04-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2255,County,0.003221465388175865,Total Vehicle Registrations,All
+2022-04-30,Snohomish,BEV (Battery Electric Vehicle),7985,County,0.011928753150251497,Total Vehicle Registrations,All
+2022-04-30,Snohomish,ICE (Internal Combustion Engine),658987,County,0.984457514367537,Total Vehicle Registrations,All
+2022-04-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2419,County,0.003613732482211443,Total Vehicle Registrations,All
+2022-05-31,King,BEV (Battery Electric Vehicle),40062,County,0.025337751301451692,Total Vehicle Registrations,All
+2022-05-31,King,ICE (Internal Combustion Engine),1530028,County,0.9676868091522522,Total Vehicle Registrations,All
+2022-05-31,King,PHEV (Plug-in Hybrid Electric Vehicle),11029,County,0.006975439546296009,Total Vehicle Registrations,All
+2022-05-31,Kitsap,BEV (Battery Electric Vehicle),2363,County,0.010003513718318325,Total Vehicle Registrations,All
+2022-05-31,Kitsap,ICE (Internal Combustion Engine),232821,County,0.9856233886638134,Total Vehicle Registrations,All
+2022-05-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1033,County,0.004373097617868316,Total Vehicle Registrations,All
+2022-05-31,Pierce,BEV (Battery Electric Vehicle),4952,County,0.007106753424932764,Total Vehicle Registrations,All
+2022-05-31,Pierce,ICE (Internal Combustion Engine),689572,County,0.9896240251893651,Total Vehicle Registrations,All
+2022-05-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2278,County,0.0032692213857021075,Total Vehicle Registrations,All
+2022-05-31,Snohomish,BEV (Battery Electric Vehicle),8159,County,0.01222129852232982,Total Vehicle Registrations,All
+2022-05-31,Snohomish,ICE (Internal Combustion Engine),656976,County,0.9840789089356731,Total Vehicle Registrations,All
+2022-05-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2470,County,0.003699792541997139,Total Vehicle Registrations,All
+2022-06-30,King,BEV (Battery Electric Vehicle),40747,County,0.02577746118545829,Total Vehicle Registrations,All
+2022-06-30,King,ICE (Internal Combustion Engine),1528690,County,0.9670833960683789,Total Vehicle Registrations,All
+2022-06-30,King,PHEV (Plug-in Hybrid Electric Vehicle),11285,County,0.00713914274616283,Total Vehicle Registrations,All
+2022-06-30,Kitsap,BEV (Battery Electric Vehicle),2399,County,0.010163187148376602,Total Vehicle Registrations,All
+2022-06-30,Kitsap,ICE (Internal Combustion Engine),232591,County,0.9853546736257033,Total Vehicle Registrations,All
+2022-06-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1058,County,0.004482139225920152,Total Vehicle Registrations,All
+2022-06-30,Pierce,BEV (Battery Electric Vehicle),5058,County,0.007278650873711522,Total Vehicle Registrations,All
+2022-06-30,Pierce,ICE (Internal Combustion Engine),687550,County,0.989410124203313,Total Vehicle Registrations,All
+2022-06-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2301,County,0.0033112249229755265,Total Vehicle Registrations,All
+2022-06-30,Snohomish,BEV (Battery Electric Vehicle),8372,County,0.012555507731715255,Total Vehicle Registrations,All
+2022-06-30,Snohomish,ICE (Internal Combustion Engine),655903,County,0.9836592436401375,Total Vehicle Registrations,All
+2022-06-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2524,County,0.0037852486281473125,Total Vehicle Registrations,All
+2022-07-31,King,BEV (Battery Electric Vehicle),41921,County,0.02659696971811818,Total Vehicle Registrations,All
+2022-07-31,King,ICE (Internal Combustion Engine),1522832,County,0.9661677104501646,Total Vehicle Registrations,All
+2022-07-31,King,PHEV (Plug-in Hybrid Electric Vehicle),11404,County,0.007235319831717272,Total Vehicle Registrations,All
+2022-07-31,Kitsap,BEV (Battery Electric Vehicle),2475,County,0.01052927137442089,Total Vehicle Registrations,All
+2022-07-31,Kitsap,ICE (Internal Combustion Engine),231508,County,0.9848931544846188,Total Vehicle Registrations,All
+2022-07-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1076,County,0.0045775741409603546,Total Vehicle Registrations,All
+2022-07-31,Pierce,BEV (Battery Electric Vehicle),5249,County,0.0075969079759573566,Total Vehicle Registrations,All
+2022-07-31,Pierce,ICE (Internal Combustion Engine),683364,County,0.9890366588077963,Total Vehicle Registrations,All
+2022-07-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2326,County,0.0033664332162462967,Total Vehicle Registrations,All
+2022-07-31,Snohomish,BEV (Battery Electric Vehicle),8684,County,0.013076304543579149,Total Vehicle Registrations,All
+2022-07-31,Snohomish,ICE (Internal Combustion Engine),652859,County,0.9830703717200069,Total Vehicle Registrations,All
+2022-07-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2559,County,0.0038533237364139846,Total Vehicle Registrations,All
+2022-08-31,King,BEV (Battery Electric Vehicle),42958,County,0.027341286182269726,Total Vehicle Registrations,All
+2022-08-31,King,ICE (Internal Combustion Engine),1516647,County,0.9652935347195128,Total Vehicle Registrations,All
+2022-08-31,King,PHEV (Plug-in Hybrid Electric Vehicle),11572,County,0.007365179098217451,Total Vehicle Registrations,All
+2022-08-31,Kitsap,BEV (Battery Electric Vehicle),2541,County,0.010857164831502442,Total Vehicle Registrations,All
+2022-08-31,Kitsap,ICE (Internal Combustion Engine),230403,County,0.9844641277735762,Total Vehicle Registrations,All
+2022-08-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1095,County,0.004678707394921359,Total Vehicle Registrations,All
+2022-08-31,Pierce,BEV (Battery Electric Vehicle),5437,County,0.007910699450164921,Total Vehicle Registrations,All
+2022-08-31,Pierce,ICE (Internal Combustion Engine),679479,County,0.9886250049105408,Total Vehicle Registrations,All
+2022-08-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2381,County,0.003464295639294221,Total Vehicle Registrations,All
+2022-08-31,Snohomish,BEV (Battery Electric Vehicle),8957,County,0.013540049492153665,Total Vehicle Registrations,All
+2022-08-31,Snohomish,ICE (Internal Combustion Engine),649985,County,0.9825643707890477,Total Vehicle Registrations,All
+2022-08-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2577,County,0.0038955797187987043,Total Vehicle Registrations,All
+2022-09-30,King,BEV (Battery Electric Vehicle),43289,County,0.027706875099206857,Total Vehicle Registrations,All
+2022-09-30,King,ICE (Internal Combustion Engine),1507459,County,0.9648404497718882,Total Vehicle Registrations,All
+2022-09-30,King,PHEV (Plug-in Hybrid Electric Vehicle),11644,County,0.00745267512890491,Total Vehicle Registrations,All
+2022-09-30,Kitsap,BEV (Battery Electric Vehicle),2576,County,0.011073901959857106,Total Vehicle Registrations,All
+2022-09-30,Kitsap,ICE (Internal Combustion Engine),228935,County,0.9841629445574094,Total Vehicle Registrations,All
+2022-09-30,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1108,County,0.004763153482733568,Total Vehicle Registrations,All
+2022-09-30,Pierce,BEV (Battery Electric Vehicle),5534,County,0.008116261709108135,Total Vehicle Registrations,All
+2022-09-30,Pierce,ICE (Internal Combustion Engine),673912,County,0.9883711891775355,Total Vehicle Registrations,All
+2022-09-30,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2395,County,0.0035125491133563397,Total Vehicle Registrations,All
+2022-09-30,Snohomish,BEV (Battery Electric Vehicle),9060,County,0.013774963319979018,Total Vehicle Registrations,All
+2022-09-30,Snohomish,ICE (Internal Combustion Engine),646066,County,0.9822886812677224,Total Vehicle Registrations,All
+2022-09-30,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2589,County,0.0039363554122986396,Total Vehicle Registrations,All
+2022-10-31,King,BEV (Battery Electric Vehicle),44929,County,0.02905062538148788,Total Vehicle Registrations,All
+2022-10-31,King,ICE (Internal Combustion Engine),1490076,County,0.9634676860367677,Total Vehicle Registrations,All
+2022-10-31,King,PHEV (Plug-in Hybrid Electric Vehicle),11571,County,0.007481688581744447,Total Vehicle Registrations,All
+2022-10-31,Kitsap,BEV (Battery Electric Vehicle),2619,County,0.011399992164953838,Total Vehicle Registrations,All
+2022-10-31,Kitsap,ICE (Internal Combustion Engine),226018,County,0.9838119240696971,Total Vehicle Registrations,All
+2022-10-31,Kitsap,PHEV (Plug-in Hybrid Electric Vehicle),1100,County,0.0047880837653490734,Total Vehicle Registrations,All
+2022-10-31,Pierce,BEV (Battery Electric Vehicle),5723,County,0.008509822056542809,Total Vehicle Registrations,All
+2022-10-31,Pierce,ICE (Internal Combustion Engine),664413,County,0.9879497469952433,Total Vehicle Registrations,All
+2022-10-31,Pierce,PHEV (Plug-in Hybrid Electric Vehicle),2381,County,0.0035404309482139486,Total Vehicle Registrations,All
+2022-10-31,Snohomish,BEV (Battery Electric Vehicle),9378,County,0.014432643814724129,Total Vehicle Registrations,All
+2022-10-31,Snohomish,ICE (Internal Combustion Engine),637823,County,0.981602919155341,Total Vehicle Registrations,All
+2022-10-31,Snohomish,PHEV (Plug-in Hybrid Electric Vehicle),2576,County,0.003964437029934886,Total Vehicle Registrations,All
+2017-01-31,Region,BEV (Battery Electric Vehicle),11741,PSRC Region,0.003755980585729513,Total Vehicle Registrations,All
+2017-01-31,Region,ICE (Internal Combustion Engine),3108762,PSRC Region,0.9945021478284347,Total Vehicle Registrations,All
+2017-01-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),5445,PSRC Region,0.001741871585835721,Total Vehicle Registrations,All
+2017-02-28,Region,BEV (Battery Electric Vehicle),12135,PSRC Region,0.0038887824249466594,Total Vehicle Registrations,All
+2017-02-28,Region,ICE (Internal Combustion Engine),3102776,PSRC Region,0.9943156800450182,Total Vehicle Registrations,All
+2017-02-28,Region,PHEV (Plug-in Hybrid Electric Vehicle),5603,PSRC Region,0.001795537530035116,Total Vehicle Registrations,All
+2017-03-31,Region,BEV (Battery Electric Vehicle),12431,PSRC Region,0.003989086890277166,Total Vehicle Registrations,All
+2017-03-31,Region,ICE (Internal Combustion Engine),3098102,PSRC Region,0.9941756956754461,Total Vehicle Registrations,All
+2017-03-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),5719,PSRC Region,0.001835217434276817,Total Vehicle Registrations,All
+2017-04-30,Region,BEV (Battery Electric Vehicle),12778,PSRC Region,0.004108503328633645,Total Vehicle Registrations,All
+2017-04-30,Region,ICE (Internal Combustion Engine),3091499,PSRC Region,0.9940079771456866,Total Vehicle Registrations,All
+2017-04-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),5858,PSRC Region,0.0018835195256797534,Total Vehicle Registrations,All
+2017-05-31,Region,BEV (Battery Electric Vehicle),13074,PSRC Region,0.004206858782244057,Total Vehicle Registrations,All
+2017-05-31,Region,ICE (Internal Combustion Engine),3088714,PSRC Region,0.9938644345066675,Total Vehicle Registrations,All
+2017-05-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),5994,PSRC Region,0.001928706711088487,Total Vehicle Registrations,All
+2017-06-30,Region,BEV (Battery Electric Vehicle),13394,PSRC Region,0.004311102327686263,Total Vehicle Registrations,All
+2017-06-30,Region,ICE (Internal Combustion Engine),3087288,PSRC Region,0.9936997523546266,Total Vehicle Registrations,All
+2017-06-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),6180,PSRC Region,0.001989145317687107,Total Vehicle Registrations,All
+2017-07-31,Region,BEV (Battery Electric Vehicle),13693,PSRC Region,0.004411131785662743,Total Vehicle Registrations,All
+2017-07-31,Region,ICE (Internal Combustion Engine),3084214,PSRC Region,0.993564186751335,Total Vehicle Registrations,All
+2017-07-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),6285,PSRC Region,0.0020246814630022884,Total Vehicle Registrations,All
+2017-08-31,Region,BEV (Battery Electric Vehicle),13935,PSRC Region,0.004489060512277991,Total Vehicle Registrations,All
+2017-08-31,Region,ICE (Internal Combustion Engine),3083857,PSRC Region,0.9934424602950893,Total Vehicle Registrations,All
+2017-08-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),6421,PSRC Region,0.002068479192632722,Total Vehicle Registrations,All
+2017-09-30,Region,BEV (Battery Electric Vehicle),14241,PSRC Region,0.004585671491265778,Total Vehicle Registrations,All
+2017-09-30,Region,ICE (Internal Combustion Engine),3084723,PSRC Region,0.9932958584054383,Total Vehicle Registrations,All
+2017-09-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),6579,PSRC Region,0.0021184701032959455,Total Vehicle Registrations,All
+2017-10-31,Region,BEV (Battery Electric Vehicle),14601,PSRC Region,0.0046996138533840215,Total Vehicle Registrations,All
+2017-10-31,Region,ICE (Internal Combustion Engine),3085487,PSRC Region,0.9931235839761868,Total Vehicle Registrations,All
+2017-10-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),6763,PSRC Region,0.002176802170429158,Total Vehicle Registrations,All
+2017-11-30,Region,BEV (Battery Electric Vehicle),14855,PSRC Region,0.004779541054665016,Total Vehicle Registrations,All
+2017-11-30,Region,ICE (Internal Combustion Engine),3086232,PSRC Region,0.9929836787762316,Total Vehicle Registrations,All
+2017-11-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),6952,PSRC Region,0.002236780169103412,Total Vehicle Registrations,All
+2017-12-31,Region,BEV (Battery Electric Vehicle),15069,PSRC Region,0.004846712154379473,Total Vehicle Registrations,All
+2017-12-31,Region,ICE (Internal Combustion Engine),3086963,PSRC Region,0.9928741848974533,Total Vehicle Registrations,All
+2017-12-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),7086,PSRC Region,0.0022791029481672937,Total Vehicle Registrations,All
+2018-01-31,Region,BEV (Battery Electric Vehicle),15504,PSRC Region,0.004980943969841901,Total Vehicle Registrations,All
+2018-01-31,Region,ICE (Internal Combustion Engine),3089778,PSRC Region,0.9926477745904391,Total Vehicle Registrations,All
+2018-01-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),7381,PSRC Region,0.0023712814397189802,Total Vehicle Registrations,All
+2018-02-28,Region,BEV (Battery Electric Vehicle),15690,PSRC Region,0.005048779122188178,Total Vehicle Registrations,All
+2018-02-28,Region,ICE (Internal Combustion Engine),3084397,PSRC Region,0.9925072771280974,Total Vehicle Registrations,All
+2018-02-28,Region,PHEV (Plug-in Hybrid Electric Vehicle),7595,PSRC Region,0.0024439437497144174,Total Vehicle Registrations,All
+2018-03-31,Region,BEV (Battery Electric Vehicle),15983,PSRC Region,0.005138821816666592,Total Vehicle Registrations,All
+2018-03-31,Region,ICE (Internal Combustion Engine),3086458,PSRC Region,0.9923517303775972,Total Vehicle Registrations,All
+2018-03-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),7805,PSRC Region,0.0025094478057362665,Total Vehicle Registrations,All
+2018-04-30,Region,BEV (Battery Electric Vehicle),16384,PSRC Region,0.005261381542968217,Total Vehicle Registrations,All
+2018-04-30,Region,ICE (Internal Combustion Engine),3089598,PSRC Region,0.992160271752412,Total Vehicle Registrations,All
+2018-04-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),8029,PSRC Region,0.0025783467046198616,Total Vehicle Registrations,All
+2018-05-31,Region,BEV (Battery Electric Vehicle),17007,PSRC Region,0.005451873678865502,Total Vehicle Registrations,All
+2018-05-31,Region,ICE (Internal Combustion Engine),3094177,PSRC Region,0.9918893481537616,Total Vehicle Registrations,All
+2018-05-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),8294,PSRC Region,0.0026587781673728748,Total Vehicle Registrations,All
+2018-06-30,Region,BEV (Battery Electric Vehicle),17557,PSRC Region,0.005615912765749873,Total Vehicle Registrations,All
+2018-06-30,Region,ICE (Internal Combustion Engine),3100152,PSRC Region,0.9916377053349092,Total Vehicle Registrations,All
+2018-06-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),8586,PSRC Region,0.002746381899340913,Total Vehicle Registrations,All
+2018-07-31,Region,BEV (Battery Electric Vehicle),17971,PSRC Region,0.005739175533630591,Total Vehicle Registrations,All
+2018-07-31,Region,ICE (Internal Combustion Engine),3104538,PSRC Region,0.9914578227603611,Total Vehicle Registrations,All
+2018-07-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),8777,PSRC Region,0.00280300170600833,Total Vehicle Registrations,All
+2018-08-31,Region,BEV (Battery Electric Vehicle),18421,PSRC Region,0.005873314821598979,Total Vehicle Registrations,All
+2018-08-31,Region,ICE (Internal Combustion Engine),3108995,PSRC Region,0.9912657517929058,Total Vehicle Registrations,All
+2018-08-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),8973,PSRC Region,0.0028609333854952303,Total Vehicle Registrations,All
+2018-09-30,Region,BEV (Battery Electric Vehicle),18903,PSRC Region,0.006021373438872213,Total Vehicle Registrations,All
+2018-09-30,Region,ICE (Internal Combustion Engine),3111226,PSRC Region,0.9910518752964419,Total Vehicle Registrations,All
+2018-09-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),9188,PSRC Region,0.0029267512646859173,Total Vehicle Registrations,All
+2018-10-31,Region,BEV (Battery Electric Vehicle),19975,PSRC Region,0.006347526689006147,Total Vehicle Registrations,All
+2018-10-31,Region,ICE (Internal Combustion Engine),3117494,PSRC Region,0.990657139815596,Total Vehicle Registrations,All
+2018-10-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),9426,PSRC Region,0.0029953334953978445,Total Vehicle Registrations,All
+2018-11-30,Region,BEV (Battery Electric Vehicle),20977,PSRC Region,0.006655458430908334,Total Vehicle Registrations,All
+2018-11-30,Region,ICE (Internal Combustion Engine),3121183,PSRC Region,0.9902704729826841,Total Vehicle Registrations,All
+2018-11-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),9689,PSRC Region,0.003074068586407534,Total Vehicle Registrations,All
+2018-12-31,Region,BEV (Battery Electric Vehicle),21669,PSRC Region,0.006870090329846134,Total Vehicle Registrations,All
+2018-12-31,Region,ICE (Internal Combustion Engine),3122540,PSRC Region,0.989991778972622,Total Vehicle Registrations,All
+2018-12-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),9898,PSRC Region,0.003138130697531821,Total Vehicle Registrations,All
+2019-01-31,Region,BEV (Battery Electric Vehicle),22822,PSRC Region,0.007221345210487563,Total Vehicle Registrations,All
+2019-01-31,Region,ICE (Internal Combustion Engine),3127371,PSRC Region,0.9895638240411752,Total Vehicle Registrations,All
+2019-01-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),10160,PSRC Region,0.0032148307483372903,Total Vehicle Registrations,All
+2019-02-28,Region,BEV (Battery Electric Vehicle),23291,PSRC Region,0.007376674051469808,Total Vehicle Registrations,All
+2019-02-28,Region,ICE (Internal Combustion Engine),3123821,PSRC Region,0.9893696840898402,Total Vehicle Registrations,All
+2019-02-28,Region,PHEV (Plug-in Hybrid Electric Vehicle),10273,PSRC Region,0.0032536418586900234,Total Vehicle Registrations,All
+2019-03-31,Region,BEV (Battery Electric Vehicle),23526,PSRC Region,0.007444623375028836,Total Vehicle Registrations,All
+2019-03-31,Region,ICE (Internal Combustion Engine),3126269,PSRC Region,0.9892839953255131,Total Vehicle Registrations,All
+2019-03-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),10338,PSRC Region,0.0032713812994579657,Total Vehicle Registrations,All
+2019-04-30,Region,BEV (Battery Electric Vehicle),24290,PSRC Region,0.007668835135830572,Total Vehicle Registrations,All
+2019-04-30,Region,ICE (Internal Combustion Engine),3132590,PSRC Region,0.9890208422458415,Total Vehicle Registrations,All
+2019-04-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),10485,PSRC Region,0.003310322618327853,Total Vehicle Registrations,All
+2019-05-31,Region,BEV (Battery Electric Vehicle),24795,PSRC Region,0.007810157267808859,Total Vehicle Registrations,All
+2019-05-31,Region,ICE (Internal Combustion Engine),3139274,PSRC Region,0.9888374126534942,Total Vehicle Registrations,All
+2019-05-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),10643,PSRC Region,0.0033524300786969023,Total Vehicle Registrations,All
+2019-06-30,Region,BEV (Battery Electric Vehicle),25431,PSRC Region,0.007996179089760577,Total Vehicle Registrations,All
+2019-06-30,Region,ICE (Internal Combustion Engine),3144181,PSRC Region,0.988613674909461,Total Vehicle Registrations,All
+2019-06-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),10782,PSRC Region,0.0033901460007785197,Total Vehicle Registrations,All
+2019-07-31,Region,BEV (Battery Electric Vehicle),26175,PSRC Region,0.008212813369424738,Total Vehicle Registrations,All
+2019-07-31,Region,ICE (Internal Combustion Engine),3149978,PSRC Region,0.9883545914725426,Total Vehicle Registrations,All
+2019-07-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),10940,PSRC Region,0.0034325951580327276,Total Vehicle Registrations,All
+2019-08-31,Region,BEV (Battery Electric Vehicle),26713,PSRC Region,0.0083705857247875,Total Vehicle Registrations,All
+2019-08-31,Region,ICE (Internal Combustion Engine),3153506,PSRC Region,0.9881590351750732,Total Vehicle Registrations,All
+2019-08-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),11075,PSRC Region,0.0034703791001393165,Total Vehicle Registrations,All
+2019-09-30,Region,BEV (Battery Electric Vehicle),27286,PSRC Region,0.008538067873352723,Total Vehicle Registrations,All
+2019-09-30,Region,ICE (Internal Combustion Engine),3157316,PSRC Region,0.9879563990919346,Total Vehicle Registrations,All
+2019-09-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),11203,PSRC Region,0.0035055330347126936,Total Vehicle Registrations,All
+2019-10-31,Region,BEV (Battery Electric Vehicle),28524,PSRC Region,0.008907817949983932,Total Vehicle Registrations,All
+2019-10-31,Region,ICE (Internal Combustion Engine),3162242,PSRC Region,0.9875429830946953,Total Vehicle Registrations,All
+2019-10-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),11365,PSRC Region,0.003549198955320691,Total Vehicle Registrations,All
+2019-11-30,Region,BEV (Battery Electric Vehicle),28840,PSRC Region,0.009003710127987553,Total Vehicle Registrations,All
+2019-11-30,Region,ICE (Internal Combustion Engine),3162819,PSRC Region,0.9874169716813961,Total Vehicle Registrations,All
+2019-11-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),11465,PSRC Region,0.003579318190616411,Total Vehicle Registrations,All
+2019-12-31,Region,BEV (Battery Electric Vehicle),29323,PSRC Region,0.009150923611960644,Total Vehicle Registrations,All
+2019-12-31,Region,ICE (Internal Combustion Engine),3163481,PSRC Region,0.9872377648565587,Total Vehicle Registrations,All
+2019-12-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),11572,PSRC Region,0.0036113115314807,Total Vehicle Registrations,All
+2020-01-31,Region,BEV (Battery Electric Vehicle),30953,PSRC Region,0.009623154018031328,Total Vehicle Registrations,All
+2020-01-31,Region,ICE (Internal Combustion Engine),3173869,PSRC Region,0.9867421645738724,Total Vehicle Registrations,All
+2020-01-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),11691,PSRC Region,0.003634681408096283,Total Vehicle Registrations,All
+2020-02-29,Region,BEV (Battery Electric Vehicle),31301,PSRC Region,0.00972420790624299,Total Vehicle Registrations,All
+2020-02-29,Region,ICE (Internal Combustion Engine),3175806,PSRC Region,0.9866201659338016,Total Vehicle Registrations,All
+2020-02-29,Region,PHEV (Plug-in Hybrid Electric Vehicle),11767,PSRC Region,0.0036556261599553137,Total Vehicle Registrations,All
+2020-03-31,Region,BEV (Battery Electric Vehicle),31887,PSRC Region,0.009918630957065301,Total Vehicle Registrations,All
+2020-03-31,Region,ICE (Internal Combustion Engine),3171111,PSRC Region,0.9863919381845362,Total Vehicle Registrations,All
+2020-03-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),11861,PSRC Region,0.0036894308583984552,Total Vehicle Registrations,All
+2020-04-30,Region,BEV (Battery Electric Vehicle),32172,PSRC Region,0.010065573903845174,Total Vehicle Registrations,All
+2020-04-30,Region,ICE (Internal Combustion Engine),3152249,PSRC Region,0.986236331991236,Total Vehicle Registrations,All
+2020-04-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),11820,PSRC Region,0.003698094104918872,Total Vehicle Registrations,All
+2020-05-31,Region,BEV (Battery Electric Vehicle),32108,PSRC Region,0.010091473226857625,Total Vehicle Registrations,All
+2020-05-31,Region,ICE (Internal Combustion Engine),3137783,PSRC Region,0.9861982414410427,Total Vehicle Registrations,All
+2020-05-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),11805,PSRC Region,0.0037102853320996098,Total Vehicle Registrations,All
+2020-06-30,Region,BEV (Battery Electric Vehicle),32279,PSRC Region,0.010139972393792435,Total Vehicle Registrations,All
+2020-06-30,Region,ICE (Internal Combustion Engine),3139191,PSRC Region,0.9861306136758162,Total Vehicle Registrations,All
+2020-06-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),11872,PSRC Region,0.0037294139303913937,Total Vehicle Registrations,All
+2020-07-31,Region,BEV (Battery Electric Vehicle),33358,PSRC Region,0.01045822369462664,Total Vehicle Registrations,All
+2020-07-31,Region,ICE (Internal Combustion Engine),3144346,PSRC Region,0.9857987241832393,Total Vehicle Registrations,All
+2020-07-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),11939,PSRC Region,0.0037430521221340444,Total Vehicle Registrations,All
+2020-08-31,Region,BEV (Battery Electric Vehicle),33764,PSRC Region,0.010576759822597126,Total Vehicle Registrations,All
+2020-08-31,Region,ICE (Internal Combustion Engine),3146503,PSRC Region,0.9856594749461357,Total Vehicle Registrations,All
+2020-08-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),12015,PSRC Region,0.0037637652312671626,Total Vehicle Registrations,All
+2020-09-30,Region,BEV (Battery Electric Vehicle),34113,PSRC Region,0.010669057793309953,Total Vehicle Registrations,All
+2020-09-30,Region,ICE (Internal Combustion Engine),3151122,PSRC Region,0.9855334544534473,Total Vehicle Registrations,All
+2020-09-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),12142,PSRC Region,0.003797487753242736,Total Vehicle Registrations,All
+2020-10-31,Region,BEV (Battery Electric Vehicle),34863,PSRC Region,0.01088584275276338,Total Vehicle Registrations,All
+2020-10-31,Region,ICE (Internal Combustion Engine),3155427,PSRC Region,0.9852704052956972,Total Vehicle Registrations,All
+2020-10-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),12310,PSRC Region,0.003843751951539374,Total Vehicle Registrations,All
+2020-11-30,Region,BEV (Battery Electric Vehicle),35870,PSRC Region,0.01119947746179314,Total Vehicle Registrations,All
+2020-11-30,Region,ICE (Internal Combustion Engine),3154550,PSRC Region,0.9849264462531238,Total Vehicle Registrations,All
+2020-11-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),12408,PSRC Region,0.003874076285083058,Total Vehicle Registrations,All
+2020-12-31,Region,BEV (Battery Electric Vehicle),36371,PSRC Region,0.01134960116781907,Total Vehicle Registrations,All
+2020-12-31,Region,ICE (Internal Combustion Engine),3155679,PSRC Region,0.9847322884622945,Total Vehicle Registrations,All
+2020-12-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),12556,PSRC Region,0.0039181103698863445,Total Vehicle Registrations,All
+2021-01-31,Region,BEV (Battery Electric Vehicle),37577,PSRC Region,0.01173351002658205,Total Vehicle Registrations,All
+2021-01-31,Region,ICE (Internal Combustion Engine),3152195,PSRC Region,0.9842805875466857,Total Vehicle Registrations,All
+2021-01-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),12765,PSRC Region,0.003985902426732306,Total Vehicle Registrations,All
+2021-02-28,Region,BEV (Battery Electric Vehicle),38208,PSRC Region,0.011936437719368125,Total Vehicle Registrations,All
+2021-02-28,Region,ICE (Internal Combustion Engine),3149807,PSRC Region,0.9840210187272236,Total Vehicle Registrations,All
+2021-02-28,Region,PHEV (Plug-in Hybrid Electric Vehicle),12940,PSRC Region,0.00404254355340828,Total Vehicle Registrations,All
+2021-03-31,Region,BEV (Battery Electric Vehicle),38745,PSRC Region,0.012087984428042877,Total Vehicle Registrations,All
+2021-03-31,Region,ICE (Internal Combustion Engine),3153349,PSRC Region,0.9838078102512473,Total Vehicle Registrations,All
+2021-03-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),13155,PSRC Region,0.004104205320709873,Total Vehicle Registrations,All
+2021-04-30,Region,BEV (Battery Electric Vehicle),40090,PSRC Region,0.012456186629655417,Total Vehicle Registrations,All
+2021-04-30,Region,ICE (Internal Combustion Engine),3164943,PSRC Region,0.9833654447548393,Total Vehicle Registrations,All
+2021-04-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),13448,PSRC Region,0.004178368615505265,Total Vehicle Registrations,All
+2021-05-31,Region,BEV (Battery Electric Vehicle),40988,PSRC Region,0.01273539017279527,Total Vehicle Registrations,All
+2021-05-31,Region,ICE (Internal Combustion Engine),3163740,PSRC Region,0.9830063263706282,Total Vehicle Registrations,All
+2021-05-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),13705,PSRC Region,0.004258283456576539,Total Vehicle Registrations,All
+2021-06-30,Region,BEV (Battery Electric Vehicle),41738,PSRC Region,0.012961757566873948,Total Vehicle Registrations,All
+2021-06-30,Region,ICE (Internal Combustion Engine),3164278,PSRC Region,0.9826681755281222,Total Vehicle Registrations,All
+2021-06-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),14072,PSRC Region,0.004370066905003838,Total Vehicle Registrations,All
+2021-07-31,Region,BEV (Battery Electric Vehicle),43265,PSRC Region,0.013442434595324152,Total Vehicle Registrations,All
+2021-07-31,Region,ICE (Internal Combustion Engine),3160934,PSRC Region,0.9821021277045268,Total Vehicle Registrations,All
+2021-07-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),14340,PSRC Region,0.0044554377001490425,Total Vehicle Registrations,All
+2021-08-31,Region,BEV (Battery Electric Vehicle),44362,PSRC Region,0.013788014789434555,Total Vehicle Registrations,All
+2021-08-31,Region,ICE (Internal Combustion Engine),3158464,PSRC Region,0.9816723399282409,Total Vehicle Registrations,All
+2021-08-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),14606,PSRC Region,0.004539645282324537,Total Vehicle Registrations,All
+2021-09-30,Region,BEV (Battery Electric Vehicle),45241,PSRC Region,0.014058819507890043,Total Vehicle Registrations,All
+2021-09-30,Region,ICE (Internal Combustion Engine),3157912,PSRC Region,0.9813336316571265,Total Vehicle Registrations,All
+2021-09-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),14827,PSRC Region,0.004607548834983437,Total Vehicle Registrations,All
+2021-10-31,Region,BEV (Battery Electric Vehicle),46579,PSRC Region,0.014486772216896952,Total Vehicle Registrations,All
+2021-10-31,Region,ICE (Internal Combustion Engine),3153591,PSRC Region,0.9808144116931724,Total Vehicle Registrations,All
+2021-10-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),15108,PSRC Region,0.004698816089930637,Total Vehicle Registrations,All
+2021-11-30,Region,BEV (Battery Electric Vehicle),47818,PSRC Region,0.014876001691119353,Total Vehicle Registrations,All
+2021-11-30,Region,ICE (Internal Combustion Engine),3151254,PSRC Region,0.9803433818467235,Total Vehicle Registrations,All
+2021-11-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),15367,PSRC Region,0.00478061646215716,Total Vehicle Registrations,All
+2021-12-31,Region,BEV (Battery Electric Vehicle),48926,PSRC Region,0.015248893951837232,Total Vehicle Registrations,All
+2021-12-31,Region,ICE (Internal Combustion Engine),3144032,PSRC Region,0.9799086487589976,Total Vehicle Registrations,All
+2021-12-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),15537,PSRC Region,0.00484245728916517,Total Vehicle Registrations,All
+2022-01-31,Region,BEV (Battery Electric Vehicle),50203,PSRC Region,0.015669653502863444,Total Vehicle Registrations,All
+2022-01-31,Region,ICE (Internal Combustion Engine),3137834,PSRC Region,0.9793990703644007,Total Vehicle Registrations,All
+2022-01-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),15799,PSRC Region,0.004931276132735883,Total Vehicle Registrations,All
+2022-02-28,Region,BEV (Battery Electric Vehicle),51470,PSRC Region,0.01608292251106072,Total Vehicle Registrations,All
+2022-02-28,Region,ICE (Internal Combustion Engine),3132832,PSRC Region,0.9789215911437998,Total Vehicle Registrations,All
+2022-02-28,Region,PHEV (Plug-in Hybrid Electric Vehicle),15987,PSRC Region,0.004995486345139455,Total Vehicle Registrations,All
+2022-03-31,Region,BEV (Battery Electric Vehicle),52591,PSRC Region,0.016468365307052923,Total Vehicle Registrations,All
+2022-03-31,Region,ICE (Internal Combustion Engine),3124568,PSRC Region,0.9784283860494711,Total Vehicle Registrations,All
+2022-03-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),16297,PSRC Region,0.005103248643475908,Total Vehicle Registrations,All
+2022-04-30,Region,BEV (Battery Electric Vehicle),54541,PSRC Region,0.017096865099305136,Total Vehicle Registrations,All
+2022-04-30,Region,ICE (Internal Combustion Engine),3119064,PSRC Region,0.9777271491923337,Total Vehicle Registrations,All
+2022-04-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),16512,PSRC Region,0.005175985708361167,Total Vehicle Registrations,All
+2022-05-31,Region,BEV (Battery Electric Vehicle),55536,PSRC Region,0.017454583855452812,Total Vehicle Registrations,All
+2022-05-31,Region,ICE (Internal Combustion Engine),3109397,PSRC Region,0.9772621484513363,Total Vehicle Registrations,All
+2022-05-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),16810,PSRC Region,0.005283267693210922,Total Vehicle Registrations,All
+2022-06-30,Region,BEV (Battery Electric Vehicle),56576,PSRC Region,0.017799714202835444,Total Vehicle Registrations,All
+2022-06-30,Region,ICE (Internal Combustion Engine),3104734,PSRC Region,0.9767989584952295,Total Vehicle Registrations,All
+2022-06-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),17168,PSRC Region,0.005401327301935077,Total Vehicle Registrations,All
+2022-07-31,Region,BEV (Battery Electric Vehicle),58329,PSRC Region,0.01842206744430411,Total Vehicle Registrations,All
+2022-07-31,Region,ICE (Internal Combustion Engine),3090563,PSRC Region,0.9760935388378139,Total Vehicle Registrations,All
+2022-07-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),17365,PSRC Region,0.005484393717882029,Total Vehicle Registrations,All
+2022-08-31,Region,BEV (Battery Electric Vehicle),59893,PSRC Region,0.01898934443277684,Total Vehicle Registrations,All
+2022-08-31,Region,ICE (Internal Combustion Engine),3076514,PSRC Region,0.9754225702212279,Total Vehicle Registrations,All
+2022-08-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),17625,PSRC Region,0.005588085345995222,Total Vehicle Registrations,All
+2022-09-30,Region,BEV (Battery Electric Vehicle),60459,PSRC Region,0.019287831461251268,Total Vehicle Registrations,All
+2022-09-30,Region,ICE (Internal Combustion Engine),3056372,PSRC Region,0.9750539707717206,Total Vehicle Registrations,All
+2022-09-30,Region,PHEV (Plug-in Hybrid Electric Vehicle),17736,PSRC Region,0.00565819776702811,Total Vehicle Registrations,All
+2022-10-31,Region,BEV (Battery Electric Vehicle),62649,PSRC Region,0.02021844009259645,Total Vehicle Registrations,All
+2022-10-31,Region,ICE (Internal Combustion Engine),3018330,PSRC Region,0.9740925519112298,Total Vehicle Registrations,All
+2022-10-31,Region,PHEV (Plug-in Hybrid Electric Vehicle),17628,PSRC Region,0.005689007996173764,Total Vehicle Registrations,All

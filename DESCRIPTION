@@ -1,0 +1,21 @@
+Package: psrcrtp
+Type: Package
+Title: Process data used in RT Dashboard
+Version: 0.1.0
+Authors@R: c(
+    person("Craig", "Helmann", email = "chelmann@psrc.org", role = "cre"),
+    person("Grant", "Gibson", email = "ggibson@psrc.org", role = "aut"))
+Maintainer: Craig Helmann <chelmann@psrc.org>
+Description: Various functions to process data in the Central Puget Sund Region for thw RTP Dashboard.
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    magrittr,
+    rlang,
+    dplyr,
+    tidyr,
+    stringr,
+    lubridate,
+    RSocrata
+RoxygenNote: 7.2.1
