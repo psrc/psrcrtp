@@ -21,5 +21,6 @@ Imports:
     utils,
     openxlsx,
     readr,
-    tibble
+    tibble,
+    psrctrends
 RoxygenNote: 7.2.1
