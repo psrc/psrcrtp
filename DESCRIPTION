@@ -17,5 +17,9 @@ Imports:
     tidyr,
     stringr,
     lubridate,
-    RSocrata
+    RSocrata,
+    utils,
+    openxlsx,
+    readr,
+    tibble
 RoxygenNote: 7.2.1
