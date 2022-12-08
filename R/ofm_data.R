@@ -265,7 +265,9 @@ population_near_hct <- function() {
   # Add Shares
   population <- dplyr::left_join(population, t, by=c("date", "metric", "variable")) %>%
     dplyr::mutate(share = .data$estimate/.data$total) %>%
-    dplyr::select(-"total")
+    dplyr::select(-"total") %>%
+    dplyr::mutate(geography = .data$grouping) %>%
+    dplyr::mutate(grouping="Growth Near High Capacity Transit")
   
   file.remove(data_file)
   
