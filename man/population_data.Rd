@@ -2,7 +2,7 @@
 % Please edit documentation in R/ofm_data.R
 \name{population_data}
 \alias{population_data}
-\title{Population Trends from the Office of Financial Managment}
+\title{Population and Housinh Trends from the Office of Financial Management}
 \usage{
 population_data(forecast_base_yr = 2018)
 }
@@ -10,7 +10,7 @@ population_data(forecast_base_yr = 2018)
 \item{forecast_base_yr}{Four digit integer for Base Year in Forecast Data - defaults to 2018}
 }
 \value{
-tibble of population trends for the region and regional geographies by calendar year
+tibble of population and housing trends for the region and regional geographies by calendar year
 }
 \description{
 This function pulls and cleans data from the Intercensal Population data from OFM.

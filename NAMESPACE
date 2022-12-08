@@ -2,6 +2,7 @@
 
 export(new_vehicle_registrations)
 export(population_data)
+export(population_near_hct)
 export(process_ntd_data_annual)
 export(process_ntd_data_ytd)
 export(total_vehicle_registrations)

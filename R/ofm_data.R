@@ -1,10 +1,10 @@
-#' Population Trends from the Office of Financial Management
+#' Population and Housinh Trends from the Office of Financial Management
 #'
 #' This function pulls and cleans data from the Intercensal Population data from OFM.
 #' Forecast data is from the latest PSRC Macroeconomic forecast as stored in Elmer
 #' 
 #' @param forecast_base_yr Four digit integer for Base Year in Forecast Data - defaults to 2018 
-#' @return tibble of population trends for the region and regional geographies by calendar year
+#' @return tibble of population and housing trends for the region and regional geographies by calendar year
 #' 
 #' @importFrom magrittr %<>% %>%
 #' @importFrom rlang .data
@@ -107,4 +107,168 @@ population_data <- function(forecast_base_yr=2018){
   
   print("All Done")
   return(population)
+}
+
+#' Population and Housing Unit Growth Near High Capacity Transit
+#'
+#' This function pulls and cleans data from the SAEP Block data from OFM for 2020 onward.
+#' 2010 to 2020 SAEP Block Data is stored in Elmer
+#' VISION 2050 Station Area and RGC buffers are stored in ElmerGeo
+#' 
+#' @return tibble of population and housing growth near High Capacity Transit by calendar year
+#' 
+#' @importFrom magrittr %<>% %>%
+#' @importFrom rlang .data
+#'  
+#' @export
+#'
+population_near_hct <- function() {
+  
+  # Silence the dplyr summarize message
+  options(dplyr.summarise.inform = FALSE)
+  
+  # Get Census Block Level Population Estimates from OFM: 2020 onward uses 2020 Census
+  print("Downloading OFM Block Level Population Estimates from OFM Website for 2020 onward.")
+  url <- "https://ofm.wa.gov/sites/default/files/public/dataresearch/pop/smallarea/data/xlsx/saep_block20.zip"
+  utils::download.file(url, "working.zip", quiet = TRUE, mode = "wb")
+  data_file <- paste0(getwd(),"/working.zip")
+  
+  ofm_post_20 <- readr::read_csv(data_file, show_col_types = FALSE) %>%
+    dplyr::filter(.data$COUNTYNAME %in% c("King", "Kitsap", "Pierce", "Snohomish")) %>%
+    dplyr::select("GEOID20", "POP2020", "POP2021", "POP2022", "HU2020", "HU2021", "HU2022") %>%
+    dplyr::mutate(geoid20 = as.character(.data$GEOID20))
+  
+  # Buffer 2020 blocks with VISION 2050 Station Areas from ElmerGeo
+  db_conn <- DBI::dbConnect(odbc::odbc(),
+                            driver = "SQL Server",
+                            server = "AWS-PROD-SQL\\Sockeye",
+                            database = "ElmerGeo",
+                            trusted_connection = "yes")
+  
+  print("Loading HCT Station Buffer from ElmerGeo")
+  buffers <- sf::st_read(dsn=db_conn, 
+                         query="SELECT acres, Shape.STAsBinary() as Shape from dbo.vision_hct_station_areas_rgc_dissolved") %>%
+    dplyr::mutate(hct_buffer=1)
+  
+  print("Loading 2020 Census Blocks from ElmerGeo")
+  blocks <- sf::st_read(dsn=db_conn, 
+                        query="SELECT geoid20, Shape.STAsBinary() as Shape from dbo.block2020_nowater")
+  
+  print("Buffering Census Blocks with HCT Station areas for 2020 Census")
+  buffered_blocks <- sf::st_intersection(blocks, buffers)
+  hct_blocks <- buffered_blocks %>%
+    sf::st_drop_geometry() %>%
+    dplyr::select(-"acres")
+  
+  ofm_post_20 <- dplyr::left_join(ofm_post_20, hct_blocks, by=c("geoid20"))
+  
+  # Final Clean up of Growth by Year around Stations
+  print("Calculating annual population growth around high-capacity station areas for 2020 onward")
+  
+  # Total Population by HCT Area and Year
+  tp <- ofm_post_20 %>%
+    dplyr::select(-"GEOID20", -"geoid20") %>%
+    tidyr::pivot_longer(cols = !.data$hct_buffer, names_to = "date", values_to = "estimate") %>%
+    dplyr::group_by(.data$hct_buffer, .data$date) %>%
+    dplyr::summarise(estimate=as.integer(sum(.data$estimate))) %>%
+    tidyr::as_tibble() %>%
+    dplyr::mutate(grouping = dplyr::case_when(.data$hct_buffer == 1 ~ "Inside HCT Area", TRUE ~ "Outside HCT Area")) %>%
+    dplyr::mutate(metric = dplyr::case_when(
+      stringr::str_detect(.data$date,"POP") ~ "Population",
+      stringr::str_detect(.data$date,"HU") ~ "Housing Units")) %>%
+    dplyr::mutate(geography="Region", geography_type="Region") %>%
+    dplyr::mutate(date = stringr::str_remove_all(.data$date,"POP")) %>%
+    dplyr::mutate(date = stringr::str_remove_all(.data$date,"HU")) %>%
+    dplyr::mutate(date = lubridate::ymd(paste0(.data$date,"-04-01"))) %>%
+    dplyr::mutate(variable="Total") %>%
+    dplyr::select(-"hct_buffer")
+  
+  # Annual Population Change
+  pc <- tp %>%
+    dplyr::group_by(.data$grouping, .data$metric) %>%
+    dplyr::mutate(estimate = (.data$estimate-dplyr::lag(.data$estimate)), variable="Change")
+  
+  pop_post_20 <- dplyr::bind_rows(tp, pc) %>% tidyr::drop_na() 
+  rm(tp,pc)
+  
+  # Get Census Block Level Population Estimates from OFM: 2010 to 2020 via Elmer
+  print("Getting Block Population from 2010 to 2020 via Elmer")
+  block_pop <- psrctrends::get_elmer_table("ofm.estimate_facts") %>% 
+    dplyr::filter(.data$publication_dim_id == 3)
+  
+  block_dim <- psrctrends::get_elmer_table("census.geography_dim") %>% 
+    dplyr::filter(.data$geography_type %in% c("Block")) %>% 
+    dplyr::select("geography_dim_id", "block_geoid")
+  
+  ofm_pre_2020 <- dplyr::left_join(block_pop, block_dim, by=c("geography_dim_id")) %>%
+    dplyr::mutate(population = .data$household_population + .data$group_quarters_population) %>%
+    dplyr::select("block_geoid", "housing_units", "population", "estimate_year") %>%
+    dplyr::rename(geoid10="block_geoid")
+  
+  # Buffer 2010 blocks with VISION 2050 Station Areas from ElmerGeo
+  print("Loading 2010 Census Blocks from ElmerGeo")
+  blocks <- sf::st_read(dsn=db_conn, 
+                        query="SELECT geoid10, Shape.STAsBinary() as Shape from dbo.block2010_nowater")
+  
+  print("Buffering Census Blocks with HCT Station areas for 2010 Census")
+  buffered_blocks <- sf::st_intersection(blocks, buffers)
+  
+  hct_blocks <- buffered_blocks %>%
+    sf::st_drop_geometry() %>%
+    dplyr::select(-"acres")
+  
+  ofm_pre_2020 <- dplyr::left_join(ofm_pre_2020, hct_blocks, by=c("geoid10"))
+  
+  # Final Clean up of Growth by Year around Stations
+  print("Calculating annual population growth around high-capacity station areas from 2010 to 2020")
+  
+  # Total Population by HCT Area and Year
+  tp <- ofm_pre_2020 %>%
+    dplyr::select(-"geoid10") %>%
+    dplyr::rename(date="estimate_year") %>%
+    tidyr::pivot_longer(cols = c("population", "housing_units"), names_to = "metric", values_to = "estimate") %>%
+    dplyr::mutate(metric = stringr::str_replace_all(.data$metric, "population", "Population")) %>%
+    dplyr::mutate(metric = stringr::str_replace_all(.data$metric, "housing_units", "Housing Units")) %>%
+    dplyr::group_by(.data$hct_buffer, .data$date, .data$metric) %>%
+    dplyr::summarise(estimate=as.integer(sum(.data$estimate))) %>%
+    tidyr::as_tibble() %>%
+    dplyr::mutate(grouping = dplyr::case_when(.data$hct_buffer == 1 ~ "Inside HCT Area", TRUE ~ "Outside HCT Area")) %>%
+    dplyr::mutate(geography="Region", geography_type="Region") %>%
+    dplyr::mutate(date = lubridate::ymd(paste0(.data$date,"-04-01"))) %>%
+    dplyr::mutate(variable="Total") %>%
+    dplyr::select(-"hct_buffer")
+  
+  # Annual Population Change
+  pc <- tp %>%
+    dplyr::group_by(.data$grouping, .data$metric) %>%
+    dplyr::mutate(estimate = (.data$estimate-dplyr::lag(.data$estimate)), variable="Change")
+  
+  tp <-tp %>%
+    dplyr::filter(lubridate::year(.data$date) != 2020)
+  
+  pop_pre_20 <- dplyr::bind_rows(tp, pc) %>% 
+    tidyr::drop_na() 
+  
+  rm(tp,pc)
+  
+  # Combine Pre and Post 2020 and Calculate Shares
+  print("Combining Pre and Post 2020 data and generating shares")
+  population <- dplyr::bind_rows(pop_pre_20, pop_post_20)
+  
+  # Calculate Totals
+  t <- population %>%
+    dplyr::select(-"grouping", -"geography", -"geography_type") %>%
+    dplyr::group_by(.data$date, .data$metric, .data$variable) %>%
+    dplyr::summarise(total = sum(.data$estimate)) %>%
+    tidyr::as_tibble()
+  
+  # Add Shares
+  population <- dplyr::left_join(population, t, by=c("date", "metric", "variable")) %>%
+    dplyr::mutate(share = .data$estimate/.data$total) %>%
+    dplyr::select(-"total")
+  
+  file.remove(data_file)
+  
+  return(population)
+  
 }
