@@ -6,7 +6,7 @@ Authors@R: c(
     person("Craig", "Helmann", email = "chelmann@psrc.org", role = "cre"),
     person("Grant", "Gibson", email = "ggibson@psrc.org", role = "aut"))
 Maintainer: Craig Helmann <chelmann@psrc.org>
-Description: Various functions to process data in the Central Puget Sund Region for thw RTP Dashboard.
+Description: Various functions to process data in the Central Puget Sound Region for the RTP Dashboard.
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -25,5 +25,7 @@ Imports:
     psrctrends,
     DBI,
     odbc,
-    sf
-RoxygenNote: 7.2.1
+    sf,
+    psrccensus,
+    tidyselect
+RoxygenNote: 7.2.3

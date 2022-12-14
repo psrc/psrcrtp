@@ -10,8 +10,8 @@
 #' @importFrom rlang .data
 #'
 #' @examples 
-#' 
-#' commute_data <- process_pums_data(pums_yr = c(2015, 2020))
+#' \dontrun{
+#' commute_data <- process_pums_data(pums_yr = c(2015,2020))}
 #' 
 #' @export
 #'
