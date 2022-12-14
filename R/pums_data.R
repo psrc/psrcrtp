@@ -75,10 +75,12 @@ process_pums_data <- function(pums_yr) {
                                                    stat_var = "travel_time",
                                                    group_vars = "COUNTY") %>% 
       dplyr::select(geography = .data$COUNTY,
-                    data_year = .data$DATA_YEAR,
+                    date = .data$DATA_YEAR,
                     estimate = dplyr::ends_with("mean"),
                     moe = dplyr::ends_with("moe")) %>% 
-      dplyr::mutate(metric = "Mean Commute Time", .before = .data$data_year)
+      dplyr::mutate(metric = "Mean Commute Time",
+                    date = lubridate::ymd(paste0(.data$date, "-12-01")),
+                    geography_type = ifelse(.data$geography == "Region", "PSRC Region", "County"))
     
     mean_time_race <- psrccensus::psrc_pums_mean(pums,
                                                  stat_var = "travel_time",
@@ -86,13 +88,14 @@ process_pums_data <- function(pums_yr) {
       dplyr::filter(.data$race_condensed != "Total") %>% 
       dplyr::select(geography = .data$COUNTY,
                     grouping = .data$race_condensed,
-                    data_year = .data$DATA_YEAR,
+                    date = .data$DATA_YEAR,
                     estimate = dplyr::ends_with("mean"),
                     moe = dplyr::ends_with("moe")) %>% 
-      dplyr::mutate(metric = "Mean Commute Time", .before = .data$data_year)
+      dplyr::mutate(metric = "Mean Commute Time",
+                    date = lubridate::ymd(paste0(.data$date, "-12-01")),
+                    geography_type = "PSRC Region")
     
-    means <- dplyr::bind_rows(mean_time_county, mean_time_race) %>% 
-      dplyr::mutate(data_year = as.character(.data$data_year))
+    means <- dplyr::bind_rows(mean_time_county, mean_time_race)
     
     # Summarize counts/shares of travel time and mode by county (incl. region) and race
     class_county <- psrccensus::psrc_pums_count(pums,
@@ -100,9 +103,10 @@ process_pums_data <- function(pums_yr) {
                                                 incl_na = FALSE) %>% 
       dplyr::filter(.data$COUNTY != "Region") %>% 
       dplyr::transmute(geography = .data$COUNTY,
+                       geography_type = "County",
                        variable = .data$commute_class,
                        metric = "Commute Time Class",
-                       data_year = .data$DATA_YEAR,
+                       date = lubridate::ymd(paste0(.data$DATA_YEAR, "-12-01")),
                        estimate = .data$count,
                        estimate_moe = .data$count_moe,
                        share = .data$share,
@@ -112,9 +116,10 @@ process_pums_data <- function(pums_yr) {
                                                 group_vars = "commute_class",
                                                 incl_na = FALSE) %>% 
       dplyr::transmute(geography = .data$COUNTY,
+                       geography_type = "PSRC Region",
                        variable = .data$commute_class,
                        metric = "Commute Time Class",
-                       data_year = .data$DATA_YEAR,
+                       date = lubridate::ymd(paste0(.data$DATA_YEAR, "-12-01")),
                        estimate = .data$count,
                        estimate_moe = .data$count_moe,
                        share = .data$share,
@@ -125,10 +130,11 @@ process_pums_data <- function(pums_yr) {
                                               incl_na = FALSE) %>% 
       dplyr::filter(.data$race_condensed != "Total") %>% 
       dplyr::transmute(geography = .data$COUNTY,
+                       geography_type = "PSRC Region",
                        grouping = .data$race_condensed,
                        variable = .data$commute_class,
                        metric = "Commute Time Class",
-                       data_year = .data$DATA_YEAR,
+                       date = lubridate::ymd(paste0(.data$DATA_YEAR, "-12-01")),
                        estimate = .data$count,
                        estimate_moe = .data$count_moe,
                        share = .data$share,
@@ -139,9 +145,10 @@ process_pums_data <- function(pums_yr) {
                                                incl_na = FALSE) %>% 
       dplyr::filter(.data$COUNTY != "Region") %>% 
       dplyr::transmute(geography = .data$COUNTY,
+                       geography_type = "County",
                        variable = .data$travel_mode,
                        metric = "Commute Mode",
-                       data_year = .data$DATA_YEAR,
+                       date = lubridate::ymd(paste0(.data$DATA_YEAR, "-12-01")),
                        estimate = .data$count,
                        estimate_moe = .data$count_moe,
                        share = .data$share,
@@ -151,9 +158,10 @@ process_pums_data <- function(pums_yr) {
                                                group_vars = "travel_mode",
                                                incl_na = FALSE) %>% 
       dplyr::transmute(geography = .data$COUNTY,
+                       geography_type = "PSRC Region",
                        variable = .data$travel_mode,
                        metric = "Commute Mode",
-                       data_year = .data$DATA_YEAR,
+                       date = lubridate::ymd(paste0(.data$DATA_YEAR, "-12-01")),
                        estimate = .data$count,
                        estimate_moe = .data$count_moe,
                        share = .data$share,
@@ -164,18 +172,18 @@ process_pums_data <- function(pums_yr) {
                                              incl_na = FALSE) %>% 
       dplyr::filter(.data$race_condensed != "Total") %>% 
       dplyr::transmute(geography = .data$COUNTY,
+                       geography_type = "PSRC Region",
                        grouping = .data$race_condensed,
                        variable = .data$travel_mode,
                        metric = "Commute Mode",
-                       data_year = .data$DATA_YEAR,
+                       date = lubridate::ymd(paste0(.data$DATA_YEAR, "-12-01")),
                        estimate = .data$count,
                        estimate_moe = .data$count_moe,
                        share = .data$share,
                        share_moe = .data$share_moe)
     
     counts <- dplyr::bind_rows(class_county, class_region, class_race,
-                               mode_county, mode_region, mode_race) %>% 
-      dplyr::mutate(data_year = as.character(.data$data_year))
+                               mode_county, mode_region, mode_race)
     
     # Combine summarized tables
     ifelse(is.null(processed),
@@ -184,7 +192,7 @@ process_pums_data <- function(pums_yr) {
     
   }
   
-  processed <- processed[, c("geography", "grouping", "variable", "metric", "data_year", "estimate", "estimate_moe", "share", "share_moe")]
+  processed <- processed[, c("geography", "geography_type", "grouping", "variable", "metric", "date", "estimate", "estimate_moe", "share", "share_moe")]
   
   return(processed)
   print("All done.")
