@@ -22,7 +22,7 @@ create_public_spreadsheet <- function(table_list) {
   table_idx <- 1
   sheet_idx <- 2
   
-  wb <- openxlsx::loadWorkbook("metadata.xlsx")
+  wb <- openxlsx::loadWorkbook(system.file("extdata", "metadata.xlsx", package = "psrcrtp"))
   
   for (i in table_list) {
     for (j in names(table_list)) {
