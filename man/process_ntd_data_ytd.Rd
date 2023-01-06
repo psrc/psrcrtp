@@ -17,7 +17,7 @@ This function pulls and cleans data from the Monthly NTD Raw Data Release.
 Data is pulled from https://www.transit.dot.gov/ntd/data-product/monthly-module-raw-data-release
 }
 \examples{
-
-ytd_ntd_data <- process_ntd_data_ytd()
+\dontrun{
+ytd_ntd_data <- process_ntd_data_ytd()}
 
 }

@@ -4,10 +4,12 @@
 \alias{create_public_spreadsheet}
 \title{Excel Spreadsheet for Public Download of RTP Monitoring Data}
 \usage{
-create_public_spreadsheet(table_list)
+create_public_spreadsheet(table_list, output_path)
 }
 \arguments{
 \item{table_list}{List of data tables and spreadsheet tab names from the dashboard.}
+
+\item{output_path}{File path for saving the Excel workbook.}
 }
 \value{
 spreadsheet of RTP Monitoring data
