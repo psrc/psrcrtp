@@ -2,7 +2,7 @@
 % Please edit documentation in R/ofm_data.R
 \name{population_data}
 \alias{population_data}
-\title{Population and Housinh Trends from the Office of Financial Management}
+\title{Population and Housing Trends from the Office of Financial Management}
 \usage{
 population_data(forecast_base_yr = 2018)
 }

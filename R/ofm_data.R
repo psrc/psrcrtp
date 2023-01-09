@@ -1,4 +1,4 @@
-#' Population and Housinh Trends from the Office of Financial Management
+#' Population and Housing Trends from the Office of Financial Management
 #'
 #' This function pulls and cleans data from the Intercensal Population data from OFM.
 #' Forecast data is from the latest PSRC Macroeconomic forecast as stored in Elmer
@@ -119,6 +119,11 @@ population_data <- function(forecast_base_yr=2018){
 #' 
 #' @importFrom magrittr %<>% %>%
 #' @importFrom rlang .data
+#' 
+#' @examples 
+#' \dontrun{
+#' pop_hsg_hct <- population_near_hct()}
+#' 
 #'  
 #' @export
 #'

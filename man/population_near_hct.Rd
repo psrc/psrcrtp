@@ -14,3 +14,9 @@ This function pulls and cleans data from the SAEP Block data from OFM for 2020 o
 2010 to 2020 SAEP Block Data is stored in Elmer
 VISION 2050 Station Area and RGC buffers are stored in ElmerGeo
 }
+\examples{
+\dontrun{
+pop_hsg_hct <- population_near_hct()}
+
+ 
+}
