@@ -10,8 +10,7 @@
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' \dontrun{
-#' annual_ntd_data <- process_ntd_data_annual()}
+#' annual_ntd_data <- process_ntd_data_annual()
 #' 
 #' @export
 #'
@@ -62,18 +61,73 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
   c_dy <- lubridate::day(today)
   
   if(c_dy < 7) {
-    c_mo <- formatC(as.integer(lubridate::month(today))-1, width=2, flag="0")
-    d_mo <- month.name[[as.integer(lubridate::month(today)) - 3]]
     
-  } else {
+    # If it is January, data is from October of the previous year and the file is stored on FTA's December folder
+    if (lubridate::month(today) == 1) {
+      c_mo <- "12"
+      d_mo <- "October"
+      c_yr <- lubridate::year(today) - 1
+      d_yr <- lubridate::year(today) - 1
+      
+    }
     
-    c_mo <- formatC(as.integer(lubridate::month(today)), width=2, flag="0")
-    d_mo <- month.name[[as.integer(lubridate::month(today)) - 2]]
+    # If it is February, data is from November of the previous year and the file is stored on FTA's January folder
+    if (lubridate::month(today) == 2) {
+      c_mo <- "01"
+      d_mo <- "November"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+    }
     
-  }
+    # If it is March, data is from December of the previous year and the file is stored on FTA's February folder
+    if (lubridate::month(today) == 3) {
+      c_mo <- "02"
+      d_mo <- "December"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+    }    
+    
+    # If it is later than March, the data is from three months back and is on FTA's previous months folder
+    if (lubridate::month(today) > 3) {
+      c_mo <- formatC(as.integer(lubridate::month(today))-1, width=2, flag="0")
+      d_mo <- month.name[[as.integer(lubridate::month(today)) - 3]]
+      d_yr <- lubridate::year(today)
+      c_yr <- lubridate::year(today)
+    }
+    
+  } # end of condition if the date is on the 7th or sooner
+  
+  else {
+    
+    # If it is January, data is from November of the previous year and the file is stored on FTA's January folder
+    if (lubridate::month(today) == 1) {
+      c_mo <- "01"
+      d_mo <- "November"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+      
+    }
+    
+    # If it is February, data is from December of the previous year and the file is stored on FTA's February folder
+    if (lubridate::month(today) == 2) {
+      c_mo <- "02"
+      d_mo <- "December"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+    }
+    
+    # If it is March or later, the data is from two months back and is on FTA's current months folder
+    if (lubridate::month(today) > 3) {
+      c_mo <- formatC(as.integer(lubridate::month(today)), width=2, flag="0")
+      d_mo <- month.name[[as.integer(lubridate::month(today)) - 2]]
+      d_yr <- lubridate::year(today)
+      c_yr <- lubridate::year(today)
+    }
+    
+  } # end of condition if it is past the 7th of the month
   
   if (is.null(ntd_file)) {
-    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",d_mo,"%20",c_yr,"%20Raw%20Database.xlsx")
+    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",d_mo,"%20",d_yr,"%20Raw%20Database.xlsx")
   } else {
     data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",ntd_file)
   }
@@ -185,7 +239,7 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
     tidyr::pivot_wider(names_from = .data$metric,
                        values_from = .data$estimate) %>% 
     dplyr::mutate(`Annual Boardings per Hour` = ifelse(.data$`Annual Transit Revenue-Hours` > 0,
-                                                round(.data$`Annual Transit Boardings` / .data$`Annual Transit Revenue-Hours`, 2), NA))
+                                                       round(.data$`Annual Transit Boardings` / .data$`Annual Transit Revenue-Hours`, 2), NA))
   
   # Pivot NTD data back to long and create region-wide estimates per metric
   processed <- processed_wide %>% 
@@ -215,8 +269,7 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' \dontrun{
-#' ytd_ntd_data <- process_ntd_data_ytd()}
+#' ytd_ntd_data <- process_ntd_data_ytd()
 #' 
 #' @export
 #'
@@ -267,18 +320,73 @@ process_ntd_data_ytd <- function(ntd_file=NULL) {
   c_dy <- lubridate::day(today)
   
   if(c_dy < 7) {
-    c_mo <- formatC(as.integer(lubridate::month(today))-1, width=2, flag="0")
-    d_mo <- month.name[[as.integer(lubridate::month(today)) - 3]]
     
-  } else {
+    # If it is January, data is from October of the previous year and the file is stored on FTA's December folder
+    if (lubridate::month(today) == 1) {
+      c_mo <- "12"
+      d_mo <- "October"
+      c_yr <- lubridate::year(today) - 1
+      d_yr <- lubridate::year(today) - 1
+      
+    }
     
-    c_mo <- formatC(as.integer(lubridate::month(today)), width=2, flag="0")
-    d_mo <- month.name[[as.integer(lubridate::month(today)) - 2]]
+    # If it is February, data is from November of the previous year and the file is stored on FTA's January folder
+    if (lubridate::month(today) == 2) {
+      c_mo <- "01"
+      d_mo <- "November"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+    }
     
-  }
+    # If it is March, data is from December of the previous year and the file is stored on FTA's February folder
+    if (lubridate::month(today) == 3) {
+      c_mo <- "02"
+      d_mo <- "December"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+    }    
+    
+    # If it is later than March, the data is from three months back and is on FTA's previous months folder
+    if (lubridate::month(today) > 3) {
+      c_mo <- formatC(as.integer(lubridate::month(today))-1, width=2, flag="0")
+      d_mo <- month.name[[as.integer(lubridate::month(today)) - 3]]
+      d_yr <- lubridate::year(today)
+      c_yr <- lubridate::year(today)
+    }
+    
+  } # end of condition if the date is on the 7th or sooner
+  
+  else {
+    
+    # If it is January, data is from November of the previous year and the file is stored on FTA's January folder
+    if (lubridate::month(today) == 1) {
+      c_mo <- "01"
+      d_mo <- "November"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+      
+    }
+    
+    # If it is February, data is from December of the previous year and the file is stored on FTA's February folder
+    if (lubridate::month(today) == 2) {
+      c_mo <- "02"
+      d_mo <- "December"
+      c_yr <- lubridate::year(today)
+      d_yr <- lubridate::year(today) - 1
+    }
+    
+    # If it is March or later, the data is from two months back and is on FTA's current months folder
+    if (lubridate::month(today) > 3) {
+      c_mo <- formatC(as.integer(lubridate::month(today)), width=2, flag="0")
+      d_mo <- month.name[[as.integer(lubridate::month(today)) - 2]]
+      d_yr <- lubridate::year(today)
+      c_yr <- lubridate::year(today)
+    }
+    
+  } # end of condition if it is past the 7th of the month
   
   if (is.null(ntd_file)) {
-    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",d_mo,"%20",c_yr,"%20Raw%20Database.xlsx")
+    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",d_mo,"%20",d_yr,"%20Raw%20Database.xlsx")
   } else {
     data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",ntd_file)
   }
