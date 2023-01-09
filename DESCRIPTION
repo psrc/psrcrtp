@@ -27,5 +27,6 @@ Imports:
     odbc,
     sf,
     psrccensus,
-    tidyselect
+    tidyselect,
+    tidycensus
 RoxygenNote: 7.2.3
