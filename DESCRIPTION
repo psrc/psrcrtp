@@ -28,5 +28,6 @@ Imports:
     sf,
     psrccensus,
     tidyselect,
-    tidycensus
+    tidycensus,
+    tidytransit
 RoxygenNote: 7.2.3
