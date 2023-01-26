@@ -10,10 +10,14 @@ employment_near_hct(start_year = 2010)
 \item{start_year}{The first year of data in the series. Defaults to 2010.}
 }
 \value{
-tibble of total jobs near High Capacity Transit by calendar year
+tibble of total jobs near High Capacity Transit and in the region by calendar year
 }
 \description{
 This function pulls total employment estimates from PSRC's employment database in Elmer.
 The jobs estimates are already summarized by year in a table in Elmer.
 VISION 2050 Station Area and RGC buffers are stored in ElmerGeo.
+}
+\examples{
+emp_hct <- employment_near_hct()
+ 
 }

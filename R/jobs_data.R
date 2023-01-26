@@ -5,14 +5,13 @@
 #' VISION 2050 Station Area and RGC buffers are stored in ElmerGeo.
 #' 
 #' @param start_year The first year of data in the series. Defaults to 2010.
-#' @return tibble of total jobs near High Capacity Transit by calendar year
+#' @return tibble of total jobs near High Capacity Transit and in the region by calendar year
 #' 
 #' @importFrom magrittr %<>% %>%
 #' @importFrom rlang .data
 #' 
 #' @examples 
-#' 
-#' emp_hct <- employment_near_hct()}
+#' emp_hct <- employment_near_hct()
 #'  
 #' @export
 #'
@@ -30,12 +29,18 @@ employment_near_hct <- function(start_year = 2010) {
   
   processed <- DBI::dbReadTable(db_conn, tbl) %>% 
     dplyr::filter(.data$data_year >= start_year) %>% 
+    dplyr::mutate(share = .data$emp_in_hct / .data$total_emp) %>% 
+    tidyr::pivot_longer(cols = c(.data$emp_in_hct,
+                                 .data$total_emp),
+                        names_to = "variable",
+                        values_to = "estimate") %>% 
     dplyr::transmute(geography = "Region",
                      geography_type = "PSRC Region",
-                     metric = "Employment Inside HCT Area",
+                     variable = ifelse(.data$variable == "emp_in_hct", "Inside HCT Area", "Region"),
+                     metric = "Total Employment",
                      date = lubridate::ymd(paste0(.data$data_year,"-03-01")),
-                     estimate = .data$emp_in_hct,
-                     share = .data$emp_in_hct / .data$total_emp)
+                     estimate = .data$estimate,
+                     share = ifelse(.data$variable == "Region", 1, .data$share))
   
   print("All done.")
   return(processed)
