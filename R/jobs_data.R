@@ -23,24 +23,43 @@ employment_near_hct <- function(start_year = 2010) {
                             database = "Elmer",
                             trusted_connection = "yes")
   
-  tbl <- DBI::Id(schema = "employment", table = "hct_station_areas_employment")
-  
   print("Pulling total employment estimates from Elmer.")
   
-  processed <- DBI::dbReadTable(db_conn, tbl) %>% 
+  region <- DBI::dbGetQuery(db_conn,
+                            "SELECT * FROM employment.hct_station_areas_employment
+                             WHERE geo IN ('Inside HCT Area', 'Region')") %>% 
     dplyr::filter(.data$data_year >= start_year) %>% 
-    dplyr::mutate(share = .data$emp_in_hct / .data$total_emp) %>% 
-    tidyr::pivot_longer(cols = c(.data$emp_in_hct,
-                                 .data$total_emp),
+    tidyr::pivot_wider(names_from = .data$geo,
+                       values_from = .data$total_emp) %>% 
+    dplyr::mutate(share = .data$`Inside HCT Area` / .data$`Region`) %>% 
+    tidyr::pivot_longer(cols = c(.data$`Inside HCT Area`,
+                                 .data$`Region`),
                         names_to = "variable",
                         values_to = "estimate") %>% 
     dplyr::transmute(geography = "Region",
                      geography_type = "PSRC Region",
-                     variable = ifelse(.data$variable == "emp_in_hct", "Inside HCT Area", "Region"),
+                     variable = .data$variable,
                      metric = "Total Employment",
                      date = lubridate::ymd(paste0(.data$data_year,"-03-01")),
                      estimate = .data$estimate,
                      share = ifelse(.data$variable == "Region", 1, .data$share))
+  
+  county <- DBI::dbGetQuery(db_conn,
+                            "SELECT * FROM employment.hct_station_areas_employment
+                             WHERE geo IN ('33', '35', '53', '61')") %>% 
+    dplyr::filter(.data$data_year >= start_year) %>% 
+    dplyr::transmute(geography = dplyr::case_when(.data$geo == "33" ~ "King",
+                                                  .data$geo == "35" ~ "Kitsap",
+                                                  .data$geo == "53" ~ "Pierce",
+                                                  .data$geo == "61" ~ "Snohomish"),
+                     geography_type = "County",
+                     metric = "Total Employment",
+                     date = lubridate::ymd(paste0(.data$data_year,"-03-01")),
+                     estimate = .data$total_emp)
+  
+  processed <- dplyr::bind_rows(region, county)
+  
+  processed <- processed[, c("geography", "geography_type", "variable", "metric", "date", "estimate", "share")]
   
   print("All done.")
   return(processed)
