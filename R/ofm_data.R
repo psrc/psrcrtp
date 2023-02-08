@@ -279,3 +279,101 @@ population_near_hct <- function() {
   return(population)
   
 }
+
+#' Housing Trends from the Office of Financial Management
+#'
+#' This function pulls and cleans data from the Intercensal Population data from OFM.
+#' Forecast data is from the latest VISION 2050 modleing as stored on the file server
+#' 
+#' @param forecast_base_yr Four digit integer for Base Year in Forecast Data - defaults to 2018 
+#' @return tibble of housing trends for the region and regional geographies by calendar year
+#' 
+#' @importFrom magrittr %<>% %>%
+#' @importFrom rlang .data
+#' 
+#' @examples
+#' 
+#' housing_units <- housing_units_data()
+#' 
+#' @export
+#'
+
+housing_units_data <- function(forecast_base_yr=2018){
+
+  # Silence the dplyr summarize message
+  options(dplyr.summarise.inform = FALSE)
+
+  # Get OFM Housing Data by Jurisdiction
+  print("Downloading housing data from the Office of Financial Management and calculating annual population change")
+  t <- psrctrends::get_ofm_postcensal_housing() %>%
+    dplyr::rename(geography="Jurisdiction", estimate="Estimate", variable="Variable", geography_type="regional_geography") %>%
+    dplyr::mutate(date = lubridate::ymd(paste0(.data$Year,"-04-01"))) %>%
+    dplyr::select(-"Year") %>%
+    tidyr::drop_na() %>%
+    dplyr::mutate(grouping="Total") %>%
+    dplyr::filter(.data$variable != "Mobile Home")
+
+  # Calculate Annual Change
+  c <- t %>%
+    dplyr::group_by(.data$geography, .data$variable) %>%
+    dplyr::mutate(estimate = (.data$estimate-dplyr::lag(.data$estimate)), grouping="Change")
+
+  # Combine Totals and Change
+  h <- dplyr::bind_rows(t, c) %>% tidyr::drop_na() 
+  rm(t,c)
+
+  # Groupings by Region for Observed Data
+  print("Summarizing housing units by Region")
+  r <- h %>% 
+    dplyr::select(-"Filter") %>%
+    dplyr::filter(.data$geography == "Region") %>%
+    dplyr::mutate(metric="Observed", share=1, geography_type="Region")
+
+  # Region Totals for subsequent share calculations
+  t <- r %>% 
+    dplyr::select("date","variable", "grouping", "estimate") %>%
+    dplyr::rename(total="estimate")
+
+  # Groupings by County for Observed Data
+  print("Summarizing Housing Units by County")
+  c <- h %>% 
+    dplyr::select(-"Filter") %>%
+    dplyr::filter(.data$geography %in% c("King County", "Kitsap County", "Pierce County", "Snohomish County")) %>%
+    dplyr::mutate(metric="Observed", geography_type="County")
+
+  c <- dplyr::left_join(c, t, by=c("date", "variable", "grouping")) %>%
+    dplyr::mutate(share = .data$estimate / .data$total) %>%
+    dplyr::select(-"total")
+
+  # Groupings by Regional Geography for Observed Data
+  print("Summarizing housing units by Regional Geography")
+  rgeo <- h %>%
+    dplyr::filter(.data$Filter %in% c(2,4)) %>%
+    dplyr::filter(.data$geography != "Unincorporated Region") %>%
+    dplyr::group_by(.data$geography_type, .data$date, .data$variable, .data$grouping) %>%
+    dplyr::summarise(estimate=sum(.data$estimate)) %>%
+    tidyr::as_tibble() %>%
+    dplyr::rename(geography="geography_type") %>%
+    dplyr::mutate(metric="Observed", geography_type="Regional Geography")
+
+  rgeo <- dplyr::left_join(rgeo, t, by=c("date", "variable", "grouping")) %>%
+    dplyr::mutate(share = .data$estimate / .data$total) %>%
+    dplyr::select(-"total")
+
+  # Getting Forecasted Housing Units
+  print("Getting housing unit forecast data")
+  f <- readr::read_csv("X://DSA//shiny-uploads//data//regional-housing.csv", show_col_types = FALSE) %>%
+    dplyr::select(-"Observed") %>%
+    dplyr::rename(estimate="Forecast") %>%
+    dplyr::filter(.data$Year >= forecast_base_yr) %>%
+    dplyr::mutate(date = lubridate::ymd(paste0(.data$Year,"-04-01"))) %>%
+    dplyr::select(-"Year") %>%
+    dplyr::mutate(metric="Forecast", geography_type="Region", geography="Region", variable="Total Housing Units", grouping="Total", share=1)
+
+  print("Combining Data into one tibble")
+  housing <- dplyr::bind_rows(list(r,c,rgeo,f))
+
+  print("All Done")
+  return(housing)
+
+}

@@ -2,6 +2,7 @@
 
 export(create_public_spreadsheet)
 export(employment_near_hct)
+export(housing_units_data)
 export(jobs_forecast_data)
 export(new_vehicle_registrations)
 export(population_data)
