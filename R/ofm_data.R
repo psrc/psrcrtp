@@ -377,3 +377,286 @@ housing_units_data <- function(forecast_base_yr=2018){
   return(housing)
 
 }
+
+#' Block Level Estimates of equity Focus Populations
+#'
+#' This function pulls and cleans data from the block level Population data from OFM.
+#' Uses Census Tracts or Block Groups to assign shares of the 6 equity focus areas to blocks
+#' 
+#' @param year Four digit integer for current year of analysis
+#' @param latest_census_year Four digit integer for latest ACS 5 yr data - defaults to 2021
+#' @return tibble of population by equity focus area by census block by calendar year
+#' 
+#' @importFrom magrittr %<>% %>%
+#' @importFrom rlang .data
+#' 
+#' @examples
+#' 
+#' pop_by_block_efa <- population_by_efa(year=2022)
+#' 
+#' @export
+#'
+
+population_by_efa <- function(year, latest_census_year=2021) {
+  
+  disability_variables <- c("B18101_004", "B18101_007", "B18101_010", "B18101_013", "B18101_016", "B18101_019",
+                            "B18101_023", "B18101_026", "B18101_029", "B18101_032", "B18101_035", "B18101_038")
+  
+  youth_variables <- c("B01001_004", "B01001_005", "B01001_006",
+                       "B01001_028", "B01001_029", "B01001_030")
+  
+  older_variables <- c("B01001_020", "B01001_021", "B01001_022", "B01001_023", "B01001_024", "B01001_025",
+                       "B01001_044", "B01001_045", "B01001_046", "B01001_047", "B01001_048", "B01001_049")
+  
+  options(dplyr.summarise.inform = FALSE)
+  
+  if (year > latest_census_year) {census_year<-latest_census_year} else (census_year <- year)
+  
+  # Get Population Data by Block from OFM
+  if (year >= 2020) {
+    
+    pop_var <- paste0("POP",year)
+    
+    # Get Census Block Level Population Estimates from OFM website: 2020 onward uses 2020 Census
+    print("Downloading OFM Block Level Population Estimates from OFM Website for 2020 onward.")
+    url <- "https://ofm.wa.gov/sites/default/files/public/dataresearch/pop/smallarea/data/xlsx/saep_block20.zip"
+    utils::download.file(url, "working.zip", quiet = TRUE, mode = "wb")
+    data_file <- paste0(getwd(),"/working.zip")
+    
+    ofm <- readr::read_csv(data_file, show_col_types = FALSE) %>%
+      dplyr::filter(.data$COUNTYNAME %in% c("King", "Kitsap", "Pierce", "Snohomish")) %>%
+      dplyr::select("GEOID20", dplyr::all_of(pop_var)) %>%
+      dplyr::mutate(population = as.integer(.data[[pop_var]])) %>%
+      dplyr::mutate(geoid = as.character(.data$GEOID20)) %>%
+      dplyr::mutate(date=lubridate::mdy(paste0("04-01-",year))) %>%
+      dplyr::select("geoid", "population", "date") %>%
+      dplyr::mutate(blockgroup_id = stringr::str_sub(.data$geoid, 1, 12)) %>%
+      dplyr::mutate(tract_id = stringr::str_sub(.data$geoid, 1, 11))
+    
+    file.remove(data_file)
+    
+  } else {
+    
+    # Get Census Block Level Population Estimates from OFM: 2010 to 2020 via Elmer
+    print("Getting Block Population from 2010 to 2020 via Elmer")
+    block_pop <- psrctrends::get_elmer_table("ofm.estimate_facts") %>% 
+      dplyr::filter(.data$publication_dim_id == 3)
+    
+    block_dim <- psrctrends::get_elmer_table("census.geography_dim") %>% 
+      dplyr::filter(.data$geography_type %in% c("Block")) %>% 
+      dplyr::select("geography_dim_id", "block_geoid")
+    
+    ofm <- dplyr::left_join(block_pop, block_dim, by=c("geography_dim_id")) %>%
+      dplyr::filter(.data$estimate_year == year) %>%
+      dplyr::mutate(population = as.integer(.data$household_population + .data$group_quarters_population)) %>%
+      dplyr::select("block_geoid", "population", "estimate_year") %>%
+      dplyr::mutate(geoid = as.character(.data$block_geoid)) %>%
+      dplyr::mutate(date=lubridate::mdy(paste0("04-01-",year))) %>%
+      dplyr::select("geoid", "population", "date") %>%
+      dplyr::mutate(blockgroup_id = stringr::str_sub(.data$geoid, 1, 12)) %>%
+      dplyr::mutate(tract_id = stringr::str_sub(.data$geoid, 1, 11))
+    
+  }
+  
+  population <- ofm %>%
+    dplyr::select("geoid","population","date") %>%
+    dplyr::rename(estimate="population", geography="geoid") %>%
+    dplyr::mutate(variable="Total Population", geography_type="Census Block", metric="Population", grouping="Equity Focus Area", share=1)
+  
+  #####################################################################################################
+  # Get Population by Race & Ethnicity for Census Block Groups
+  #####################################################################################################
+  print(paste0("Downloading ", census_year," Population Data by Census BlockGroup by Race & Ethnicity from Census."))
+  pop <- psrccensus::get_acs_recs(geography = 'block group',table.names = c('B03002'), years=c(census_year))
+  
+  tot <- pop %>% 
+    dplyr::filter(.data$variable == "B03002_001") %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::rename(total="estimate")
+  
+  white <- pop %>% 
+    dplyr::filter(.data$variable == "B03002_003") %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::rename(white="estimate")
+  
+  poc <- dplyr::left_join(tot,white, by=c("GEOID")) %>%
+    dplyr::mutate(poc=.data$total-.data$white) %>%
+    dplyr::mutate(share=.data$poc/.data$total) %>%
+    dplyr::select("GEOID","share") %>%
+    dplyr::mutate(share = tidyr::replace_na(.data$share,0)) %>%
+    dplyr::rename(blockgroup_id="GEOID")
+  
+  # Join Population and Census Data
+  temp <- dplyr::left_join(ofm, poc, by=c("blockgroup_id")) %>%
+    dplyr::mutate(estimate=round(.data$population*.data$share,0)) %>%
+    dplyr::mutate(variable="People of Color", geography_type="Census Block", metric="Population", grouping="Equity Focus Area") %>%
+    dplyr::select(-"population", -"blockgroup_id", -"tract_id") %>%
+    dplyr::rename(geography="geoid")
+  
+  population <- dplyr::bind_rows(population, temp)
+  
+  rm(pop, tot, white, poc, temp)
+  
+  #####################################################################################################
+  # Get Population by Disability Status for Census Tracts
+  #####################################################################################################
+  print(paste0("Downloading ", census_year," Population Data by Census Tract by Disability Status from Census."))
+  pop <- psrccensus::get_acs_recs(geography = 'tract',table.names = c('B18101'), years=c(census_year))
+  
+  tot <- pop %>% 
+    dplyr::filter(.data$variable == "B18101_001") %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::rename(total="estimate")
+  
+  disabled <- pop %>% 
+    dplyr::filter(.data$variable %in% disability_variables) %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::group_by(.data$GEOID) %>%
+    dplyr::summarise(disabled=sum(.data$estimate)) %>%
+    tidyr::as_tibble()
+  
+  dis <- dplyr::left_join(tot,disabled, by=c("GEOID")) %>%
+    dplyr::mutate(share=.data$disabled/.data$total) %>%
+    dplyr::select("GEOID","share") %>%
+    dplyr::mutate(share = tidyr::replace_na(.data$share,0)) %>%
+    dplyr::rename(tract_id="GEOID")
+  
+  # Join Population and Census Data
+  temp <- dplyr::left_join(ofm, dis, by=c("tract_id")) %>%
+    dplyr::mutate(estimate=round(.data$population*.data$share,0)) %>%
+    dplyr::mutate(variable="People with a Disability", geography_type="Census Block", metric="Population", grouping="Equity Focus Area") %>%
+    dplyr::select(-"population", -"blockgroup_id", -"tract_id") %>%
+    dplyr::rename(geography="geoid")
+  
+  population <- dplyr::bind_rows(population, temp)
+  
+  rm(pop, tot, disabled, dis, temp)
+  
+  #####################################################################################################
+  # Get Population by Poverty Status for Census Tract
+  #####################################################################################################
+  print(paste0("Downloading ", census_year," Population Data by Tract by Poverty Status from Census."))
+  pop <- psrccensus::get_acs_recs(geography = 'tract',table.names = c('C17002'), years=c(census_year))
+  
+  tot <- pop %>% 
+    dplyr::filter(.data$variable == "C17002_001") %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::rename(total="estimate")
+  
+  above <- pop %>% 
+    dplyr::filter(.data$variable == "C17002_008") %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::rename(above="estimate")
+  
+  pov <- dplyr::left_join(tot,above, by=c("GEOID")) %>%
+    dplyr::mutate(below=.data$total-.data$above) %>%
+    dplyr::mutate(share=.data$below/.data$total) %>%
+    dplyr::select("GEOID","share") %>%
+    dplyr::mutate(share = tidyr::replace_na(.data$share,0)) %>%
+    dplyr::rename(tract_id="GEOID")
+  
+  # Join Population and Census Data
+  temp <- dplyr::left_join(ofm, pov, by=c("tract_id")) %>%
+    dplyr::mutate(estimate=round(.data$population*.data$share,0)) %>%
+    dplyr::mutate(variable="People with Lower Incomes", geography_type="Census Block", metric="Population", grouping="Equity Focus Area") %>%
+    dplyr::select(-"population", -"blockgroup_id", -"tract_id") %>%
+    dplyr::rename(geography="geoid")
+  
+  population <- dplyr::bind_rows(population, temp)
+  
+  rm(pop, tot, above, pov, temp)
+  
+  #####################################################################################################
+  # Get Population by Age for Census Block Groups
+  #####################################################################################################
+  print(paste0("Downloading ", census_year," Population Data by Census BlockGroup by Age from Census."))
+  pop <- psrccensus::get_acs_recs(geography = 'block group',table.names = c('B01001'), years=c(census_year))
+  
+  tot <- pop %>% 
+    dplyr::filter(.data$variable == "B01001_001") %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::rename(total="estimate")
+  
+  youth <- pop %>% 
+    dplyr::filter(.data$variable %in% youth_variables) %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::group_by(.data$GEOID) %>%
+    dplyr::summarise(youth=sum(.data$estimate)) %>%
+    tidyr::as_tibble()
+  
+  older <- pop %>% 
+    dplyr::filter(.data$variable %in% older_variables) %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::group_by(.data$GEOID) %>%
+    dplyr::summarise(older=sum(.data$estimate)) %>%
+    tidyr::as_tibble()
+  
+  # Join Youth Population and Census Data
+  age <- dplyr::left_join(tot, youth, by=c("GEOID")) %>%
+    dplyr::mutate(share=.data$youth/.data$total) %>%
+    dplyr::select("GEOID","share") %>%
+    dplyr::mutate(share = tidyr::replace_na(.data$share,0)) %>%
+    dplyr::rename(blockgroup_id="GEOID")
+  
+  temp <- dplyr::left_join(ofm, age, by=c("blockgroup_id")) %>%
+    dplyr::mutate(estimate=round(.data$population*.data$share,0)) %>%
+    dplyr::mutate(variable="Youth", geography_type="Census Block", metric="Population", grouping="Equity Focus Area") %>%
+    dplyr::select(-"population", -"blockgroup_id", -"tract_id") %>%
+    dplyr::rename(geography="geoid")
+  
+  population <- dplyr::bind_rows(population, temp)
+  
+  # Join Older Adults Population and Census Data
+  age <- dplyr::left_join(tot, older, by=c("GEOID")) %>%
+    dplyr::mutate(share=.data$older/.data$total) %>%
+    dplyr::select("GEOID","share") %>%
+    dplyr::mutate(share = tidyr::replace_na(.data$share,0)) %>%
+    dplyr::rename(blockgroup_id="GEOID")
+  
+  temp <- dplyr::left_join(ofm, age, by=c("blockgroup_id")) %>%
+    dplyr::mutate(estimate=round(.data$population*.data$share,0)) %>%
+    dplyr::mutate(variable="Older Adults", geography_type="Census Block", metric="Population", grouping="Equity Focus Area") %>%
+    dplyr::select(-"population", -"blockgroup_id", -"tract_id") %>%
+    dplyr::rename(geography="geoid")
+  
+  population <- dplyr::bind_rows(population, temp)
+  
+  rm(pop, tot, youth, older, age, temp)
+  
+  #####################################################################################################
+  # Get Population by Limited English Proficiency for Census Tracts
+  #####################################################################################################
+  print(paste0("Downloading ", census_year," Population Data by Census Tract by English Proficiency from Census."))
+  pop <- psrccensus::get_acs_recs(geography = 'tract',table.names = c('C16002'), years=c(census_year))
+  
+  tot <- pop %>% 
+    dplyr::filter(.data$variable == "C16002_001") %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::rename(total="estimate")
+  
+  lep <- pop %>% 
+    dplyr::filter(stringr::str_detect(.data$label, "Limited English speaking household")) %>% 
+    dplyr::select("GEOID","estimate") %>%
+    dplyr::group_by(.data$GEOID) %>%
+    dplyr::summarise(lep=sum(.data$estimate)) %>%
+    tidyr::as_tibble()
+  
+  # Join LEP Population and Census Data
+  lep <- dplyr::left_join(tot, lep, by=c("GEOID")) %>%
+    dplyr::mutate(share=.data$lep/.data$total) %>%
+    dplyr::select("GEOID","share") %>%
+    dplyr::mutate(share = tidyr::replace_na(.data$share,0)) %>%
+    dplyr::rename(tract_id="GEOID")
+  
+  temp <- dplyr::left_join(ofm, lep, by=c("tract_id")) %>%
+    dplyr::mutate(estimate=round(.data$population*.data$share,0)) %>%
+    dplyr::mutate(variable="Limited English Proficiency", geography_type="Census Block", metric="Population", grouping="Equity Focus Area") %>%
+    dplyr::select(-"population", -"blockgroup_id", -"tract_id") %>%
+    dplyr::rename(geography="geoid")
+  
+  population <- dplyr::bind_rows(population, temp)
+  
+  rm(pop, tot, lep, temp)
+  
+  return(population)
+}
