@@ -137,3 +137,88 @@ transit_stops_by_mode <- function(year, service_change) {
   
   return(final_stops)
 }
+
+#' Census Blocks served by Transit
+#'
+#' This function pulls GTFS data by Mode and intersect with Blocks to determine which blocks are served by transit.
+#' 
+#' @param year Year as a four digit integer - available from 2015 to current year
+#' @param service_change Service Change period - either Fall or Spring - defaults to Spring
+#' @param buffer Buffer Distance express in miles - defaults to 0.5
+#' @param modes Either HCT or All for transit serving the blocks - defaults to HCT
+#' @return character vector of census block id's served by transit modes
+#' 
+#' @importFrom magrittr %<>% %>%
+#' @importFrom rlang .data
+#' 
+#' @examples
+#' \dontrun{
+#' hct_blocks <- blocks_served_by_transit(year=2022)}
+#' 
+#' @export
+#'
+
+blocks_served_by_transit <- function(year, service_change="Spring", buffer=0.5, modes="HCT") {
+  
+  wgs84 <- 4326
+  spn <- 2285 
+  
+  if (modes=="HCT"){
+    
+    transit_modes <- c("BRT", "Commuter Rail", "Ferry", "Light Rail or Streetcar")
+    
+  } else {
+    
+    transit_modes <- c("BRT", "Bus", "Commuter Rail", "Ferry", "Light Rail or Streetcar")
+    
+  }
+  
+  print(paste0("Processing ", modes, " stops data for ", service_change, " of ", year))
+  stops <- psrcrtp::transit_stops_by_mode(year=year, service_change = service_change) %>%
+    dplyr::filter(.data$transit_type %in% transit_modes) %>%
+    dplyr::select("stop_id", "stop_lat", "stop_lon") %>%
+    dplyr::distinct()
+  
+  
+  print(paste0("Buffering stops by ", buffer, " miles and dissolving."))
+  stops_layer <- sf::st_as_sf(stops, coords = c("stop_lon", "stop_lat"), crs = wgs84) %>% 
+    sf::st_transform(spn) %>%
+    sf::st_buffer(dist = buffer*5280) %>%
+    sf::st_union() %>% 
+    sf::st_sf() %>%
+    dplyr::mutate(transit_type = "HCT")
+  
+  if (year >=2020) { 
+    
+    census_year <- 2020
+    print(paste0("Downloading ", census_year, " Census Blocks - this can take a minute getting from Elmergeo"))
+    block_layer <- psrcelmer::st_read_elmergeo(layer_name = "block2020", project_to_wgs84 = FALSE)
+    
+    block_layer <- block_layer %>%
+      dplyr::select("geoid20") %>%
+      sf::st_transform(spn) %>%
+      dplyr::rename(geoid="geoid20")
+    
+  } else {
+    
+    census_year <- 2010
+    print(paste0("Downloading ", census_year, " Census Blocks - this can take a minute getting from Elmergeo"))
+    block_layer <- psrcelmer::st_read_elmergeo(layer_name = "block2010", project_to_wgs84 = FALSE)
+    
+    block_layer <- block_layer %>%
+      dplyr::select("geoid10") %>%
+      sf::st_transform(spn) %>%
+      dplyr::rename(geoid="geoid10")
+    
+  }
+  
+  print(paste0("Intersecting Blocks and Transit Stops and outputting list of Blocks served by ", modes, " stops."))
+  blocks <- sf::st_intersection(stops_layer, block_layer) %>% 
+    sf::st_drop_geometry() %>%
+    dplyr::select("geoid") %>%
+    dplyr::distinct() %>%
+    dplyr::pull()
+  
+  return(blocks)
+  
+}

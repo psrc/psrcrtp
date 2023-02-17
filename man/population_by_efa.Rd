@@ -19,7 +19,7 @@ This function pulls and cleans data from the block level Population data from OF
 Uses Census Tracts or Block Groups to assign shares of the 6 equity focus areas to blocks
 }
 \examples{
-
-pop_by_block_efa <- population_by_efa(year=2022)
+\dontrun{
+pop_by_block_efa <- population_by_efa(year=2022)}
 
 }

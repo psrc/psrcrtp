@@ -391,8 +391,8 @@ housing_units_data <- function(forecast_base_yr=2018){
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' 
-#' pop_by_block_efa <- population_by_efa(year=2022)
+#' \dontrun{
+#' pop_by_block_efa <- population_by_efa(year=2022)}
 #' 
 #' @export
 #'

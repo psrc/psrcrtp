@@ -29,5 +29,6 @@ Imports:
     psrccensus,
     tidyselect,
     tidycensus,
-    tidytransit
+    tidytransit,
+    psrcelmer
 RoxygenNote: 7.2.3
