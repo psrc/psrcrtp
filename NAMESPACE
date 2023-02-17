@@ -3,6 +3,7 @@
 export(blocks_served_by_transit)
 export(create_public_spreadsheet)
 export(employment_near_hct)
+export(equity_population_near_transit)
 export(housing_units_data)
 export(jobs_forecast_data)
 export(new_vehicle_registrations)

@@ -222,3 +222,58 @@ blocks_served_by_transit <- function(year, service_change="Spring", buffer=0.5, 
   return(blocks)
   
 }
+
+#' Equity Population served by Transit
+#'
+#' This function pulls GTFS data by Mode, intersects with Blocks and calculates how many people are served by transit.
+#' 
+#' @param year Year as a four digit integer - available from 2015 to current year
+#' @param service_change Service Change period - either Fall or Spring - defaults to Spring
+#' @param modes Either HCT or All for transit serving the blocks - defaults to HCT
+#' @param latest_census_year Four digit integer for latest ACS 5 yr data - defaults to 2021
+#' @param buffer Buffer Distance express in miles - defaults to 0.50
+#' @return tibble of population and share of people serve by transit by equity focus population
+#' 
+#' @importFrom magrittr %<>% %>%
+#' @importFrom rlang .data
+#' 
+#' @examples
+#' \dontrun{
+#' pop_half_mile_hct <- equity_population_near_transit(year=2022)
+#' pop_qtr_mile_hct <- equity_population_near_transit(year=2022, buffer=0.25)}
+#' 
+#' @export
+#'
+equity_population_near_transit <- function(year, service_change="Spring", modes="HCT", latest_census_year=2021, buffer=0.50) {
+  
+  print("Getting Equity Population by Census Block")
+  pop_by_block_efa <- psrcrtp::population_by_efa(year=2022, latest_census_year = latest_census_year)
+  
+  print("Getting list of blocks near transit")
+  transit_blocks <- psrcrtp::blocks_served_by_transit(year=year, service_change=service_change, buffer=buffer, modes=modes)
+  
+  print(paste0("Calculating Population within ", buffer, " miles of ", modes, " transit."))
+  blocks_near_transit <-pop_by_block_efa %>%
+    dplyr::filter(.data$geography %in% transit_blocks) %>%
+    dplyr::group_by(.data$variable) %>%
+    dplyr::summarise(estimate=sum(.data$estimate)) %>%
+    tidyr::as_tibble()
+  
+  print("Calculating Total Population for the entire Region by Equity Focus Areafor share calculations.")
+  all_blocks <-pop_by_block_efa %>%
+    dplyr::group_by(.data$variable) %>%
+    dplyr::summarise(estimate=sum(.data$estimate)) %>%
+    tidyr::as_tibble() %>%
+    dplyr::rename(total="estimate")
+  
+  print("Creating final output")
+  pop <- dplyr::left_join(blocks_near_transit, all_blocks, by=c("variable")) %>%
+    dplyr::mutate(share=.data$estimate/.data$total) %>%
+    dplyr::mutate(geography="Region", geography_type="PSRC Region") %>%
+    dplyr::mutate(metric=paste0("Population near ",modes," transit")) %>%
+    dplyr::mutate(grouping=paste0(buffer, " mile buffer distance")) %>%
+    dplyr::mutate(date=lubridate::mdy(paste0("04-01-",year))) %>%
+    dplyr::select(-"total")
+  
+  return(pop)
+}
