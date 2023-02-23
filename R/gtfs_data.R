@@ -247,7 +247,7 @@ blocks_served_by_transit <- function(year, service_change="Spring", buffer=0.5, 
 equity_population_near_transit <- function(year, service_change="Spring", modes="HCT", latest_census_year=2021, buffer=0.50) {
   
   print("Getting Equity Population by Census Block")
-  pop_by_block_efa <- psrcrtp::population_by_efa(year=2022, latest_census_year = latest_census_year)
+  pop_by_block_efa <- psrcrtp::population_by_efa(year=year, latest_census_year = latest_census_year)
   
   print("Getting list of blocks near transit")
   transit_blocks <- psrcrtp::blocks_served_by_transit(year=year, service_change=service_change, buffer=buffer, modes=modes)
