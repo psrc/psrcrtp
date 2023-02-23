@@ -53,6 +53,7 @@ acs_mode_to_work_county <- function(years) {
       dplyr::mutate(label = stringr::str_remove_all(.data$label, "Estimate ")) %>%
       dplyr::mutate(label = stringr::str_remove_all(.data$label, ":")) %>%
       dplyr::mutate(label = stringr::str_remove_all(.data$label, " \\(excluding taxicab\\)")) %>%
+      dplyr::mutate(label = stringr::str_replace_all(.data$label, "Worked at home", "Worked from home")) %>%
       dplyr::rename(geography="name", variable="label", metric="concept", geography_type="census_geography") %>%
       dplyr::mutate(date=lubridate::mdy(paste0("12-01-",.data$year)), grouping="PSRC Region", share_moe=0, metric="Mode to Work") %>%
       dplyr::select(-"year")
@@ -118,6 +119,7 @@ acs_mode_to_work_place <- function(years) {
       dplyr::mutate(label = stringr::str_remove_all(.data$label, "Estimate ")) %>%
       dplyr::mutate(label = stringr::str_remove_all(.data$label, ":")) %>%
       dplyr::mutate(label = stringr::str_remove_all(.data$label, " \\(excluding taxicab\\)")) %>%
+      dplyr::mutate(label = stringr::str_replace_all(.data$label, "Worked at home", "Worked from home")) %>%
       dplyr::rename(geography="name", variable="label", metric="concept", geography_type="census_geography") %>%
       dplyr::mutate(date=lubridate::mdy(paste0("12-01-",.data$year)), grouping="PSRC Cities", share_moe=0, metric="Mode to Work") %>%
       dplyr::select(-"year")
