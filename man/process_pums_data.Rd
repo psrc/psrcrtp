@@ -2,18 +2,20 @@
 % Please edit documentation in R/pums_data.R
 \name{process_pums_data}
 \alias{process_pums_data}
-\title{Totals and Shares of Commute Travel Mode and Time from PUMS 5-Year Data}
+\title{Totals and Shares of Commute Travel Mode and Time from PUMS Data}
 \usage{
-process_pums_data(pums_yr)
+process_pums_data(pums_yr, pums_span = 5)
 }
 \arguments{
-\item{pums_yr}{List of PUMS data years. Each year should be the latest in non-overlapping five-year series.}
+\item{pums_yr}{List of PUMS data years. Each year should be the latest in non-overlapping five-year series if span is 5.}
+
+\item{pums_span}{Integer of either 1 or 5 for the 1 or 5 year data series}
 }
 \value{
 tibble of mean, total, and share of travel mode and time to work by race/ethnicity, county, and region
 }
 \description{
-This function processes 5-year Public Use Microdata Sample (PUMS) estimates from the U.S. Census Bureau.
+This function processes Public Use Microdata Sample (PUMS) estimates from the U.S. Census Bureau.
 Data is pulled using PSRC's psrccensus package.
 }
 \examples{
