@@ -17,6 +17,6 @@ This function pulls and cleans ACS Mode Share Data from Census Table B08006.
 Pulls data by year for King, Kitsap, Pierce and Snohomish counties and summarized by PSRC Region
 }
 \examples{
-modes_psrc <- acs_mode_to_work_county(years <- 2021)
+modes_psrc_counties <- acs_mode_to_work_county(years <- 2021)
 
 }
