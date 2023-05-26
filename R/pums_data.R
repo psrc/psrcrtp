@@ -340,9 +340,11 @@ process_pums_data <- function(pums_yr, pums_span=5) {
            processed <- dplyr::bind_rows(means, modes, times, simple_modes),
            processed <- dplyr::bind_rows(processed, means, modes, times, simple_modes))
     
+    processed$year_span <- pums_span
+    
   }
   
-  processed <- processed[, c("geography", "geography_type", "grouping", "variable", "metric", "date", "estimate", "estimate_moe", "share", "share_moe")]
+  processed <- processed[, c("geography", "geography_type", "grouping", "variable", "metric", "date", "estimate", "estimate_moe", "share", "share_moe", "year_span")]
   print("All done.")
   return(processed)
 }
