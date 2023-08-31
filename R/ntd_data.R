@@ -1,9 +1,8 @@
 #' Annual Transit Metrics from the National Transit Database
 #'
-#' This function pulls and cleans data from the Monthly NTD Raw Data Release.
-#' Data is pulled from https://www.transit.dot.gov/ntd/data-product/monthly-module-raw-data-release
+#' This function cleans data from the Monthly NTD Raw Data Release.
+#' Data is downloaded from https://www.transit.dot.gov/ntd/data-product/monthly-module-raw-data-release
 #' 
-#' @param ntd_file Sometimes FTA renames the file so you can set the name here - defaults to NULL 
 #' @return tibble of transit related metrics for the region and metro areas by calendar year
 #' 
 #' @importFrom magrittr %<>% %>%
@@ -14,7 +13,7 @@
 #' 
 #' @export
 #'
-process_ntd_data_annual <- function(ntd_file=NULL) {
+process_ntd_data_annual <- function() {
   
   # Silence the dplyr summarize message
   options(dplyr.summarise.inform = FALSE)
@@ -53,88 +52,15 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
                  "VP" = "Vanpool",
                  "YR" = "Rail")
   
-  ntd_modes <- tibble::enframe(ntd_modes) %>% dplyr::rename(Modes=.data$name, mode_name=.data$value)
+  ntd_modes <- tibble::enframe(ntd_modes) %>% dplyr::rename(Mode=.data$name, mode_name=.data$value)
   
-  # Figure out Date to know where to download the file from
-  today <- Sys.Date()
-  c_yr <- lubridate::year(today)
-  c_dy <- lubridate::day(today)
+  # Location of the most recently downloaded NTD file
+  file_dir <- "X:/DSA/rtp-dashboard/NTD/"
   
-  if(c_dy < 7) {
-    
-    # If it is January, data is from October of the previous year and the file is stored on FTA's December folder
-    if (lubridate::month(today) == 1) {
-      c_mo <- "12"
-      d_mo <- "October"
-      c_yr <- lubridate::year(today) - 1
-      d_yr <- lubridate::year(today) - 1
-      
-    }
-    
-    # If it is February, data is from November of the previous year and the file is stored on FTA's January folder
-    if (lubridate::month(today) == 2) {
-      c_mo <- "01"
-      d_mo <- "November"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-    }
-    
-    # If it is March, data is from December of the previous year and the file is stored on FTA's February folder
-    if (lubridate::month(today) == 3) {
-      c_mo <- "02"
-      d_mo <- "December"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-    }    
-    
-    # If it is later than March, the data is from three months back and is on FTA's previous months folder
-    if (lubridate::month(today) > 3) {
-      c_mo <- formatC(as.integer(lubridate::month(today))-1, width=2, flag="0")
-      d_mo <- month.name[[as.integer(lubridate::month(today)) - 3]]
-      d_yr <- lubridate::year(today)
-      c_yr <- lubridate::year(today)
-    }
-    
-  } # end of condition if the date is on the 7th or sooner
+  setwd(file_dir)
   
-  else {
-    
-    # If it is January, data is from November of the previous year and the file is stored on FTA's January folder
-    if (lubridate::month(today) == 1) {
-      c_mo <- "01"
-      d_mo <- "November"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-      
-    }
-    
-    # If it is February, data is from December of the previous year and the file is stored on FTA's February folder
-    if (lubridate::month(today) == 2) {
-      c_mo <- "02"
-      d_mo <- "December"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-    }
-    
-    # If it is March or later, the data is from two months back and is on FTA's current months folder
-    if (lubridate::month(today) > 3) {
-      c_mo <- formatC(as.integer(lubridate::month(today)), width=2, flag="0")
-      d_mo <- month.name[[as.integer(lubridate::month(today)) - 2]]
-      d_yr <- lubridate::year(today)
-      c_yr <- lubridate::year(today)
-    }
-    
-  } # end of condition if it is past the 7th of the month
-  
-  if (is.null(ntd_file)) {
-    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",d_mo,"%20",d_yr,"%20Raw%20Database.xlsx")
-  } else {
-    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",ntd_file)
-  }
-  
-  print("Downloading NTD Data from FTA Website.")
-  utils::download.file(data_url, "working.xlsx", quiet = TRUE, mode = "wb")
-  data_file <- paste0(getwd(),"/working.xlsx")
+  # Choose NTD file
+  data_file <- file.choose()
   
   # Initial processing of NTD data
   processed <- NULL
@@ -143,35 +69,35 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
     
     # Download file and filter data to only include operators for RTP analysis
     t <- dplyr::as_tibble(openxlsx::read.xlsx(data_file, sheet = areas, skipEmptyRows = TRUE, startRow = 1, colNames = TRUE)) %>%
-      dplyr::mutate(`5.digit.NTD.ID` = stringr::str_pad(string=.data$`5.digit.NTD.ID`, width=5, pad="0", side=c("left"))) %>%
-      dplyr::filter(.data$`5.digit.NTD.ID` %in% ntd_ids) %>% 
-      dplyr::mutate(Modes = dplyr::case_when(.data$Modes == "DR" & .data$TOS == "DO" ~ "DR-DO",
-                                             .data$Modes == "DR" & .data$TOS == "PT" ~ "DR-PT",
-                                             .data$Modes == "DR" & .data$TOS == "TN" ~ "DR-TN",
-                                             .data$Modes == "DR" & .data$TOS == "TX" ~ "DR-TX",
-                                             TRUE ~ .data$Modes)) %>% 
-      dplyr::select(-.data$`4.digit.NTD.ID`, -.data$Active, -.data$Reporter.Type, -.data$UZA, -.data$UZA.Name, -.data$TOS) %>% 
-      tidyr::pivot_longer(cols = 4:dplyr::last_col(), names_to = "date", values_to = "estimate", values_drop_na = TRUE)
+      dplyr::mutate(NTD.ID = stringr::str_pad(string=.data$NTD.ID, width=5, pad="0", side=c("left"))) %>%
+      dplyr::filter(.data$NTD.ID %in% ntd_ids) %>% 
+      dplyr::mutate(Mode = dplyr::case_when(.data$Mode == "DR" & .data$TOS == "DO" ~ "DR-DO",
+                                            .data$Mode == "DR" & .data$TOS == "PT" ~ "DR-PT",
+                                            .data$Mode == "DR" & .data$TOS == "TN" ~ "DR-TN",
+                                            .data$Mode == "DR" & .data$TOS == "TX" ~ "DR-TX",
+                                            TRUE ~ .data$Mode)) %>% 
+      dplyr::select(-.data$Legacy.NTD.ID, -.data$Status, -.data$Reporter.Type, -.data$UZA, -.data$UACE.CD, -.data$UZA.Name, -.data$TOS, -.data$`3.Mode`) %>% 
+      tidyr::pivot_longer(cols = 4:dplyr::last_col(), names_to = "date", values_to = "estimate", values_drop_na = TRUE) %>% 
+      dplyr::mutate(date = openxlsx::convertToDate(.data$date))
     
     # Add Detailed Mode Names & Aggregate  
-    t <- dplyr::left_join(t, ntd_modes, by=c("Modes")) %>% 
+    t <- dplyr::left_join(t, ntd_modes, by=c("Mode")) %>% 
       dplyr::rename(variable=.data$mode_name) %>% 
-      dplyr::select(-.data$Modes) %>%
-      dplyr::group_by(.data$`5.digit.NTD.ID`, .data$Agency, .data$date, .data$variable) %>%
+      dplyr::select(-.data$Mode) %>%
+      dplyr::group_by(.data$NTD.ID, .data$Agency, .data$date, .data$variable) %>%
       dplyr::summarise(estimate=sum(.data$estimate)) %>%
       tidyr::as_tibble()
     
     # Add Metro Area Name
     n <- agencies %>% dplyr::select(.data$NTDID, .data$MPO_AREA, .data$AGENCY_NAME)
-    t <- dplyr::left_join(t, n, by=c("5.digit.NTD.ID"="NTDID")) %>%
-      dplyr::select(-.data$`5.digit.NTD.ID`, -.data$Agency) %>%
+    t <- dplyr::left_join(t, n, by=c("NTD.ID"="NTDID")) %>%
+      dplyr::select(-.data$NTD.ID, -.data$Agency) %>%
       dplyr::rename(grouping=.data$MPO_AREA, geography=.data$AGENCY_NAME) %>%
       tidyr::as_tibble() %>%
       dplyr::mutate(metric=areas) %>%
       dplyr::mutate(metric = dplyr::case_when(.data$metric == "UPT" ~ "Annual Transit Boardings",
                                               .data$metric == "VRM" ~ "Annual Transit Revenue-Miles",
-                                              .data$metric == "VRH" ~ "Annual Transit Revenue-Hours")) %>% 
-      dplyr::mutate(date = lubridate::parse_date_time(.data$date, 'my'))
+                                              .data$metric == "VRH" ~ "Annual Transit Revenue-Hours"))
     
     rm(n)
     
@@ -250,7 +176,6 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
                         names_to = "metric",
                         values_to = "estimate")
   
-  file.remove(data_file)
   print("All done.")
   
   return(processed)
@@ -259,10 +184,9 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
 
 #' Year to Date Transit Metrics from the National Transit Database
 #'
-#' This function pulls and cleans data from the Monthly NTD Raw Data Release.
-#' Data is pulled from https://www.transit.dot.gov/ntd/data-product/monthly-module-raw-data-release
+#' This function cleans data from the Monthly NTD Raw Data Release.
+#' Data is downloaded from https://www.transit.dot.gov/ntd/data-product/monthly-module-raw-data-release
 #' 
-#' @param ntd_file Sometimes FTA renames the file so you can set the name here - defaults to NULL 
 #' @return tibble of year to date transit related metrics for the region and metro areas
 #' 
 #' @importFrom magrittr %<>% %>%
@@ -273,7 +197,7 @@ process_ntd_data_annual <- function(ntd_file=NULL) {
 #' 
 #' @export
 #'
-process_ntd_data_ytd <- function(ntd_file=NULL) {
+process_ntd_data_ytd <- function() {
   
   # Silence the dplyr summarize message
   options(dplyr.summarise.inform = FALSE)
@@ -312,88 +236,15 @@ process_ntd_data_ytd <- function(ntd_file=NULL) {
                  "VP" = "Vanpool",
                  "YR" = "Rail")
   
-  ntd_modes <- tibble::enframe(ntd_modes) %>% dplyr::rename(Modes=.data$name, mode_name=.data$value)
+  ntd_modes <- tibble::enframe(ntd_modes) %>% dplyr::rename(Mode=.data$name, mode_name=.data$value)
   
-  # Figure out Date to know where to download the file from
-  today <- Sys.Date()
-  c_yr <- lubridate::year(today)
-  c_dy <- lubridate::day(today)
+  # Location of the most recently downloaded NTD file
+  file_dir <- "X:/DSA/rtp-dashboard/NTD/"
   
-  if(c_dy < 7) {
-    
-    # If it is January, data is from October of the previous year and the file is stored on FTA's December folder
-    if (lubridate::month(today) == 1) {
-      c_mo <- "12"
-      d_mo <- "October"
-      c_yr <- lubridate::year(today) - 1
-      d_yr <- lubridate::year(today) - 1
-      
-    }
-    
-    # If it is February, data is from November of the previous year and the file is stored on FTA's January folder
-    if (lubridate::month(today) == 2) {
-      c_mo <- "01"
-      d_mo <- "November"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-    }
-    
-    # If it is March, data is from December of the previous year and the file is stored on FTA's February folder
-    if (lubridate::month(today) == 3) {
-      c_mo <- "02"
-      d_mo <- "December"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-    }    
-    
-    # If it is later than March, the data is from three months back and is on FTA's previous months folder
-    if (lubridate::month(today) > 3) {
-      c_mo <- formatC(as.integer(lubridate::month(today))-1, width=2, flag="0")
-      d_mo <- month.name[[as.integer(lubridate::month(today)) - 3]]
-      d_yr <- lubridate::year(today)
-      c_yr <- lubridate::year(today)
-    }
-    
-  } # end of condition if the date is on the 7th or sooner
+  setwd(file_dir)
   
-  else {
-    
-    # If it is January, data is from November of the previous year and the file is stored on FTA's January folder
-    if (lubridate::month(today) == 1) {
-      c_mo <- "01"
-      d_mo <- "November"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-      
-    }
-    
-    # If it is February, data is from December of the previous year and the file is stored on FTA's February folder
-    if (lubridate::month(today) == 2) {
-      c_mo <- "02"
-      d_mo <- "December"
-      c_yr <- lubridate::year(today)
-      d_yr <- lubridate::year(today) - 1
-    }
-    
-    # If it is March or later, the data is from two months back and is on FTA's current months folder
-    if (lubridate::month(today) > 3) {
-      c_mo <- formatC(as.integer(lubridate::month(today)), width=2, flag="0")
-      d_mo <- month.name[[as.integer(lubridate::month(today)) - 2]]
-      d_yr <- lubridate::year(today)
-      c_yr <- lubridate::year(today)
-    }
-    
-  } # end of condition if it is past the 7th of the month
-  
-  if (is.null(ntd_file)) {
-    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",d_mo,"%20",d_yr,"%20Raw%20Database.xlsx")
-  } else {
-    data_url <- paste0("https://www.transit.dot.gov/sites/fta.dot.gov/files/",c_yr,"-",c_mo,"/",ntd_file)
-  }
-  
-  print("Downloading NTD Data from FTA Website.")
-  utils::download.file(data_url, "working.xlsx", quiet = TRUE, mode = "wb")
-  data_file <- paste0(getwd(),"/working.xlsx")
+  # Choose NTD file
+  data_file <- file.choose()
   
   # Initial processing of NTD data
   processed <- NULL
@@ -402,35 +253,35 @@ process_ntd_data_ytd <- function(ntd_file=NULL) {
     
     # Download file and filter data to only include operators for RTP analysis
     t <- dplyr::as_tibble(openxlsx::read.xlsx(data_file, sheet = areas, skipEmptyRows = TRUE, startRow = 1, colNames = TRUE)) %>%
-      dplyr::mutate(`5.digit.NTD.ID` = stringr::str_pad(string=.data$`5.digit.NTD.ID`, width=5, pad="0", side=c("left"))) %>%
-      dplyr::filter(.data$`5.digit.NTD.ID` %in% ntd_ids) %>% 
-      dplyr::mutate(Modes = dplyr::case_when(.data$Modes == "DR" & .data$TOS == "DO" ~ "DR-DO",
-                                             .data$Modes == "DR" & .data$TOS == "PT" ~ "DR-PT",
-                                             .data$Modes == "DR" & .data$TOS == "TN" ~ "DR-TN",
-                                             .data$Modes == "DR" & .data$TOS == "TX" ~ "DR-TX",
-                                             TRUE ~ .data$Modes)) %>% 
-      dplyr::select(-.data$`4.digit.NTD.ID`, -.data$Active, -.data$Reporter.Type, -.data$UZA, -.data$UZA.Name, -.data$TOS) %>% 
-      tidyr::pivot_longer(cols = 4:dplyr::last_col(), names_to = "date", values_to = "estimate", values_drop_na = TRUE)
+      dplyr::mutate(NTD.ID = stringr::str_pad(string=.data$NTD.ID, width=5, pad="0", side=c("left"))) %>%
+      dplyr::filter(.data$NTD.ID %in% ntd_ids) %>% 
+      dplyr::mutate(Mode = dplyr::case_when(.data$Mode == "DR" & .data$TOS == "DO" ~ "DR-DO",
+                                             .data$Mode == "DR" & .data$TOS == "PT" ~ "DR-PT",
+                                             .data$Mode == "DR" & .data$TOS == "TN" ~ "DR-TN",
+                                             .data$Mode == "DR" & .data$TOS == "TX" ~ "DR-TX",
+                                             TRUE ~ .data$Mode)) %>% 
+      dplyr::select(-.data$Legacy.NTD.ID, -.data$Status, -.data$Reporter.Type, -.data$UZA, -.data$UACE.CD, -.data$UZA.Name, -.data$TOS, -.data$`3.Mode`) %>% 
+      tidyr::pivot_longer(cols = 4:dplyr::last_col(), names_to = "date", values_to = "estimate", values_drop_na = TRUE) %>% 
+      dplyr::mutate(date = openxlsx::convertToDate(.data$date))
     
     # Add Detailed Mode Names & Aggregate  
-    t <- dplyr::left_join(t, ntd_modes, by=c("Modes")) %>% 
+    t <- dplyr::left_join(t, ntd_modes, by=c("Mode")) %>% 
       dplyr::rename(variable=.data$mode_name) %>% 
-      dplyr::select(-.data$Modes) %>%
-      dplyr::group_by(.data$`5.digit.NTD.ID`, .data$Agency, .data$date, .data$variable) %>%
+      dplyr::select(-.data$Mode) %>%
+      dplyr::group_by(.data$NTD.ID, .data$Agency, .data$date, .data$variable) %>%
       dplyr::summarise(estimate=sum(.data$estimate)) %>%
       tidyr::as_tibble()
     
     # Add Metro Area Name
     n <- agencies %>% dplyr::select(.data$NTDID, .data$MPO_AREA, .data$AGENCY_NAME)
-    t <- dplyr::left_join(t, n, by=c("5.digit.NTD.ID"="NTDID")) %>%
-      dplyr::select(-.data$`5.digit.NTD.ID`, -.data$Agency) %>%
+    t <- dplyr::left_join(t, n, by=c("NTD.ID"="NTDID")) %>%
+      dplyr::select(-.data$NTD.ID, -.data$Agency) %>%
       dplyr::rename(grouping=.data$MPO_AREA, geography=.data$AGENCY_NAME) %>%
       tidyr::as_tibble() %>%
       dplyr::mutate(metric=areas) %>%
       dplyr::mutate(metric = dplyr::case_when(.data$metric == "UPT" ~ "YTD Transit Boardings",
                                               .data$metric == "VRM" ~ "YTD Transit Revenue-Miles",
-                                              .data$metric == "VRH" ~ "YTD Transit Revenue-Hours")) %>% 
-      dplyr::mutate(date = lubridate::parse_date_time(.data$date, 'my'))
+                                              .data$metric == "VRH" ~ "YTD Transit Revenue-Hours"))
     
     rm(n)
     
@@ -503,7 +354,6 @@ process_ntd_data_ytd <- function(ntd_file=NULL) {
                         names_to = "metric",
                         values_to = "estimate")
   
-  file.remove(data_file)
   print("All done.")
   
   return(processed)

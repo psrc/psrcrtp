@@ -4,17 +4,14 @@
 \alias{process_ntd_data_annual}
 \title{Annual Transit Metrics from the National Transit Database}
 \usage{
-process_ntd_data_annual(ntd_file = NULL)
-}
-\arguments{
-\item{ntd_file}{Sometimes FTA renames the file so you can set the name here - defaults to NULL}
+process_ntd_data_annual()
 }
 \value{
 tibble of transit related metrics for the region and metro areas by calendar year
 }
 \description{
-This function pulls and cleans data from the Monthly NTD Raw Data Release.
-Data is pulled from https://www.transit.dot.gov/ntd/data-product/monthly-module-raw-data-release
+This function cleans data from the Monthly NTD Raw Data Release.
+Data is downloaded from https://www.transit.dot.gov/ntd/data-product/monthly-module-raw-data-release
 }
 \examples{
 annual_ntd_data <- process_ntd_data_annual()
