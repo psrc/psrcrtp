@@ -4,7 +4,10 @@
 \alias{process_crash_data_annual}
 \title{Traffic Fatalities from the Washington Traffic Safety Commission}
 \usage{
-process_crash_data_annual()
+process_crash_data_annual(data_years = seq(10, 20, by = 1))
+}
+\arguments{
+\item{data_years}{List of two-digit integers for years of analysis - defaults to 10 to 20}
 }
 \value{
 tibble of fatal collision metrics for the region and counties by calendar year

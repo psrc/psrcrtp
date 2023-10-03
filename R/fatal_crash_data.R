@@ -3,6 +3,8 @@
 #' This function pulls and cleans data from yearly fatal traffic collision data from the Washington Traffic Safety Commission.
 #' Data comes from the WTSC's Coded Fatal Crash data files.
 #' 
+#' @param data_years List of two-digit integers for years of analysis - defaults to 10 to 20
+#' 
 #' @return tibble of fatal collision metrics for the region and counties by calendar year
 #' 
 #' @importFrom magrittr %<>% %>%
@@ -14,12 +16,10 @@
 #' 
 #' @export
 #'
-process_crash_data_annual <- function() {
+process_crash_data_annual <- function(data_years = seq(10, 20, by = 1)) {
   
   # Silence the dplyr summarize message
   options(dplyr.summarise.inform = FALSE)
-  
-  data_years <- seq(10, 20, by = 1)
   
   ptype_lookup <- data.frame(ptype = c(1, 2, 3,
                                        4, 5, 6, 7,
