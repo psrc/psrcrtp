@@ -17,7 +17,7 @@ This function pulls and cleans data from the Intercensal Population data from OF
 Forecast data is from the latest PSRC Macroeconomic forecast as stored in Elmer
 }
 \examples{
-
-pop_data<- population_data()
+\dontrun{
+pop_data<- population_data()}
 
 }

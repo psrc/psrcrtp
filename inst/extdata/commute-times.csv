@@ -1,0 +1,14 @@
+﻿variable,simple_label,label
+B08303_001,Total,Total
+B08303_002,Less than 15 minutes,Less than 5 minutes
+B08303_003,Less than 15 minutes,5 to 9 minutes
+B08303_004,15 to 30 minutes,10 to 14 minutes
+B08303_005,15 to 30 minutes,15 to 19 minutes
+B08303_006,15 to 30 minutes,20 to 24 minutes
+B08303_007,15 to 30 minutes,25 to 29 minutes
+B08303_008,30 to 45 minutes,30 to 34 minutes
+B08303_009,30 to 45 minutes,35 to 39 minutes
+B08303_010,30 to 45 minutes,40 to 44 minutes
+B08303_011,45 to 60 minutes,45 to 59 minutes
+B08303_012,more than 60 minutes,60 to 89 minutes
+B08303_013,more than 60 minutes,90 or more minutes

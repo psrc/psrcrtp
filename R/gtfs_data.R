@@ -10,7 +10,8 @@
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' routes_2015 <- transit_routes(year=2015, service_change = "Spring")
+#' \dontrun{
+#' routes_2015 <- transit_routes(year=2015, service_change = "Spring")}
 #' 
 #' @export
 #'
@@ -89,7 +90,8 @@ transit_routes <- function(year, service_change) {
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' stops_2021 <- transit_stops_by_mode(year=2021, service_change = "Spring")
+#' \dontrun{
+#' stops_2021 <- transit_stops_by_mode(year=2021, service_change = "Spring")}
 #' 
 #' @export
 #'

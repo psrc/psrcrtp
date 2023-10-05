@@ -12,8 +12,8 @@
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' 
-#' new_veh <- new_vehicle_registrations(mo=c(4), yrs=c(2022))
+#' \dontrun{
+#' new_veh <- new_vehicle_registrations(mo=c(4), yrs=c(2022))}
 #' 
 #' @export
 #'
@@ -120,8 +120,8 @@ new_vehicle_registrations <- function(mo=c(1,4,7,10),
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' 
-#' all_veh <- total_vehicle_registrations()
+#' \dontrun{
+#' all_veh <- total_vehicle_registrations()}
 #' 
 #' @export
 #'

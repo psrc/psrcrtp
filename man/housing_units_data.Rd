@@ -17,7 +17,7 @@ This function pulls and cleans data from the Intercensal Population data from OF
 Forecast data is from the latest VISION 2050 modleing as stored on the file server
 }
 \examples{
-
-housing_units <- housing_units_data()
+\dontrun{
+housing_units <- housing_units_data()}
 
 }

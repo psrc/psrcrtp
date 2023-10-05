@@ -1,0 +1,11 @@
+﻿variable,simple_label,label
+B08301_001,Total,Total
+B08301_003,Drove Alone,Drove Alone
+B08301_004,Carpooled,Carpooled
+B08301_010,Transit,Transit
+B08301_016,Other,Taxi
+B08301_017,Other,Motorcycle
+B08301_018,Bike,Bike
+B08301_019,Walk,Walk
+B08301_020,Other,Other
+B08301_021,Work from Home,Work from Home

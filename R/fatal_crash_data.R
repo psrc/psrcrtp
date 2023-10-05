@@ -11,8 +11,8 @@
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' 
-#' annual_crash_data <- process_crash_data_annual()
+#' \dontrun{
+#' annual_crash_data <- process_crash_data_annual()}
 #' 
 #' @export
 #'

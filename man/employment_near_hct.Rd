@@ -18,6 +18,7 @@ The jobs estimates are already summarized by year in a table in Elmer.
 VISION 2050 Station Area and RGC buffers are stored in ElmerGeo.
 }
 \examples{
-emp_hct <- employment_near_hct()
+\dontrun{
+emp_hct <- employment_near_hct()}
  
 }

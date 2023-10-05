@@ -25,7 +25,7 @@ This function pulls and cleans data from the Washington State Registration Data.
 Data is pulled from https://data.wa.gov/ via the Socrata API
 }
 \examples{
-
-new_veh <- new_vehicle_registrations(mo=c(4), yrs=c(2022))
+\dontrun{
+new_veh <- new_vehicle_registrations(mo=c(4), yrs=c(2022))}
 
 }

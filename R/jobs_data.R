@@ -11,7 +11,8 @@
 #' @importFrom rlang .data
 #' 
 #' @examples 
-#' emp_hct <- employment_near_hct()
+#' \dontrun{
+#' emp_hct <- employment_near_hct()}
 #'  
 #' @export
 #'
@@ -78,7 +79,8 @@ employment_near_hct <- function(start_year = 2010) {
 #' @importFrom rlang .data
 #' 
 #' @examples 
-#' forecast_jobs <- jobs_forecast_data()
+#' \dontrun{
+#' forecast_jobs <- jobs_forecast_data()}
 #'  
 #' @export
 #'

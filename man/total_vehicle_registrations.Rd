@@ -22,7 +22,7 @@ This function pulls and cleans data from the Washington State Registration Data.
 Data is pulled from https://data.wa.gov/ via the Socrata API
 }
 \examples{
-
-all_veh <- total_vehicle_registrations()
+\dontrun{
+all_veh <- total_vehicle_registrations()}
 
 }

@@ -17,6 +17,7 @@ This function pulls total employment estimates from PSRC's employment database i
 The jobs estimates are already summarized by year in a table in Elmer.
 }
 \examples{
-forecast_jobs <- jobs_forecast_data()
+\dontrun{
+forecast_jobs <- jobs_forecast_data()}
  
 }

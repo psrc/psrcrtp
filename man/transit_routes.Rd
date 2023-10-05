@@ -18,6 +18,7 @@ tibble of gtfs route level data by service period year
 This function pulls and cleans GTFS Route data from the PSRC server for use in further transit analysis.
 }
 \examples{
-routes_2015 <- transit_routes(year=2015, service_change = "Spring")
+\dontrun{
+routes_2015 <- transit_routes(year=2015, service_change = "Spring")}
 
 }

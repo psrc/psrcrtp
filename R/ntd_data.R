@@ -9,7 +9,8 @@
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' annual_ntd_data <- process_ntd_data_annual()
+#' \dontrun{
+#' annual_ntd_data <- process_ntd_data_annual()}
 #' 
 #' @export
 #'
@@ -193,7 +194,8 @@ process_ntd_data_annual <- function() {
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' ytd_ntd_data <- process_ntd_data_ytd()
+#' \dontrun{
+#' ytd_ntd_data <- process_ntd_data_ytd()}
 #' 
 #' @export
 #'

@@ -10,8 +10,8 @@
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' 
-#' pop_data<- population_data()
+#' \dontrun{
+#' pop_data<- population_data()}
 #' 
 #' @export
 #'
@@ -292,8 +292,8 @@ population_near_hct <- function() {
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' 
-#' housing_units <- housing_units_data()
+#' \dontrun{
+#' housing_units <- housing_units_data()}
 #' 
 #' @export
 #'

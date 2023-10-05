@@ -18,6 +18,7 @@ tibble of gtfs stop level data by service period year and mode
 This function pulls and cleans GTFS Stop data from the PSRC server for use in further transit analysis.
 }
 \examples{
-stops_2021 <- transit_stops_by_mode(year=2021, service_change = "Spring")
+\dontrun{
+stops_2021 <- transit_stops_by_mode(year=2021, service_change = "Spring")}
 
 }

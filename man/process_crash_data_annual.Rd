@@ -17,7 +17,7 @@ This function pulls and cleans data from yearly fatal traffic collision data fro
 Data comes from the WTSC's Coded Fatal Crash data files.
 }
 \examples{
-
-annual_crash_data <- process_crash_data_annual()
+\dontrun{
+annual_crash_data <- process_crash_data_annual()}
 
 }
