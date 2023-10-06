@@ -1,0 +1,16 @@
+﻿variable,simple_label,label
+B08011_001,Total,Total
+B08011_002,Overnight,0:00 to 05:00
+B08011_003,Early Morning,05:00 to 05:30
+B08011_004,Early Morning,05:30 to  06:00
+B08011_005,Early Morning,06:00 to 06:30
+B08011_006,Early Morning,06:30 to 07:00
+B08011_007,AM Peak,07:00 to 07:30
+B08011_008,AM Peak,07:30 to 08:00
+B08011_009,AM Peak,08:00 to 08:30
+B08011_010,AM Peak,08:30 to 09:00
+B08011_011,Late Morning,09:00 to 10:00
+B08011_012,Late Morning,10:00 to 11:00
+B08011_013,Late Morning,11:00 to 12:00
+B08011_014,Afternoon,12:00 to 16:00
+B08011_015,Evening,16:00 to 0:00
