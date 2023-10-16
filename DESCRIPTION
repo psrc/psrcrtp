@@ -30,5 +30,7 @@ Imports:
     tidyselect,
     tidycensus,
     tidytransit,
-    psrcelmer
+    psrcelmer,
+    data.table,
+    readxl
 RoxygenNote: 7.2.3
