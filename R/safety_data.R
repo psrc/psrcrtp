@@ -621,3 +621,116 @@ summarise_collision_data <- function(data_file) {
   final <- dplyr::bind_rows(collisions, rates)
   return(final)
 }
+
+#' Summarize MPO Collision Data for RTP Dashboard
+#'
+#' This function summarizes the processed fatal collision data from FARS into a format
+#' for the RTP Dashboard. Summaries include Total and Rate per 100k people for the 27 largest MPO's.
+#'
+#' @param safety_yrs Vector of years in four digit integer format to analyze - defaults to 2010 to 2021
+#' @return tibble of annual fatal collisions and rates for Metro regions
+#'
+#' @importFrom rlang .data
+#'
+#' @examples
+#' \dontrun{
+#' mpo_collisions <- process_mpo_fars_data(safety_yrs=c(seq(2020,2021,by=1)))}
+#'
+#' @export
+#'
+process_mpo_fars_data<- function(safety_yrs=c(seq(2010,2021,by=1))) {
+  
+  # Figure of which counties are in each MPO
+  mpo_file <- system.file('extdata', 'regional-councils-counties.csv', package='psrcrtp')
+  
+  mpo <- readr::read_csv(mpo_file, show_col_types = FALSE) |> 
+    dplyr::mutate(COUNTY_FIPS=stringr::str_pad(.data$COUNTY_FIPS, width=3, side=c("left"), pad="0")) |>
+    dplyr::mutate(STATE_FIPS=stringr::str_pad(.data$STATE_FIPS, width=2, side=c("left"), pad="0")) |>
+    dplyr::mutate(GEOID = paste0(.data$STATE_FIPS,.data$COUNTY_FIPS))
+  
+  states <- mpo |> dplyr::select("STATE_FIPS") |> dplyr::distinct() |> dplyr::pull()
+  counties <- mpo |> dplyr::select("GEOID") |> dplyr::distinct() |> dplyr::pull()
+  
+  # Get Population Data from ACS using TidyCensus
+  mpo_county_data <- NULL
+  for(yr in safety_yrs) {
+    print(paste0("Working of population data for ",yr))
+    
+    for (st in states) {
+      
+      c <- mpo |> dplyr::filter(.data$STATE_FIPS %in% st) |> dplyr::select("COUNTY_FIPS") |> dplyr::pull()
+      
+      pop <- tidycensus::get_acs(geography = "county", state=st, county=c, variables = c("B03002_001"), year = yr, survey = "acs5") |> 
+        dplyr::select(-"moe") |> 
+        dplyr::mutate(data_year=yr, variable="Population") |>
+        dplyr::select(-"NAME")
+      
+      ifelse(is.null(mpo_county_data), mpo_county_data <- pop, mpo_county_data <- dplyr::bind_rows(mpo_county_data,pop))
+      
+      rm(c, pop)
+    }
+  }
+  
+  mpo_county_data <- dplyr::left_join(mpo, mpo_county_data, by="GEOID")
+  
+  pop_data <- mpo_county_data |>
+    dplyr::select("MPO_AREA", "variable", "estimate", "data_year") |>
+    dplyr::rename(geography="MPO_AREA") |>
+    dplyr::group_by(.data$geography, .data$variable, .data$data_year) |>
+    dplyr::summarise(estimate=sum(.data$estimate)) |>
+    tidyr::as_tibble() |>
+    dplyr::mutate(metric="Population", geography_type="Metro Regions", grouping="All", variable="Total")
+  
+  # Fatality Data
+  collision_data <- NULL
+  for (y in safety_yrs) {
+    
+    # Open Current Years FARS Accident Data
+    
+    all_files <- as.character(utils::unzip(paste0("X:/DSA/shiny-uploads/data/FARS",y,"NationalCSV.zip"), list = TRUE)$Name)
+    
+    print(paste0("Working of FARS Fatalities data for ",y))
+    f <- readr::read_csv(unz(paste0("X:/DSA/shiny-uploads/data/FARS",y,"NationalCSV.zip"), all_files[1]), show_col_types = FALSE) |>
+      dplyr::mutate(COUNTY_FIPS=stringr::str_pad(.data$COUNTY, width=3, side=c("left"), pad="0")) |>
+      dplyr::mutate(STATE_FIPS=stringr::str_pad(.data$STATE, width=2, side=c("left"), pad="0")) |>
+      dplyr::mutate(GEOID = paste0(.data$STATE_FIPS, .data$COUNTY_FIPS)) |>
+      dplyr::filter(.data$GEOID %in% counties) |>
+      dplyr::select("GEOID", "FATALS") |>
+      dplyr::group_by(.data$GEOID) |>
+      dplyr::summarise(estimate=sum(.data$FATALS)) |>
+      tidyr::as_tibble() |>
+      dplyr::mutate(data_year=y, variable="Total")
+    
+    ifelse(is.null(collision_data), collision_data <- f, collision_data <- dplyr::bind_rows(collision_data,f))
+    
+    rm(f)
+    
+  }
+  
+  # Annual Fatality Data
+  mpo_county_data <- dplyr::left_join(mpo, collision_data, by="GEOID")
+  
+  fatality_data <- mpo_county_data |>
+    dplyr::select("MPO_AREA", "variable", "estimate", "data_year") |>
+    dplyr::rename(geography="MPO_AREA") |>
+    dplyr::group_by(.data$geography, .data$variable, .data$data_year) |>
+    dplyr::summarise(estimate=sum(.data$estimate)) |>
+    tidyr::as_tibble() |>
+    dplyr::mutate(metric="Traffic Related Deaths", geography_type="Metro Regions", grouping="All") |>
+    tidyr::drop_na()
+  
+  # Calculate Per Capita Rates
+  p <- pop_data |>
+    dplyr::select("geography", "data_year", "estimate") |> 
+    dplyr::rename(population="estimate")
+  
+  rate_data <- dplyr::left_join(fatality_data, p, by=c("geography","data_year")) |>
+    dplyr::mutate(estimate=(.data$estimate/.data$population)*100000, variable="Rate per 100k people") |>
+    dplyr::select(-"population")
+  
+  fars_data <- dplyr::bind_rows(fatality_data, rate_data) |>
+    dplyr::mutate(date=lubridate::ymd(paste0(.data$data_year,"-12-01"))) |>
+    dplyr::select(-"data_year")
+  
+  return(fars_data)
+}
