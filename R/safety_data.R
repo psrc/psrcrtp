@@ -605,8 +605,52 @@ summarise_collision_data <- function(data_file) {
     dplyr::mutate(geography_type="Mode", geography="Region", variable="Total") |>
     dplyr::select("date", "geography", "variable", "geography_type", "grouping", "metric", "estimate")
   
-  collisions <- dplyr::bind_rows(region, county, race, age, gender, mode)
-  rm(region, county, race, age, gender, mode)
+  # Create Day of Week Summary by Year
+  dow <- collision_data |>
+    dplyr::select("year", "day_of_week", "injury_type", "injuries") |>
+    dplyr::group_by(.data$year, .data$day_of_week, .data$injury_type) |>
+    dplyr::summarise(estimate = sum(.data$injuries)) |>
+    dplyr::as_tibble() |>
+    dplyr::rename(metric = "injury_type", grouping = "day_of_week") |>
+    dplyr::mutate(date=lubridate::mdy(paste0("12-01-",.data$year))) |>
+    dplyr::mutate(geography_type="Day of Week", geography="Region", variable="Total") |>
+    dplyr::select("date", "geography", "variable", "geography_type", "grouping", "metric", "estimate")
+  
+  # Create Time of Day Summary by Year
+  tod <- collision_data |>
+    dplyr::select("year", "time_of_day", "injury_type", "injuries") |>
+    dplyr::group_by(.data$year, .data$time_of_day, .data$injury_type) |>
+    dplyr::summarise(estimate = sum(.data$injuries)) |>
+    dplyr::as_tibble() |>
+    dplyr::rename(metric = "injury_type", grouping = "time_of_day") |>
+    dplyr::mutate(date=lubridate::mdy(paste0("12-01-",.data$year))) |>
+    dplyr::mutate(geography_type="Time of Day", geography="Region", variable="Total") |>
+    dplyr::select("date", "geography", "variable", "geography_type", "grouping", "metric", "estimate")
+  
+  # Create Roadway Summary by Year
+  roadway <- collision_data |>
+    dplyr::select("year", "roadway", "injury_type", "injuries") |>
+    dplyr::group_by(.data$year, .data$roadway, .data$injury_type) |>
+    dplyr::summarise(estimate = sum(.data$injuries)) |>
+    dplyr::as_tibble() |>
+    dplyr::rename(metric = "injury_type", grouping = "roadway") |>
+    dplyr::mutate(date=lubridate::mdy(paste0("12-01-",.data$year))) |>
+    dplyr::mutate(geography_type="Roadway Type", geography="Region", variable="Total") |>
+    dplyr::select("date", "geography", "variable", "geography_type", "grouping", "metric", "estimate")
+  
+  # Create HDC Summary by Year
+  hdc <- collision_data |>
+    dplyr::select("year", "hdc", "injury_type", "injuries") |>
+    dplyr::group_by(.data$year, .data$hdc, .data$injury_type) |>
+    dplyr::summarise(estimate = sum(.data$injuries)) |>
+    dplyr::as_tibble() |>
+    dplyr::rename(metric = "injury_type", grouping = "hdc") |>
+    dplyr::mutate(date=lubridate::mdy(paste0("12-01-",.data$year))) |>
+    dplyr::mutate(geography_type="Historically Disadvantaged Community", geography="Region", variable="Total") |>
+    dplyr::select("date", "geography", "variable", "geography_type", "grouping", "metric", "estimate")
+  
+  collisions <- dplyr::bind_rows(region, county, race, age, gender, mode, dow, tod, roadway, hdc)
+  rm(region, county, race, age, gender, mode, dow, tod, roadway, hdc)
   
   #########################################################################
   # Collision Rates by Year
