@@ -10,7 +10,7 @@ new_ev_models(data_file = "C:/coding/Vehicle_Title_Transactions.csv")
 \item{data_file}{path to downloaded data files https://data.wa.gov/Transportation/Title-Transactions-by-Month/u4cd-bc3x}
 }
 \value{
-tibble of electric vehicle manufacturers registered in the region by month
+tibble of electric vehicle manufacturers registered in the region by year to date
 }
 \description{
 This cleans data from the Washington State Registration Data vehicle registrations on open data portal.

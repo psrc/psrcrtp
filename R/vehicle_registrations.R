@@ -137,7 +137,7 @@ new_ev_registrations <- function (data_file, title_type="Original Title", vehicl
 #' The data is pre-downloaded due to size from: https://data.wa.gov/Transportation/Title-Transactions-by-Month/u4cd-bc3x
 #' 
 #' @param data_file path to downloaded data files https://data.wa.gov/Transportation/Title-Transactions-by-Month/u4cd-bc3x
-#' @return tibble of electric vehicle manufacturers registered in the region by month
+#' @return tibble of electric vehicle manufacturers registered in the region by year to date
 #' 
 #' @importFrom rlang .data
 #' 
@@ -152,27 +152,43 @@ new_ev_models <- function (data_file="C:/coding/Vehicle_Title_Transactions.csv")
   # Silence the dplyr summarize message
   options(dplyr.summarise.inform = FALSE)
   
-  df <- readr::read_csv(data_file, show_col_types = FALSE) |>
+  df <- readr::read_csv(data_file, show_col_types = FALSE) 
+  
+  mo <- df |>
+    dplyr::select(date="Transaction Month and Year") |>
+    dplyr::mutate(date = lubridate::mdy(.data$date)) |>
+    dplyr::mutate(year = lubridate::year(.data$date)) |>
+    dplyr::mutate(month = lubridate::month(.data$date)) |>
+    dplyr::group_by(.data$year) |>
+    dplyr::summarise(max_month = max(.data$month)) |>
+    dplyr::as_tibble()
+  
+  working <- df |>
     dplyr::select(date="Transaction Month and Year", variable="Electrification Level", grouping="Make", estimate="Transaction Count") |>
     dplyr::mutate(variable = stringr::str_replace_all(.data$variable, "BEV \\(Battery Electric Vehicle\\)", "Battery Electric Vehicle")) |>
     dplyr::filter(.data$variable == "Battery Electric Vehicle") |>
     dplyr::mutate(date = lubridate::mdy(.data$date)) |>
-    dplyr::group_by(.data$date, .data$variable, .data$grouping) |>
+    dplyr::mutate(year = lubridate::year(.data$date)) |>
+    dplyr::group_by(.data$year, .data$variable, .data$grouping) |>
     dplyr::summarise(estimate = sum(.data$estimate)) |>
     dplyr::as_tibble()
   
-  total <- df %>%
+  working <- dplyr::left_join(working, mo, by=c("year")) |>
+    dplyr::mutate(date = lubridate::mdy(paste0(.data$max_month,"-01-", .data$year))) |>
+    dplyr::select(-"year", -"max_month")
+  
+  total <- working %>%
     dplyr::group_by(.data$date, .data$variable) |>
     dplyr::summarise(total = sum(.data$estimate)) |>
     dplyr::as_tibble()
   
-  df <- dplyr::left_join(df, total, by=c("date", "variable")) |>
+  working <- dplyr::left_join(working, total, by=c("date", "variable")) |>
     dplyr::mutate(share = .data$estimate/.data$total) |>
     dplyr::select(-"total") |>
     dplyr::mutate(geography = "Region", geography_type = "County", metric = "ev-manufacturers") |>
     dplyr::select("date", "geography", "variable", "geography_type", "grouping", "metric", "estimate", "share")
   
-  return(df)
+  return(working)
   
 }
 
