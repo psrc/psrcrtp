@@ -22,7 +22,7 @@ tibble of new vehicle registrations by electrification level by month and county
 }
 \description{
 This cleans data from the Washington State Registration Data vehicle registrations on open data portal.
-The data is pre-downloaded ue to size from: https://data.wa.gov/Transportation/Title-Transactions-by-Month/u4cd-bc3x
+The data is pre-downloaded due to size from: https://data.wa.gov/Transportation/Title-Transactions-by-Month/u4cd-bc3x
 }
 \examples{
 \dontrun{
