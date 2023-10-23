@@ -18,7 +18,7 @@ ev_registrations_tract(
 \item{vehicle_type}{Either for "New" or "Used" vehicles  -defaults to "New"}
 }
 \value{
-tibble of new vehicle registrations by electrification level by month and county
+tibble of new vehicle registrations by electrification level by year to date by 2020 census tract
 }
 \description{
 This cleans data from the Washington State Registration Data vehicle registrations on open data portal.

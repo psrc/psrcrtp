@@ -200,7 +200,7 @@ new_ev_models <- function (data_file="C:/coding/Vehicle_Title_Transactions.csv")
 #' @param data_file path to downloaded data files https://data.wa.gov/Transportation/Title-Transactions-by-Month/u4cd-bc3x
 #' @param title_type Either an "Original Title" or a "Transfer Title" - defaults to "Original Title"
 #' @param vehicle_type Either for "New" or "Used" vehicles  -defaults to "New"
-#' @return tibble of new vehicle registrations by electrification level by month and county
+#' @return tibble of new vehicle registrations by electrification level by year to date by 2020 census tract
 #' 
 #' @importFrom rlang .data
 #' 
@@ -217,7 +217,18 @@ ev_registrations_tract <- function (data_file, title_type="Original Title", vehi
   # Silence the dplyr summarize message
   options(dplyr.summarise.inform = FALSE)
   
-  df <- readr::read_csv(data_file, show_col_types = FALSE) |>
+  df <- readr::read_csv(data_file, show_col_types = FALSE) 
+  
+  mo <- df |>
+    dplyr::select(date="Transaction Month and Year") |>
+    dplyr::mutate(date = lubridate::mdy(.data$date)) |>
+    dplyr::mutate(year = lubridate::year(.data$date)) |>
+    dplyr::mutate(month = lubridate::month(.data$date)) |>
+    dplyr::group_by(.data$year) |>
+    dplyr::summarise(max_month = max(.data$month)) |>
+    dplyr::as_tibble()
+  
+  working <- df |>
     dplyr::filter(.data$`New or Used Vehicle` == vehicle_type & .data$`Transaction Type` == title_type) |>
     dplyr::select(date="Transaction Month and Year", variable="Electrification Level", 
                   geography="2020 GEOID", estimate="Transaction Count") |>
@@ -227,22 +238,28 @@ ev_registrations_tract <- function (data_file, title_type="Original Title", vehi
     dplyr::mutate(variable = stringr::str_replace_all(.data$variable, "Mild HEV \\(Hybrid Electric Vehicle\\)", "Hybrid Electric Vehicle")) |>
     dplyr::mutate(variable = stringr::str_replace_all(.data$variable, "Strong HEV \\(Hybrid Electric Vehicle\\)", "Hybrid Electric Vehicle")) |>
     dplyr::mutate(variable = stringr::str_replace_all(.data$variable, "PHEV \\(Plug-in Hybrid Electric Vehicle\\)", "Plug-in Hybrid Electric Vehicle")) |>
-    dplyr::group_by(.data$date, .data$variable, .data$geography) |>
+    dplyr::mutate(date = lubridate::mdy(.data$date)) |>
+    dplyr::mutate(year = lubridate::year(.data$date)) |>
+    dplyr::group_by(.data$year, .data$variable, .data$geography) |>
     dplyr::summarise(estimate = sum(.data$estimate)) |>
     dplyr::as_tibble() |>
-    dplyr::mutate(date = lubridate::mdy(date))
+    tidyr::drop_na()
   
-  total <- df |>
+  working <- dplyr::left_join(working, mo, by=c("year")) |>
+    dplyr::mutate(date = lubridate::mdy(paste0(.data$max_month,"-01-", .data$year))) |>
+    dplyr::select(-"year", -"max_month")
+  
+  total <- working |>
     dplyr::group_by(.data$date, .data$geography) |>
     dplyr::summarise(total = sum(.data$estimate)) |>
     dplyr::as_tibble()
   
-  df <- dplyr::left_join(df, total, by=c("date", "geography")) |>
+  working <- dplyr::left_join(working, total, by=c("date", "geography")) |>
     dplyr::mutate(share = .data$estimate/.data$total) |>
     dplyr::select(-"total") |>
     dplyr::mutate(geography_type = "Tract", grouping = vehicle_type, metric = "new-vehicle-registrations") |>
     dplyr::select("date", "geography", "variable", "geography_type", "grouping", "metric", "estimate", "share")
   
-  return(df)
+  return(working)
   
 }
