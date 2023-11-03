@@ -19,7 +19,7 @@
 #'
 #' @export
 #'
-wstc_fatal_collisions <- function(data_years=seq(10, 22, by = 1)) {
+wstc_fatal_collisions <- function(data_years=seq(2010, 2022, by = 1)) {
 
   wgs84 <- 4326
   spn <- 32148
@@ -106,11 +106,13 @@ wstc_fatal_collisions <- function(data_years=seq(10, 22, by = 1)) {
   # Initial processing of fatal crash data
   processed <- NULL
   for (year in data_years) {
+    
+    c_yr <- year - 2000
 
     suppressWarnings({
-      data_file <- stringr::str_glue("X:/DSA/rtp-dashboard/WTSC/Data/person{year}.xlsx")
+      data_file <- stringr::str_glue("X:/DSA/rtp-dashboard/WTSC/Data/person{c_yr}.xlsx")
 
-      print(stringr::str_glue("Working on 20{year} data processing and cleanup."))
+      print(stringr::str_glue("Working on 20{c_yr} data processing and cleanup."))
 
       print("Downloading Fatality Data")
 
@@ -777,4 +779,40 @@ process_mpo_fars_data<- function(safety_yrs=c(seq(2010,2021,by=1))) {
     dplyr::select(-"data_year")
   
   return(fars_data)
+}
+
+#' Summarized Safety data various geographies
+#'
+#' This function summarizes vehicle registration data by electrification level 
+#' The data is pre-downloaded due to size from: https://data.wa.gov/Transportation/Title-Transactions-by-Month/u4cd-bc3x
+#'
+#' @param serious_injury_data_file Path and Name of pre-processed serious injury data file
+#' @param base_yr Four digit integer for first year of safety data - defaults to 2010 
+#' @param wtsc_yr Four digit integer for last year of Fatal data from the WSTC - defaults to 2022
+#' @param fars_yr Four digit integer for last year of FARS data - defaults to 2021
+#' @return tibble of serious and fatal collisions for use in RTP Dashboard
+#'
+#' @importFrom rlang .data
+#'
+#' @examples 
+#' \dontrun{
+#' collision_data <- process_safety_data(base_yr=2010, wtsc_yr=2022, fars_yr=2021)}
+#' 
+#' @export
+#'
+process_safety_data<- function(serious_injury_data_file="X:/DSA/rtp-dashboard/serious_injury_data.csv", base_yr=2010, wtsc_yr=2022, fars_yr=2021) {
+  
+  print(stringr::str_glue("Summarize and Clean Up Fatal Collisions from Washington State Traffic Safety Commission for PSRC Region"))
+  fatal_collisions <- wstc_fatal_collisions(data_years=seq(base_yr, wtsc_yr, by = 1))
+  print(stringr::str_glue("Summarize and Clean Up Serious Injury Collisions from Washington State Department of Transporation"))
+  serious_collisions <- wsdot_serious_injury_collisions(serious_injury_data_file)
+  print(stringr::str_glue("Summarize Combined Fatal and Serious Injury Data"))
+  collisions <- dplyr::bind_rows(fatal_collisions, serious_collisions)
+  saveRDS(collisions, "X:/DSA/rtp-dashboard/processed_collision_data.rds")
+  collision_data <- summarise_collision_data(data_file="X:/DSA/rtp-dashboard/processed_collision_data.rds")
+  print(stringr::str_glue("Summarize Fatal Collisions from the Fatal Analysis Reporting System Data for MPO Comparisons"))
+  mpo_collisions <- process_mpo_fars_data(safety_yrs=c(seq(base_yr,fars_yr,by=1)))
+  collision_data <- dplyr::bind_rows(collision_data, mpo_collisions)
+  return(collision_data)
+  
 }

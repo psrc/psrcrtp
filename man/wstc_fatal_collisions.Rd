@@ -4,7 +4,7 @@
 \alias{wstc_fatal_collisions}
 \title{Fatal Collisions from Washington Coded Fatal Crash (CFC) Data Files}
 \usage{
-wstc_fatal_collisions(data_years = seq(10, 22, by = 1))
+wstc_fatal_collisions(data_years = seq(2010, 2022, by = 1))
 }
 \arguments{
 \item{data_years}{Two digit integer (or vector of integers) for analysis years}
