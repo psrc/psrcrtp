@@ -35,7 +35,8 @@ process_npmrds_data <- function(file_path = "X:/DSA/rtp-dashboard/NPMRDS/") {
       dplyr::mutate(lane_miles = .data$miles * .data$thrulanes_unidir) |>
       tidyr::separate(col=.data$date, into = c("date","year")) |>
       dplyr::mutate(year = as.character(.data$year)) |>
-      dplyr::mutate(date = lubridate::mdy(paste0(.data$date,"-01-",.data$year)))
+      dplyr::mutate(date = lubridate::mdy(paste0(.data$date,"-01-",.data$year))) |>
+      dplyr::filter(!(is.na(.data$f_system)))
     
     ifelse(is.null(processed), processed <- t, processed <- dplyr::bind_rows(processed, t))
     
