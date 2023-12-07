@@ -82,11 +82,8 @@ jobs_data <- function(forecast_base_yr=2018, first_year = 2010){
     dplyr::mutate(variable="Observed", metric="Jobs") |>
     dplyr::select("year", "date", "geography", "geography_type", "variable", "grouping", "metric", "estimate")
   
+  # Get Forecast Job Growth from Elmer
   print(stringr::str_glue("Getting Jobs Forecast Data"))
-  # Observed Data up to Forecast Base Year
-  fo <- o |> dplyr::mutate(variable="Forecast") |> dplyr::filter(.data$year <= forecast_base_yr)
-  
-  # Get Forecast Population Growth from Elmer
   fj <- psrcelmer::get_table(schema='Macroeconomic', tbl_name='employment_facts') |>
     dplyr::filter(.data$employment_sector_dim_id==8 & .data$data_year >= forecast_base_yr-1) |>
     dplyr::rename(estimate="jobs", year="data_year") |>
@@ -101,7 +98,7 @@ jobs_data <- function(forecast_base_yr=2018, first_year = 2010){
     dplyr::mutate(year = as.character(.data$year)) |>
     dplyr::select("year", "date", "geography", "geography_type", "variable", "grouping", "metric", "estimate")
   
-  f <- dplyr::bind_rows(o, fo, fj)
+  f <- dplyr::bind_rows(o, fj)
   
   print("All Done")
   return(f)
