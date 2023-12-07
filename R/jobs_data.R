@@ -7,65 +7,50 @@
 #' @param start_year The first year of data in the series. Defaults to 2010.
 #' @return tibble of total jobs near High Capacity Transit and in the region by calendar year
 #' 
-#' @importFrom magrittr %<>% %>%
 #' @importFrom rlang .data
 #' 
 #' @examples 
 #' \dontrun{
-#' emp_hct <- employment_near_hct()}
+#' jobs_hct <- jobs_near_hct()}
 #'  
 #' @export
 #'
-employment_near_hct <- function(start_year = 2010) {
+jobs_near_hct <- function(start_year = 2010) {
   
-  db_conn <- DBI::dbConnect(odbc::odbc(),
-                            driver = "SQL Server",
-                            server = "AWS-PROD-SQL\\Sockeye",
-                            database = "Elmer",
-                            trusted_connection = "yes")
+  region <- psrcelmer::get_table(schema='employment', tbl_name='hct_station_areas_employment') |>
+    dplyr::filter(.data$data_year >= start_year) |>
+    dplyr::filter(.data$geo %in% c("Inside HCT Area", "Region")) |>
+    tidyr::pivot_wider(names_from = "geo", values_from = "total_emp") |>
+    dplyr::rename(`in station area` = "Inside HCT Area") |>
+    dplyr::mutate(`not in station area` = .data$Region - .data$`in station area`) |>
+    tidyr::pivot_longer(cols = !c("data_year", "Region"), names_to = "variable", values_to = "jobs") |>
+    dplyr::select(-"Region") |>
+    dplyr::arrange(.data$variable, .data$data_year) |>
+    dplyr::group_by(.data$variable) |>
+    dplyr::mutate(job_growth = .data$jobs - dplyr::lag(.data$jobs)) |>
+    tidyr::pivot_longer(cols = !c("data_year", "variable"), names_to = "metric", values_to = "estimate") |>
+    tidyr::drop_na() |>
+    dplyr::mutate(grouping = dplyr::case_when(
+      stringr::str_detect(.data$metric, "growth") ~ "Change",
+      !(stringr::str_detect(.data$metric, "growth")) ~ "Total"))|>
+    dplyr::mutate(metric = "Jobs near HCT") |>
+    dplyr::rename(year = "data_year")
   
-  print("Pulling total employment estimates from Elmer.")
+  totals <- region |>
+    dplyr::group_by(.data$year, .data$metric, .data$grouping) |>
+    dplyr::summarise(total = sum(.data$estimate)) |>
+    dplyr::as_tibble()
   
-  region <- DBI::dbGetQuery(db_conn,
-                            "SELECT * FROM employment.hct_station_areas_employment
-                             WHERE geo IN ('Inside HCT Area', 'Region')") %>% 
-    dplyr::filter(.data$data_year >= start_year) %>% 
-    tidyr::pivot_wider(names_from = .data$geo,
-                       values_from = .data$total_emp) %>% 
-    dplyr::mutate(share = .data$`Inside HCT Area` / .data$`Region`) %>% 
-    tidyr::pivot_longer(cols = c(.data$`Inside HCT Area`,
-                                 .data$`Region`),
-                        names_to = "variable",
-                        values_to = "estimate") %>% 
-    dplyr::transmute(geography = "Region",
-                     geography_type = "PSRC Region",
-                     variable = .data$variable,
-                     metric = "Total Employment",
-                     date = lubridate::ymd(paste0(.data$data_year,"-03-01")),
-                     estimate = .data$estimate,
-                     share = ifelse(.data$variable == "Region", 1, .data$share))
+  region <- dplyr::left_join(region, totals, by=c("year", "metric", "grouping")) |>
+    dplyr::mutate(share = .data$estimate / .data$total) |>
+    dplyr::select(-"total") |>
+    dplyr::mutate(year = as.character(.data$year), geography="Region", geography_type="Region", date=lubridate::mdy(paste0("04-01-", .data$year))) |>
+    dplyr::select("year", "date", "geography", "geography_type", "variable", "grouping", "metric", "estimate", "share")
   
-  county <- DBI::dbGetQuery(db_conn,
-                            "SELECT * FROM employment.hct_station_areas_employment
-                             WHERE geo IN ('33', '35', '53', '61')") %>% 
-    dplyr::filter(.data$data_year >= start_year) %>% 
-    dplyr::transmute(geography = dplyr::case_when(.data$geo == "33" ~ "King",
-                                                  .data$geo == "35" ~ "Kitsap",
-                                                  .data$geo == "53" ~ "Pierce",
-                                                  .data$geo == "61" ~ "Snohomish"),
-                     geography_type = "County",
-                     metric = "Total Employment",
-                     date = lubridate::ymd(paste0(.data$data_year,"-03-01")),
-                     estimate = .data$total_emp)
-  
-  processed <- dplyr::bind_rows(region, county)
-  
-  processed <- processed[, c("geography", "geography_type", "variable", "metric", "date", "estimate", "share")]
-  
-  print("All done.")
-  return(processed)
+  return(region)
   
 }
+
 
 #' Total Observed and Forecast Employment Growth
 #'
@@ -73,62 +58,50 @@ employment_near_hct <- function(start_year = 2010) {
 #' The jobs estimates are already summarized by year in a table in Elmer.
 #' 
 #' @param forecast_base_yr Four digit integer for Base Year in Forecast Data - defaults to 2018 
+#' @param first_year Four digit integer for first year of data to use from Elmer - defaults to 2010
 #' @return tibble of total jobs in the region by calendar year
 #' 
-#' @importFrom magrittr %<>% %>%
 #' @importFrom rlang .data
 #' 
 #' @examples 
 #' \dontrun{
-#' forecast_jobs <- jobs_forecast_data()}
+#' jobs <- jobs_data()}
 #'  
 #' @export
 #'
-jobs_forecast_data <- function(forecast_base_yr=2018){
+jobs_data <- function(forecast_base_yr=2018, first_year = 2010){
   
   # Silence the dplyr summarize message
   options(dplyr.summarise.inform = FALSE)
   
-  print("Getting Histroic Jobs Data")
-  oj <- psrcrtp::employment_near_hct() %>%
-    dplyr::filter(.data$variable=="Region") %>%
-    dplyr::mutate(grouping="Total Employment", geography_type="PSRC Region", share=1, variable="Total", metric="Observed Employment")
+  print(stringr::str_glue("Getting Historic Jobs Data"))
+  o <- psrcrtp::jobs_near_hct(start_year = first_year) |>
+    dplyr::group_by(.data$year, .data$date, .data$geography, .data$geography_type, .data$grouping, .data$metric) |>
+    dplyr::summarise(estimate = sum(.data$estimate)) |>
+    dplyr::as_tibble() |>
+    dplyr::mutate(variable="Observed", metric="Jobs") |>
+    dplyr::select("year", "date", "geography", "geography_type", "variable", "grouping", "metric", "estimate")
   
-  # Annual Observed Employment Change
-  oc <- oj %>%
-    dplyr::group_by(.data$geography) %>%
-    dplyr::mutate(estimate = (.data$estimate-dplyr::lag(.data$estimate)), variable="Change") %>% 
-    tidyr::drop_na()
-  
-  o <- dplyr::bind_rows(oj, oc)
-  rm(oj,oc)
-  
-  print("Getting Jobs Forecast Data")
+  print(stringr::str_glue("Getting Jobs Forecast Data"))
   # Observed Data up to Forecast Base Year
-  fo <- o %>%
-    dplyr::mutate(metric="Forecast Employment") %>%
-    dplyr::filter(lubridate::year(.data$date) <= forecast_base_yr)
+  fo <- o |> dplyr::mutate(variable="Forecast") |> dplyr::filter(.data$year <= forecast_base_yr)
   
   # Get Forecast Population Growth from Elmer
-  fj <- psrctrends::get_elmer_table("Macroeconomic.employment_facts") %>%
-    dplyr::filter(.data$employment_sector_dim_id==8 & .data$data_year >= forecast_base_yr) %>%
-    dplyr::rename(estimate="jobs") %>%
-    dplyr::mutate(date = lubridate::ymd(paste0(.data$data_year,"-04-01"))) %>%
-    dplyr::mutate(metric="Forecast Employment") %>% 
-    dplyr::select("date", "estimate", "metric") %>%
-    dplyr::mutate(geography="Region", grouping="Total Employment", geography_type="PSRC Region", share=1, variable="Total") 
+  fj <- psrcelmer::get_table(schema='Macroeconomic', tbl_name='employment_facts') |>
+    dplyr::filter(.data$employment_sector_dim_id==8 & .data$data_year >= forecast_base_yr-1) |>
+    dplyr::rename(estimate="jobs", year="data_year") |>
+    dplyr::mutate(date = lubridate::ymd(paste0(.data$year,"-04-01"))) |>
+    dplyr::mutate(geography="Region", geography_type="Region", variable="Forecast", metric="Jobs") |>
+    dplyr::select("year", "date", "geography", "geography_type", "variable", "metric", "estimate") |>
+    dplyr::mutate(change = (.data$estimate- dplyr::lag(.data$estimate))) |>
+    tidyr::drop_na() |>
+    tidyr::pivot_longer(cols = c("estimate", "change"), names_to = "grouping", values_to = "estimate") |>
+    dplyr::mutate(grouping = stringr::str_replace_all(.data$grouping, "change", "Change")) |>
+    dplyr::mutate(grouping = stringr::str_replace_all(.data$grouping, "estimate", "Total")) |>
+    dplyr::mutate(year = as.character(.data$year)) |>
+    dplyr::select("year", "date", "geography", "geography_type", "variable", "grouping", "metric", "estimate")
   
-  # Annual Forecast Employment Change
-  fc <- fj %>%
-    dplyr::group_by(.data$geography) %>%
-    dplyr::mutate(estimate = (.data$estimate-dplyr::lag(.data$estimate)), variable="Change") %>% 
-    tidyr::drop_na()
-  
-  fj <- fj %>%
-    dplyr::filter(lubridate::year(.data$date) > forecast_base_yr)
-  
-  f <- dplyr::bind_rows(o, fo, fj, fc)
-  rm(o, fo, fj, fc)
+  f <- dplyr::bind_rows(o, fo, fj)
   
   print("All Done")
   return(f)

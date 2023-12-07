@@ -23,13 +23,10 @@ Imports:
     readr,
     tibble,
     psrctrends,
-    DBI,
-    odbc,
     sf,
     psrccensus,
     tidyselect,
     tidycensus,
-    tidytransit,
     psrcelmer,
     data.table,
     readxl
