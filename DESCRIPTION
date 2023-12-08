@@ -22,7 +22,6 @@ Imports:
     openxlsx,
     readr,
     tibble,
-    psrctrends,
     sf,
     psrccensus,
     tidyselect,

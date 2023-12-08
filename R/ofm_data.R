@@ -7,8 +7,8 @@
 #' @importFrom rlang .data
 #' 
 #' @examples
-#' 
-#' ofm_pop_data <- get_ofm_pop_data()
+#' \dontrun{
+#' ofm_pop_data <- get_ofm_pop_data()}
 #' 
 #' @export
 #'
@@ -149,6 +149,94 @@ get_ofm_pop_data <- function(){
   
 }
 
+#' Get OFM Housing Data by Jurisdiction
+#'
+#' This function pulls Housing Data by Jurisdiction.
+#' 
+#' @return tibble of population by jurisdiction
+#' 
+#' @importFrom rlang .data
+#' 
+#' @examples
+#' \dontrun{
+#' ofm_housing_data <- get_ofm_housing_data()}
+#' 
+#' @export
+#'
+get_ofm_housing_data <-function () {
+  
+  # Silence the dplyr summarize message
+  options(dplyr.summarise.inform = FALSE)
+  
+  # Jurisdictions with Regional Geography
+  jurisdictions <- psrcelmer::get_table(schema='Political', tbl_name='jurisdiction_dims')
+  
+  jurisdictions <- jurisdictions |>
+    dplyr::mutate(juris_name = gsub("Seatac","SeaTac",.data$juris_name)) |>
+    dplyr::mutate(juris_name = gsub("Beau Arts Village","Beaux Arts Village",.data$juris_name)) |>
+    dplyr::select("juris_name", "regional_geography", "airport_affected") |>
+    dplyr::distinct() |>
+    dplyr::mutate(regional_geography=gsub("HCT","High Capacity Transit Community",.data$regional_geography)) |>
+    dplyr::mutate(regional_geography=gsub("Metro","Metropolitan Cities",.data$regional_geography)) |>
+    dplyr::mutate(regional_geography=gsub("Core","Core Cities",.data$regional_geography)) |>
+    dplyr::mutate(regional_geography=gsub("CitiesTowns","Cities & Towns",.data$regional_geography)) |>
+    dplyr::select(-"airport_affected") |>
+    dplyr::mutate(juris_name = gsub("Uninc. King", "King County", .data$juris_name)) |>
+    dplyr::mutate(juris_name = gsub("Uninc. Kitsap", "Kitsap County", .data$juris_name)) |>
+    dplyr::mutate(juris_name = gsub("Uninc. Pierce", "Pierce County", .data$juris_name)) |>
+    dplyr::mutate(juris_name = gsub("Uninc. Snohomish", "Snohomish County", .data$juris_name))
+  
+  # Housing
+  ofm.url <- "https://ofm.wa.gov/sites/default/files/public/dataresearch/pop/april1/hseries/ofm_april1_postcensal_estimates_housing_1980_1990-present.xlsx"
+  
+  # 1990 to Present
+  utils::download.file(ofm.url, "working.xlsx", quiet = TRUE, mode = "wb")
+  ofm.pop.file <- paste0(getwd(),"/working.xlsx")
+  
+  ofm.type <- dplyr::as_tibble(openxlsx::read.xlsx(ofm.pop.file, detectDates = FALSE, skipEmptyRows = TRUE, startRow = 4, colNames = TRUE, sheet = "Housing Units")) |>
+    dplyr::filter(.data$County %in% c("King","Kitsap","Pierce","Snohomish")) |>
+    dplyr::select(-(dplyr::contains("1980"))) |>
+    tidyr::pivot_longer(cols=dplyr::contains("Housing"), names_to="Year", values_to="Estimate") |>
+    dplyr::mutate(Variable= dplyr::case_when(
+      stringr::str_detect(.data$Year, "Total") ~ "Total Housing Units",
+      stringr::str_detect(.data$Year, "One") ~ "Single-Family",
+      stringr::str_detect(.data$Year, "Two") ~ "Multi-Family",
+      stringr::str_detect(.data$Year, "Mobile") ~ "Mobile Home")) |>
+    dplyr::mutate(Year = stringr::str_replace(.data$Year, ".Census.*", ""), Year = stringr::str_replace(.data$Year, ".Postcensal.*", ""), Jurisdiction = stringr::str_replace(.data$Jurisdiction, " \\(part\\)", "")) |>
+    dplyr::mutate(dplyr::across(c('Filter','Year','Estimate'), as.numeric)) |>
+    dplyr::select(-"Line") |>
+    dplyr::mutate(Jurisdiction = stringr::str_trim(.data$Jurisdiction, side = c("both"))) |>
+    dplyr::select(-"County") |>
+    dplyr::group_by(.data$Filter, .data$Jurisdiction, .data$Year, .data$Variable) |>
+    dplyr::summarize(Estimate = sum(.data$Estimate)) |>
+    dplyr::as_tibble()
+  
+  # Create a Regional Summary by Filter Type and then Join to Full OFM tibble
+  region <- ofm.type |>
+    dplyr::filter(.data$Filter <= 3) |>
+    dplyr::select("Filter" , "Year", "Estimate", "Variable") |>
+    dplyr::group_by(.data$Filter,.data$Year, .data$Variable) |>
+    dplyr::summarize_all(sum) |>
+    dplyr::mutate(Jurisdiction = "Region") |>
+    dplyr::mutate(Jurisdiction = ifelse(.data$Filter == 2, "Unincorporated Region", .data$Jurisdiction)) |>
+    dplyr::mutate(Jurisdiction = ifelse(.data$Filter == 3, "Incorporated Region", .data$Jurisdiction))
+  
+  # Add the regional results to the OFM full tibble
+  ofm.type <- dplyr::bind_rows(ofm.type,region)
+  
+  ofm.type <- dplyr::left_join(ofm.type, jurisdictions, by=c("Jurisdiction"="juris_name")) |>
+    dplyr::mutate(regional_geography = dplyr::case_when(
+      Filter==1 ~ "County",
+      Filter==2 ~ "Unincorporated",
+      Filter==3 ~ "Incorporated",
+      Filter==4 ~ .data$regional_geography
+    ))
+  
+  file.remove(ofm.pop.file)
+  
+  return(ofm.type)
+}
+
 #' Population  Trends from the Office of Financial Management
 #'
 #' This function pulls and cleans data from the Intercensal Population data from OFM.
@@ -287,98 +375,68 @@ pop_hsg_near_hct <- function() {
 
 #' Housing Trends from the Office of Financial Management
 #'
-#' This function pulls and cleans data from the Intercensal Population data from OFM.
-#' Forecast data is from the latest VISION 2050 modleing as stored on the file server
+#' This function pulls and cleans data from the Intercensal Housing data from OFM.
+#' Forecast data is from the latest VISION 2050 modeling as stored on the file server
 #' 
 #' @param forecast_base_yr Four digit integer for Base Year in Forecast Data - defaults to 2018 
+#' @param start_year Four digit integer for first year of data to use from Elmer - defaults to 2010
 #' @return tibble of housing trends for the region and regional geographies by calendar year
 #' 
-#' @importFrom magrittr %<>% %>%
 #' @importFrom rlang .data
 #' 
 #' @examples
 #' \dontrun{
-#' housing_units <- housing_units_data()}
+#' hsg <- regional_housing_data()}
 #' 
 #' @export
 #'
-
-housing_units_data <- function(forecast_base_yr=2018){
-
+regional_housing_data <- function(forecast_base_yr=2018, start_year=2010){
+  
   # Silence the dplyr summarize message
   options(dplyr.summarise.inform = FALSE)
-
+  
   # Get OFM Housing Data by Jurisdiction
-  print("Downloading housing data from the Office of Financial Management and calculating annual population change")
-  t <- psrctrends::get_ofm_postcensal_housing() %>%
-    dplyr::rename(geography="Jurisdiction", estimate="Estimate", variable="Variable", geography_type="regional_geography") %>%
-    dplyr::mutate(date = lubridate::ymd(paste0(.data$Year,"-04-01"))) %>%
-    dplyr::select(-"Year") %>%
-    tidyr::drop_na() %>%
-    dplyr::mutate(grouping="Total") %>%
-    dplyr::filter(.data$variable != "Mobile Home")
-
-  # Calculate Annual Change
-  c <- t %>%
-    dplyr::group_by(.data$geography, .data$variable) %>%
-    dplyr::mutate(estimate = (.data$estimate-dplyr::lag(.data$estimate)), grouping="Change")
-
-  # Combine Totals and Change
-  h <- dplyr::bind_rows(t, c) %>% tidyr::drop_na() 
-  rm(t,c)
-
-  # Groupings by Region for Observed Data
-  print("Summarizing housing units by Region")
-  r <- h %>% 
-    dplyr::select(-"Filter") %>%
-    dplyr::filter(.data$geography == "Region") %>%
-    dplyr::mutate(metric="Observed", share=1, geography_type="Region")
-
-  # Region Totals for subsequent share calculations
-  t <- r %>% 
-    dplyr::select("date","variable", "grouping", "estimate") %>%
-    dplyr::rename(total="estimate")
-
-  # Groupings by County for Observed Data
-  print("Summarizing Housing Units by County")
-  c <- h %>% 
-    dplyr::select(-"Filter") %>%
-    dplyr::filter(.data$geography %in% c("King County", "Kitsap County", "Pierce County", "Snohomish County")) %>%
-    dplyr::mutate(metric="Observed", geography_type="County")
-
-  c <- dplyr::left_join(c, t, by=c("date", "variable", "grouping")) %>%
-    dplyr::mutate(share = .data$estimate / .data$total) %>%
-    dplyr::select(-"total")
-
-  # Groupings by Regional Geography for Observed Data
-  print("Summarizing housing units by Regional Geography")
-  rgeo <- h %>%
-    dplyr::filter(.data$Filter %in% c(2,4)) %>%
-    dplyr::filter(.data$geography != "Unincorporated Region") %>%
-    dplyr::group_by(.data$geography_type, .data$date, .data$variable, .data$grouping) %>%
-    dplyr::summarise(estimate=sum(.data$estimate)) %>%
-    tidyr::as_tibble() %>%
-    dplyr::rename(geography="geography_type") %>%
-    dplyr::mutate(metric="Observed", geography_type="Regional Geography")
-
-  rgeo <- dplyr::left_join(rgeo, t, by=c("date", "variable", "grouping")) %>%
-    dplyr::mutate(share = .data$estimate / .data$total) %>%
-    dplyr::select(-"total")
-
-  # Getting Forecasted Housing Units
-  print("Getting housing unit forecast data")
-  f <- readr::read_csv("X://DSA//shiny-uploads//data//regional-housing.csv", show_col_types = FALSE) %>%
-    dplyr::select(-"Observed") %>%
-    dplyr::rename(estimate="Forecast") %>%
-    dplyr::filter(.data$Year >= forecast_base_yr) %>%
-    dplyr::mutate(date = lubridate::ymd(paste0(.data$Year,"-04-01"))) %>%
-    dplyr::select(-"Year") %>%
-    dplyr::mutate(metric="Forecast", geography_type="Region", geography="Region", variable="Total Housing Units", grouping="Total", share=1)
-
-  print("Combining Data into one tibble")
-  housing <- dplyr::bind_rows(list(r,c,rgeo,f))
-
-  print("All Done")
+  print(stringr::str_glue("Downloading housing data from the Office of Financial Management and calculating annual population change"))
+  t <- psrcrtp::get_ofm_housing_data() %>%
+    dplyr::filter(.data$Jurisdiction == "Region" & .data$Variable == "Total Housing Units") |>
+    dplyr::rename(geography="Jurisdiction", estimate="Estimate", variable="Variable", geography_type="regional_geography") |>
+    dplyr::mutate(date = lubridate::ymd(paste0(.data$Year,"-04-01")), geography_type="Region") |>
+    dplyr::rename(year="Year") |>
+    dplyr::mutate(year = as.character(.data$year)) |>
+    tidyr::drop_na() |>
+    dplyr::select(-"Filter") |>
+    dplyr::group_by(.data$variable) |>
+    dplyr::mutate(change = (.data$estimate - dplyr::lag(.data$estimate))) |>
+    tidyr::pivot_longer(cols = c("estimate", "change"), names_to = "grouping", values_to = "estimate") |>
+    tidyr::drop_na() |>
+    dplyr::filter(.data$year >= start_year) |>
+    dplyr::mutate(metric="Housing Units", variable="Observed") |>
+    dplyr::mutate(grouping = stringr::str_replace_all(.data$grouping, "change", "Change")) |>
+    dplyr::mutate(grouping = stringr::str_replace_all(.data$grouping, "estimate", "Total")) |>
+    dplyr::select("year", "date", "geography", "geography_type", "variable", "grouping", "metric", "estimate")
+  
+  # Getting Forecast Housing Units
+  print(stringr::str_glue("Getting housing unit forecast data"))
+  f <- readr::read_csv("X://DSA//rtp-dashboard//PSRC//regional-housing.csv", show_col_types = FALSE) |>
+    dplyr::select(-"Observed") |>
+    dplyr::rename(estimate="Forecast") |>
+    dplyr::filter(.data$Year >= forecast_base_yr-1) |>
+    dplyr::mutate(date = lubridate::ymd(paste0(.data$Year,"-04-01"))) |>
+    dplyr::mutate(year = as.character(.data$Year)) |>
+    dplyr::mutate(metric="Housing Units", geography_type="Region", geography="Region", variable="Forecast") |>
+    dplyr::select("year", "date", "geography", "geography_type", "variable", "metric", "estimate") |>
+    dplyr::group_by(.data$variable) |>
+    dplyr::mutate(change = (.data$estimate - dplyr::lag(.data$estimate))) |>
+    tidyr::pivot_longer(cols = c("estimate", "change"), names_to = "grouping", values_to = "estimate") |>
+    tidyr::drop_na()|>
+    dplyr::mutate(grouping = stringr::str_replace_all(.data$grouping, "change", "Change")) |>
+    dplyr::mutate(grouping = stringr::str_replace_all(.data$grouping, "estimate", "Total")) |>
+    dplyr::select("year", "date", "geography", "geography_type", "variable", "grouping", "metric", "estimate") |>
+    dplyr::filter(.data$year >= forecast_base_yr)
+  
+  housing <- dplyr::bind_rows(t,f)
+  
+  print(stringr::str_glue("All Done"))
   return(housing)
-
+  
 }

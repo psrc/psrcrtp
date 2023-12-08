@@ -13,7 +13,7 @@ tibble of population by jurisdiction
 This function pulls Intercensal Population Data by Jurisdiction.
 }
 \examples{
-
-ofm_pop_data <- get_ofm_pop_data()
+\dontrun{
+ofm_pop_data <- get_ofm_pop_data()}
 
 }

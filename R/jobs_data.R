@@ -100,6 +100,6 @@ jobs_data <- function(forecast_base_yr=2018, first_year = 2010){
   
   f <- dplyr::bind_rows(o, fj)
   
-  print("All Done")
+  print(stringr::str_glue("All Done"))
   return(f)
 }
