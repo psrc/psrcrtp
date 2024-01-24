@@ -733,10 +733,10 @@ process_mpo_fars_data<- function(safety_yrs=c(seq(2010,2021,by=1))) {
     
     # Open Current Years FARS Accident Data
     
-    all_files <- as.character(utils::unzip(paste0("X:/DSA/rtp-dashboard/data/FARS",y,"NationalCSV.zip"), list = TRUE)$Name)
+    all_files <- as.character(utils::unzip(paste0("X:/DSA/rtp-dashboard/FARS/FARS",y,"NationalCSV.zip"), list = TRUE)$Name)
     
     print(paste0("Working of FARS Fatalities data for ",y))
-    f <- readr::read_csv(unz(paste0("X:/DSA/rtp-dashboard/data/FARS",y,"NationalCSV.zip"), all_files[1]), show_col_types = FALSE) |>
+    f <- readr::read_csv(unz(paste0("X:/DSA/rtp-dashboard/FARS/FARS",y,"NationalCSV.zip"), all_files[1]), show_col_types = FALSE) |>
       dplyr::mutate(COUNTY_FIPS=stringr::str_pad(.data$COUNTY, width=3, side=c("left"), pad="0")) |>
       dplyr::mutate(STATE_FIPS=stringr::str_pad(.data$STATE, width=2, side=c("left"), pad="0")) |>
       dplyr::mutate(GEOID = paste0(.data$STATE_FIPS, .data$COUNTY_FIPS)) |>
