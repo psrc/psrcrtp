@@ -77,7 +77,7 @@ process_ntd_data <- function() {
                                             .data$Mode == "DR" & .data$TOS == "TN" ~ "DR-TN",
                                             .data$Mode == "DR" & .data$TOS == "TX" ~ "DR-TX",
                                             TRUE ~ .data$Mode)) |> 
-      dplyr::select(-"Legacy.NTD.ID", -"Status", -"Reporter.Type", -"UACE.CD", -"UZA.Name", -"TOS", -"3.Mode") |> 
+      dplyr::select(-"Legacy.NTD.ID", -"Mode/Type.of.Service.Status", -"Reporter.Type", -"UACE.CD", -"UZA.Name", -"TOS", -"3.Mode") |> 
       tidyr::pivot_longer(cols = 4:dplyr::last_col(), names_to = "date", values_to = "estimate", values_drop_na = TRUE) |> 
       dplyr::mutate(date = lubridate::my(.data$date))
     
