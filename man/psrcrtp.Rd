@@ -2,8 +2,8 @@
 % Please edit documentation in R/psrcrtp_details.R
 \docType{package}
 \name{psrcrtp}
-\alias{psrcrtp}
 \alias{psrcrtp-package}
+\alias{psrcrtp}
 \title{psrcrtp: A package for data processing to feed the RTP Dashboard in the Puget Sound Region.}
 \description{
 Various functions to process trend data in the Central Puget Sound Region.

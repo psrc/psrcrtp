@@ -341,7 +341,7 @@ pop_hsg_near_hct <- function() {
   
   max_ofm_vintage <- max(parcels$ofm_vintage)
   
-  parcels <- parcels |> dplyr::filter(.data$year < 2020 | (.data$year >= 2020 & .data$ofm_vintage==max_ofm_vintage)) |>
+  parcels <- parcels |> dplyr::filter(.data$ofm_vintage==max_ofm_vintage) |>
     dplyr::group_by(.data$year, .data$variable) |>
     dplyr::summarise(population = as.integer(sum(.data$total_pop)), housing_units = as.integer(sum(.data$housing_units))) |>
     dplyr::as_tibble() |>
